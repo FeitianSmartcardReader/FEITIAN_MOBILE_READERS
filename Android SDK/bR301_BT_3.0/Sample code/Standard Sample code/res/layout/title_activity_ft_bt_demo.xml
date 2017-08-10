@@ -1,0 +1,260 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.00"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.00"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/ESSreceive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="数据显示"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/Ereceive"
+                    android:layout_width="741dp"
+                    android:layout_height="match_parent"
+                    android:editable="false"
+                    android:gravity="top"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/BSelectBlue"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.44"
+                    android:text="BlueTooth"
+                    android:textSize="20dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/BList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="List" />
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="25dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/deviceTextView"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:text="设备连接"
+                    android:textSize="20dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/Bconnect"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.44"
+                    android:text="Connect"
+                    android:textSize="20dip" />
+
+                <Button
+                    android:id="@+id/BdisConnect"
+                    android:layout_width="241dp"
+                    android:layout_height="wrap_content"
+                    android:text="DisConnect" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/deviceTextView"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:text="Reader"
+                    android:textSize="25dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/BPowerOn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PowerOn"
+                    android:textSize="20dip" />
+
+                <Button
+                    android:id="@+id/BPowerOff"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:text="PowerOff"
+                    android:textSize="20dip" />
+
+                <Button
+                    android:id="@+id/BGetAtr"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:text="GetAtr"
+                    android:textSize="20dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/BGetStatus"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:text="GetcardStatus"
+                    android:textSize="20dip" />
+
+                <Button
+                    android:id="@+id/BGetSerial"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:text="GetSerialNum"
+                    android:textSize="20dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/BSendData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SendData"
+                    android:textSize="20dip" />
+
+                <EditText
+                    android:id="@+id/ESendData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                  <Button
+                    android:id="@+id/BSendCmd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send"
+                    android:textSize="20dip" />
+ 					<Spinner
+ 					    android:id="@+id/spinner2"
+ 					    android:layout_width="match_parent"
+ 					    android:layout_height="39dp"
+ 					    android:textSize="25dp" />
+              
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/BWriteFlash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WriteFlash"
+                    android:textSize="20dip" />
+
+                <Button
+                    android:id="@+id/BReadFlash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ReadFlash"
+                    android:textSize="20dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/EWriteFlash"
+                    android:layout_width="match_parent"
+                    android:layout_height="176dp"
+                    android:gravity="top"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/BclearReceiveData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ClearData"
+                    android:textSize="20dip" />
+
+                <Button
+                    android:id="@+id/BExit"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:text="Exit"
+                    android:textSize="20dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
