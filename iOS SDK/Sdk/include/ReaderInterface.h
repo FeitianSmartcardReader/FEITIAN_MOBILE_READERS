@@ -1,15 +1,23 @@
 #import <Foundation/Foundation.h>
-
-typedef enum DEVICETYPE{
-    IR301_AND_BR301 = 1,
-    BR301BLE_AND_BR500 = 2,
-}DEVICETYPE;
-
-
-
+#import "ft301u.h"
 /**
  *  Delegate which is used to notify the appliation layer when the reader is attached/detached..
  */
+typedef enum READERTYPE{
+    READER_UNKOWN = 0,
+    READER_iR301U_DOCK,
+    READER_iR301U_LIGHTING,
+    READER_bR301, //bR301 B55
+    READER_bR301B, //bR301 C63
+    READER_bR301BLE,
+    READER_bR500
+}READERTYPE;
+
+typedef enum DEVICETYPE{
+    EMPTY_DEVICE = 0,
+    IR301_AND_BR301 = 1,
+    BR301BLE_AND_BR500 = 2,
+}DEVICETYPE;
 
 @protocol ReaderInterfaceDelegate<NSObject>
 @required
@@ -20,6 +28,8 @@ typedef enum DEVICETYPE{
  *  You should assume that an application implemenation of this delegate will call [ReaderInterface cardInterface] to obtian a card interface.
  *  @param attached is YES if the 301 has become attached to the phone or NO if the 301 has become detached from the phone.
  */
+- (void) findPeripheralReader:(NSString *)readerName;
+
 - (void) readerInterfaceDidChange:(BOOL)attached;
 
 - (void) cardInterfaceDidDetach:(BOOL)attached;
@@ -59,7 +69,16 @@ typedef enum DEVICETYPE{
  */
 - (BOOL)        isCardAttached;
 
+/**
+ *depend on the readerName to Connect Peripheral Readr
+ *timeout is a number need set by customer, the lib will try to connect reader, but if the reader already turn off or had long distance between iOS and reader, then after that time, will return connection failure
+ */
+- (BOOL)connectPeripheralReader:(NSString *)readerName timeout:(float)timeout;
 
+/**
+ *disConnect the current Peripheral Reader
+ */
+- (void)disConnectCurrentPeripheralReader;
 
 @end
 
@@ -74,17 +93,12 @@ typedef enum DEVICETYPE{
  *  Set an device type you will use.
  *  @param deviceType is the type you will use. Now it supports IR301 and BR301.
  */
-+(void)        setDeviceType:(DEVICETYPE) deviceType;
++(void)setDeviceType:(DEVICETYPE) deviceType;
 
 /**
  *  Get the device type which you are using now.
  *  @return IR301 or BR301.
  */
-+(DEVICETYPE)  getDeviceType;
++(DEVICETYPE)getDeviceType;
 
 @end
-
-
-
-
-
