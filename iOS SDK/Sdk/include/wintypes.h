@@ -71,10 +71,6 @@ extern "C"
 	typedef unsigned long *PULONG;
 
 #endif
-
-    
-    /////////////////////////////////////////
-
     
 #define SCARD_PCI_T0	(&g_rgSCardT0Pci) /**< protocol control information (PCI) for T=0 */
 #define SCARD_PCI_T1	(&g_rgSCardT1Pci) /**< protocol control information (PCI) for T=1 */

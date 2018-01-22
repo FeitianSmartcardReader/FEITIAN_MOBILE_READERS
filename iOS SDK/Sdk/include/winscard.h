@@ -46,8 +46,7 @@ extern "C"
 	
 	typedef const SCARD_IO_REQUEST *LPCSCARD_IO_REQUEST;
 	
-	extern SCARD_IO_REQUEST g_rgSCardT0Pci, g_rgSCardT1Pci,
-	g_rgSCardRawPci;
+	extern SCARD_IO_REQUEST g_rgSCardT0Pci, g_rgSCardT1Pci, g_rgSCardRawPci;
 
 	PCSC_API LONG SCardEstablishContext(DWORD dwScope,
 		/*@null@*/ LPCVOID pvReserved1, /*@null@*/ LPCVOID pvReserved2,

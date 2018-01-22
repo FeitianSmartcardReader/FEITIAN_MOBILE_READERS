@@ -254,7 +254,7 @@ extern "C"
     LONG FtGetAccessoryManufacturer(SCARDCONTEXT hContext, unsigned int * length,char * buffer);
     
     /*
-     Function: FtGetAccessoryModeName
+     Function: FtGetAccessoryModelName
      
      Parameters:
      hContext         IN         Connection context to the PC/SC Resource Manager
@@ -264,7 +264,7 @@ extern "C"
      Description:
      This function used to get accessory manufacturer
      */
-    LONG FtGetAccessoryModeName(SCARDCONTEXT hContext, unsigned int * length,char * buffer);
+    LONG FtGetAccessoryModelName(SCARDCONTEXT hContext, unsigned int * length,char * buffer);
 #ifdef __cplusplus
 }
 #endif
