@@ -1,8 +1,0 @@
-<resources>
-
-    <string name="app_name">FtBtDemo</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
-    <string name="title_activity_ft_bt_demo">FtBtDemo</string>
-
-</resources>
