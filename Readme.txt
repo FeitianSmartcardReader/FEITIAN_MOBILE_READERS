@@ -1,4 +1,12 @@
 History:
+2018/6/25
+	- Update iOS SDK, release version is 3.5.16
+	- After call SCardEstablishContext, the scan thread will start scan the BLE device
+	- The 3.5.16 lib will automaticly do scan and connect the closest reader
+	- Imrpove the thread safe
+	- ScardDisconnect will only disconnect smart card
+	- Merger iR301 and bR301 SDK(v1.32.5) into combo SDK
+	- Fixed few bugs for BLE reader
 2018/4/12
 	- Update Android SDK, release combo Android SDK, support R301,R502,vR504,iR301,bR301,bR301BLE,bR500 
 	- Will update iOS SDK recently, the lib is working on improve, should be upgrade in two weeks.
