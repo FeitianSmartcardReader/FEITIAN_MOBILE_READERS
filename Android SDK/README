@@ -1,6 +1,8 @@
 Feitian combo Android SDK
 
 Change history:
+2018/08/10
+	Update Android SDK, the new native lib version support native lib with Bluetooth 3.0, Bluetooth 4.0 and OTG.
 2018/04/12
 	Update Android SDK, the new SDK support R301,R502,R301-Dual,iR301,bR301,bR301BLE,bR500,vR504.
 	Support Bluetooth 3.0, Bluetooth 4.0 and OTG

@@ -8,6 +8,9 @@
 package com.example.ftreadertest;
 
 public final class R {
+    public static final class array {
+        public static final int EncModeArray=0x7f040000;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -18,63 +21,53 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080026;
-        public static final int button11=0x7f080000;
-        public static final int buttonA_0=0x7f080001;
-        public static final int buttonA_11=0x7f080006;
-        public static final int buttonA_12=0x7f080007;
-        public static final int buttonA_13=0x7f080008;
-        public static final int buttonA_21=0x7f08000b;
-        public static final int buttonA_22=0x7f08000c;
-        public static final int buttonA_23=0x7f08000d;
-        public static final int buttonA_24=0x7f08000e;
-        public static final int buttonB_0=0x7f080002;
-        public static final int buttonB_11=0x7f080010;
-        public static final int buttonC_0=0x7f080003;
-        public static final int buttonC_11=0x7f080012;
-        public static final int buttonC_12=0x7f080013;
-        public static final int buttonC_13=0x7f080014;
-        public static final int buttonC_21=0x7f080017;
-        public static final int buttonC_22=0x7f080018;
-        public static final int buttonC_23=0x7f080019;
-        public static final int buttonC_24=0x7f08001a;
-        public static final int buttonD_0=0x7f080004;
-        public static final int buttonD_11=0x7f08001c;
-        public static final int buttonD_12=0x7f08001d;
-        public static final int buttonD_13=0x7f08001e;
-        public static final int buttonD_21=0x7f080021;
-        public static final int buttonD_22=0x7f080022;
-        public static final int buttonD_23=0x7f080023;
-        public static final int buttonD_24=0x7f080024;
-        public static final int layoutA_1=0x7f080005;
-        public static final int layoutA_2=0x7f08000a;
-        public static final int layoutB_1=0x7f08000f;
-        public static final int layoutC_1=0x7f080011;
-        public static final int layoutC_2=0x7f080016;
-        public static final int layoutD_1=0x7f08001b;
-        public static final int layoutD_2=0x7f080020;
-        public static final int spinnerA_14=0x7f080009;
-        public static final int spinnerC_14=0x7f080015;
-        public static final int spinnerD_14=0x7f08001f;
-        public static final int textView=0x7f080025;
+        public static final int BLEMODE=0x7f090006;
+        public static final int BTMODE=0x7f090005;
+        public static final int USBMODE=0x7f090004;
+        public static final int action_settings=0x7f09001c;
+        public static final int apdu=0x7f090010;
+        public static final int button21=0x7f090008;
+        public static final int button22=0x7f090009;
+        public static final int button31=0x7f09000b;
+        public static final int button32=0x7f09000c;
+        public static final int button33=0x7f09000d;
+        public static final int button34=0x7f09000e;
+        public static final int button41=0x7f09000f;
+        public static final int clear=0x7f090000;
+        public static final int exit=0x7f090001;
+        public static final int ft_close=0x7f090014;
+        public static final int ft_find=0x7f090012;
+        public static final int ft_open=0x7f090013;
+        public static final int ft_poweroff=0x7f090017;
+        public static final int ft_poweron=0x7f090016;
+        public static final int ft_xfr=0x7f090018;
+        public static final int jar=0x7f090003;
+        public static final int jar_area=0x7f090011;
+        public static final int jni=0x7f090002;
+        public static final int pcsc_area=0x7f090007;
+        public static final int readerInfo=0x7f09001a;
+        public static final int slotStatus=0x7f090019;
+        public static final int spinnerC_14=0x7f09000a;
+        public static final int spinner_jar=0x7f090015;
+        public static final int textView=0x7f09001b;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050002;
-        public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050001;
+        public static final int action_settings=0x7f060002;
+        public static final int app_name=0x7f060000;
+        public static final int hello_world=0x7f060001;
     }
     public static final class style {
         /** 
@@ -98,10 +91,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }
