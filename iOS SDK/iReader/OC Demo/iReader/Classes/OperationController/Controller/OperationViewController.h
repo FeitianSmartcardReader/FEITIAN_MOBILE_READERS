@@ -8,5 +8,6 @@
 #import <UIKit/UIKit.h>
 
 @interface OperationViewController : UIViewController
-
+@property (nonatomic, copy)NSString *readerName;
+@property (nonatomic, strong) UIViewController *rootVC;
 @end

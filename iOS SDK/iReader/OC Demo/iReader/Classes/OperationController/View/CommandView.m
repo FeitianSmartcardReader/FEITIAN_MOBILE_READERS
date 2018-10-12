@@ -51,6 +51,7 @@
 
     [self.contentView addSubview:collectionView];
     
+    //关闭按钮
     UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     
     CGFloat btnW = 40;
@@ -67,6 +68,7 @@
     [self.contentView addSubview:closeBtn];
 }
 
+//关闭按钮点击事件
 -(void)closeBtnClick
 {
    [self removeFromSuperview];

@@ -1,3 +1,18 @@
+2018/10/12
+	Update iOS demo code - only objective-C
+	1. Redesign the UI to meet latest iPhone style
+	2. Integrate with latest lib 3.5.29
+	3. Add support iR301, bR301, bR301BLE, bR500 in one App
+	4. Add get reader information API, now you can get reader serial number, Bluetooth ID, Firmware version, Reader name. Model name and manufacturer from our API
+	5. App support auto pair function for bR301BLE and bR500
+	6. App support get battery status of reader, currently, only support bR500, you will need contact Feitian to have latest version, the exist reader cannot update firmware to support battery service.
+	7. App will scan the bluetooth list each 10s
+	
+	Other comments:
+	1. The iReader App only support one reader
+	2. Auto Pair only work for bR301BLE and bR500, since these device using Bluetooth Smart technology
+
+
 2018/1/15
 	
 	Update demo code, new iReader demo support bR301,iR301,bR301BLE and bR500
@@ -18,7 +33,7 @@
 
 
 
-/**
+	/**
 	 *  Set an device type you will use.
 	 *  @param deviceType is the type you will use. Now it supports IR301 and BR301.
 	 */

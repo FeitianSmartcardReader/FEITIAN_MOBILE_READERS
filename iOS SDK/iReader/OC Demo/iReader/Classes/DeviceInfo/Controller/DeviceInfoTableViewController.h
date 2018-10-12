@@ -8,5 +8,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DeviceInfoTableViewController : UITableViewController
-
+@property (nonatomic, copy)NSString *readerName;
 @end

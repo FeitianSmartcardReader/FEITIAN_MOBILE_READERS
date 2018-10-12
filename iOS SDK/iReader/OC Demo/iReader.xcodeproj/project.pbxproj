@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A1633811FC446AF001F4572 /* SelecteReaderTypeController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A16337B1FC446AF001F4572 /* SelecteReaderTypeController.mm */; };
-		4A1633821FC446AF001F4572 /* ReaderTypeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A16337F1FC446AF001F4572 /* ReaderTypeTableViewCell.m */; };
-		4A1633831FC446AF001F4572 /* ReaderTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1633801FC446AF001F4572 /* ReaderTypeTableViewCell.xib */; };
-		4A1633861FC446CE001F4572 /* ReaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1633851FC446CE001F4572 /* ReaderModel.m */; };
 		4A1633F51FC596E0001F4572 /* ScanDeviceController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A1633F41FC596E0001F4572 /* ScanDeviceController.mm */; };
+		4A3F414320E21A0200DBE8F2 /* HelpVisualEffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F414220E21A0200DBE8F2 /* HelpVisualEffectView.m */; };
+		4A3F414920E33B7A00DBE8F2 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F414720E33B7A00DBE8F2 /* CollectionViewCell.m */; };
+		4A3F414A20E33B7A00DBE8F2 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3F414820E33B7A00DBE8F2 /* CollectionViewCell.xib */; };
+		4A47E0C12125986400DC9F28 /* WelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A47E0BF2125986400DC9F28 /* WelcomeController.m */; };
+		4A47E0C22125986400DC9F28 /* WelcomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A47E0C02125986400DC9F28 /* WelcomeController.xib */; };
+		4A47E0C421265DFD00DC9F28 /* ScanDeviceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A47E0C321265DFD00DC9F28 /* ScanDeviceController.xib */; };
+		4A47E0CA212695BC00DC9F28 /* ReaderItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A47E0C9212695BC00DC9F28 /* ReaderItemView.m */; };
+		4A47E0CC21269CF400DC9F28 /* OperationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A47E0CB21269CF400DC9F28 /* OperationViewController.xib */; };
+		4A8E5DC920C8D613007DFAD1 /* ListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8E5DC820C8D613007DFAD1 /* ListView.m */; };
 		4A9C102D1FC6A6A500A50FAD /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C102C1FC6A6A500A50FAD /* OperationViewController.m */; };
-		4A9C10311FC6D06800A50FAD /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C102F1FC6D06800A50FAD /* CollectionViewCell.m */; };
-		4A9C10321FC6D06800A50FAD /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A9C10301FC6D06800A50FAD /* CollectionViewCell.xib */; };
-		4A9C103C1FC6E32400A50FAD /* CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C103B1FC6E32400A50FAD /* CollectionView.m */; };
 		4A9C10441FC6E81400A50FAD /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C10421FC6E81400A50FAD /* Tools.m */; };
 		4A9C107B1FC7C38E00A50FAD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4A9C104A1FC7C38E00A50FAD /* LICENSE */; };
 		4A9C107C1FC7C38E00A50FAD /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C104E1FC7C38E00A50FAD /* MJRefreshAutoFooter.m */; };
@@ -43,11 +45,10 @@
 		4A9C10951FC8078200A50FAD /* flash.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A9C10941FC8078100A50FAD /* flash.txt */; };
 		4A9C10981FC816BF00A50FAD /* DeviceInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C10971FC816BF00A50FAD /* DeviceInfoTableViewController.m */; };
 		4A9C109B1FC8178A00A50FAD /* DeviceInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C109A1FC8178A00A50FAD /* DeviceInfoModel.m */; };
-		4A9C109E1FC91A3F00A50FAD /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C109D1FC91A3F00A50FAD /* TabbarViewController.m */; };
 		4A9C10A11FC91A6D00A50FAD /* Tabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C10A01FC91A6D00A50FAD /* Tabbar.m */; };
 		4A9C10A41FC91F8A00A50FAD /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C10A31FC91F8A00A50FAD /* Button.m */; };
-		4A9C10AA1FC92B2B00A50FAD /* CommandView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C10A91FC92B2B00A50FAD /* CommandView.m */; };
-		4ADE18A3200C3E3400481B39 /* libiRockey301_ccid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADE18A2200C3E3400481B39 /* libiRockey301_ccid.a */; };
+		4AEF93FD20BE77E300A18758 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF93FC20BE77E300A18758 /* ViewController.m */; };
+		4AEF940320BE83C500A18758 /* view.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF940220BE83C500A18758 /* view.m */; };
 		672B0ED61FC2C12A000CBEDC /* hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 672B0EC71FC2C12A000CBEDC /* hex.m */; };
 		672B0ED81FC2C12A000CBEDC /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 672B0ECC1FC2C12A000CBEDC /* SVIndefiniteAnimatedView.m */; };
 		672B0ED91FC2C12A000CBEDC /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 672B0ECD1FC2C12A000CBEDC /* SVProgressHUD.bundle */; };
@@ -61,6 +62,7 @@
 		678D0C921FC26D4600D05AB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678D0C901FC26D4600D05AB7 /* LaunchScreen.storyboard */; };
 		678D0C9D1FC26D4600D05AB7 /* iReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 678D0C9C1FC26D4600D05AB7 /* iReaderTests.m */; };
 		678D0CA81FC26D4700D05AB7 /* iReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 678D0CA71FC26D4700D05AB7 /* iReaderUITests.m */; };
+		B5FD3694215F90D8002642DB /* libiRockey301_ccid_V3.5.29_Debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FD3693215F90D8002642DB /* libiRockey301_ccid_V3.5.29_Debug.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,22 +83,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A16337A1FC446AF001F4572 /* SelecteReaderTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelecteReaderTypeController.h; sourceTree = "<group>"; };
-		4A16337B1FC446AF001F4572 /* SelecteReaderTypeController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SelecteReaderTypeController.mm; sourceTree = "<group>"; };
-		4A16337E1FC446AF001F4572 /* ReaderTypeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderTypeTableViewCell.h; sourceTree = "<group>"; };
-		4A16337F1FC446AF001F4572 /* ReaderTypeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderTypeTableViewCell.m; sourceTree = "<group>"; };
-		4A1633801FC446AF001F4572 /* ReaderTypeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReaderTypeTableViewCell.xib; sourceTree = "<group>"; };
-		4A1633841FC446CE001F4572 /* ReaderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReaderModel.h; sourceTree = "<group>"; };
-		4A1633851FC446CE001F4572 /* ReaderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReaderModel.m; sourceTree = "<group>"; };
+		1A5B5D742011F5AB00FDA151 /* ReaderInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderInterface.h; sourceTree = "<group>"; };
+		1A5B5D752011F5AB00FDA151 /* wintypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wintypes.h; sourceTree = "<group>"; };
+		1A5B5D762011F5AB00FDA151 /* winscard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = winscard.h; sourceTree = "<group>"; };
+		1A5B5D772011F5AB00FDA151 /* ft301u.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ft301u.h; sourceTree = "<group>"; };
 		4A1633F31FC596E0001F4572 /* ScanDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanDeviceController.h; sourceTree = "<group>"; };
 		4A1633F41FC596E0001F4572 /* ScanDeviceController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ScanDeviceController.mm; sourceTree = "<group>"; };
+		4A3F414120E21A0200DBE8F2 /* HelpVisualEffectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpVisualEffectView.h; sourceTree = "<group>"; };
+		4A3F414220E21A0200DBE8F2 /* HelpVisualEffectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelpVisualEffectView.m; sourceTree = "<group>"; };
+		4A3F414620E33B7A00DBE8F2 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		4A3F414720E33B7A00DBE8F2 /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		4A3F414820E33B7A00DBE8F2 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		4A47E0BE2125986400DC9F28 /* WelcomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeController.h; sourceTree = "<group>"; };
+		4A47E0BF2125986400DC9F28 /* WelcomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeController.m; sourceTree = "<group>"; };
+		4A47E0C02125986400DC9F28 /* WelcomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeController.xib; sourceTree = "<group>"; };
+		4A47E0C321265DFD00DC9F28 /* ScanDeviceController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanDeviceController.xib; sourceTree = "<group>"; };
+		4A47E0C8212695BC00DC9F28 /* ReaderItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReaderItemView.h; sourceTree = "<group>"; };
+		4A47E0C9212695BC00DC9F28 /* ReaderItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReaderItemView.m; sourceTree = "<group>"; };
+		4A47E0CB21269CF400DC9F28 /* OperationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationViewController.xib; sourceTree = "<group>"; };
+		4A8E5DC720C8D613007DFAD1 /* ListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListView.h; sourceTree = "<group>"; };
+		4A8E5DC820C8D613007DFAD1 /* ListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListView.m; sourceTree = "<group>"; };
 		4A9C102B1FC6A6A500A50FAD /* OperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationViewController.h; sourceTree = "<group>"; };
 		4A9C102C1FC6A6A500A50FAD /* OperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationViewController.m; sourceTree = "<group>"; };
-		4A9C102E1FC6D06800A50FAD /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
-		4A9C102F1FC6D06800A50FAD /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
-		4A9C10301FC6D06800A50FAD /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
-		4A9C103A1FC6E32400A50FAD /* CollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionView.h; sourceTree = "<group>"; };
-		4A9C103B1FC6E32400A50FAD /* CollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionView.m; sourceTree = "<group>"; };
 		4A9C10421FC6E81400A50FAD /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		4A9C10431FC6E81400A50FAD /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		4A9C104A1FC7C38E00A50FAD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -148,19 +156,14 @@
 		4A9C10971FC816BF00A50FAD /* DeviceInfoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoTableViewController.m; sourceTree = "<group>"; };
 		4A9C10991FC8178A00A50FAD /* DeviceInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceInfoModel.h; sourceTree = "<group>"; };
 		4A9C109A1FC8178A00A50FAD /* DeviceInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoModel.m; sourceTree = "<group>"; };
-		4A9C109C1FC91A3F00A50FAD /* TabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarViewController.h; sourceTree = "<group>"; };
-		4A9C109D1FC91A3F00A50FAD /* TabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabbarViewController.m; sourceTree = "<group>"; };
 		4A9C109F1FC91A6D00A50FAD /* Tabbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tabbar.h; sourceTree = "<group>"; };
 		4A9C10A01FC91A6D00A50FAD /* Tabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tabbar.m; sourceTree = "<group>"; };
 		4A9C10A21FC91F8A00A50FAD /* Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
 		4A9C10A31FC91F8A00A50FAD /* Button.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Button.m; sourceTree = "<group>"; };
-		4A9C10A81FC92B2B00A50FAD /* CommandView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandView.h; sourceTree = "<group>"; };
-		4A9C10A91FC92B2B00A50FAD /* CommandView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommandView.m; sourceTree = "<group>"; };
-		4ABE85FE1FEB909F00317AEC /* ft301u.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ft301u.h; sourceTree = "<group>"; };
-		4ABE85FF1FEB909F00317AEC /* ReaderInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderInterface.h; sourceTree = "<group>"; };
-		4ABE86001FEB909F00317AEC /* winscard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = winscard.h; sourceTree = "<group>"; };
-		4ABE86011FEB909F00317AEC /* wintypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wintypes.h; sourceTree = "<group>"; };
-		4ADE18A2200C3E3400481B39 /* libiRockey301_ccid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiRockey301_ccid.a; sourceTree = "<group>"; };
+		4AEF93FB20BE77E300A18758 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4AEF93FC20BE77E300A18758 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4AEF940120BE83C500A18758 /* view.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = view.h; sourceTree = "<group>"; };
+		4AEF940220BE83C500A18758 /* view.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = view.m; sourceTree = "<group>"; };
 		672B0EC61FC2C12A000CBEDC /* hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hex.h; sourceTree = "<group>"; };
 		672B0EC71FC2C12A000CBEDC /* hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hex.m; sourceTree = "<group>"; };
 		672B0ECB1FC2C12A000CBEDC /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 		678D0CA31FC26D4700D05AB7 /* iReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		678D0CA71FC26D4700D05AB7 /* iReaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iReaderUITests.m; sourceTree = "<group>"; };
 		678D0CA91FC26D4700D05AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5FD3693215F90D8002642DB /* libiRockey301_ccid_V3.5.29_Debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiRockey301_ccid_V3.5.29_Debug.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ADE18A3200C3E3400481B39 /* libiRockey301_ccid.a in Frameworks */,
+				B5FD3694215F90D8002642DB /* libiRockey301_ccid_V3.5.29_Debug.a in Frameworks */,
 				672B0EE11FC2C1CA000CBEDC /* ExternalAccessory.framework in Frameworks */,
 				672B0EDF1FC2C1C3000CBEDC /* CoreBluetooth.framework in Frameworks */,
 			);
@@ -214,44 +218,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A1633781FC446AF001F4572 /* SelectReaderType */ = {
-			isa = PBXGroup;
-			children = (
-				4A1633791FC446AF001F4572 /* Controller */,
-				4A16337C1FC446AF001F4572 /* Mode */,
-				4A16337D1FC446AF001F4572 /* View */,
-			);
-			path = SelectReaderType;
-			sourceTree = "<group>";
-		};
-		4A1633791FC446AF001F4572 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				4A16337A1FC446AF001F4572 /* SelecteReaderTypeController.h */,
-				4A16337B1FC446AF001F4572 /* SelecteReaderTypeController.mm */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		4A16337C1FC446AF001F4572 /* Mode */ = {
-			isa = PBXGroup;
-			children = (
-				4A1633841FC446CE001F4572 /* ReaderModel.h */,
-				4A1633851FC446CE001F4572 /* ReaderModel.m */,
-			);
-			path = Mode;
-			sourceTree = "<group>";
-		};
-		4A16337D1FC446AF001F4572 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4A16337E1FC446AF001F4572 /* ReaderTypeTableViewCell.h */,
-				4A16337F1FC446AF001F4572 /* ReaderTypeTableViewCell.m */,
-				4A1633801FC446AF001F4572 /* ReaderTypeTableViewCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		4A1633D51FC591CC001F4572 /* ScanDevice */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,15 +231,30 @@
 			children = (
 				4A1633F31FC596E0001F4572 /* ScanDeviceController.h */,
 				4A1633F41FC596E0001F4572 /* ScanDeviceController.mm */,
+				4A47E0C321265DFD00DC9F28 /* ScanDeviceController.xib */,
+				4A3F414120E21A0200DBE8F2 /* HelpVisualEffectView.h */,
+				4A3F414220E21A0200DBE8F2 /* HelpVisualEffectView.m */,
+				4A47E0C8212695BC00DC9F28 /* ReaderItemView.h */,
+				4A47E0C9212695BC00DC9F28 /* ReaderItemView.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A47E0B52125915D00DC9F28 /* WelCome */ = {
+			isa = PBXGroup;
+			children = (
+				4A47E0BE2125986400DC9F28 /* WelcomeController.h */,
+				4A47E0BF2125986400DC9F28 /* WelcomeController.m */,
+				4A47E0C02125986400DC9F28 /* WelcomeController.xib */,
+			);
+			path = WelCome;
 			sourceTree = "<group>";
 		};
 		4A9C10251FC6A5F900A50FAD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				4ABE85FC1FEB909F00317AEC /* SDK */,
-				4A1633781FC446AF001F4572 /* SelectReaderType */,
+				4A47E0B52125915D00DC9F28 /* WelCome */,
 				4A1633D51FC591CC001F4572 /* ScanDevice */,
 				4A9C10271FC6A67000A50FAD /* OperationController */,
 				4A9C10331FC6E10500A50FAD /* DeviceInfo */,
@@ -305,8 +286,12 @@
 			children = (
 				4A9C102B1FC6A6A500A50FAD /* OperationViewController.h */,
 				4A9C102C1FC6A6A500A50FAD /* OperationViewController.m */,
-				4A9C109C1FC91A3F00A50FAD /* TabbarViewController.h */,
-				4A9C109D1FC91A3F00A50FAD /* TabbarViewController.m */,
+				4A47E0CB21269CF400DC9F28 /* OperationViewController.xib */,
+				4A3F414620E33B7A00DBE8F2 /* CollectionViewCell.h */,
+				4A3F414720E33B7A00DBE8F2 /* CollectionViewCell.m */,
+				4A3F414820E33B7A00DBE8F2 /* CollectionViewCell.xib */,
+				4A8E5DC720C8D613007DFAD1 /* ListView.h */,
+				4A8E5DC820C8D613007DFAD1 /* ListView.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -323,15 +308,8 @@
 		4A9C102A1FC6A67000A50FAD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4A9C102E1FC6D06800A50FAD /* CollectionViewCell.h */,
-				4A9C102F1FC6D06800A50FAD /* CollectionViewCell.m */,
-				4A9C10301FC6D06800A50FAD /* CollectionViewCell.xib */,
-				4A9C103A1FC6E32400A50FAD /* CollectionView.h */,
-				4A9C103B1FC6E32400A50FAD /* CollectionView.m */,
 				4A9C109F1FC91A6D00A50FAD /* Tabbar.h */,
 				4A9C10A01FC91A6D00A50FAD /* Tabbar.m */,
-				4A9C10A81FC92B2B00A50FAD /* CommandView.h */,
-				4A9C10A91FC92B2B00A50FAD /* CommandView.m */,
 				4A9C10A21FC91F8A00A50FAD /* Button.h */,
 				4A9C10A31FC91F8A00A50FAD /* Button.m */,
 			);
@@ -483,10 +461,10 @@
 		4ABE85FD1FEB909F00317AEC /* include */ = {
 			isa = PBXGroup;
 			children = (
-				4ABE85FE1FEB909F00317AEC /* ft301u.h */,
-				4ABE85FF1FEB909F00317AEC /* ReaderInterface.h */,
-				4ABE86001FEB909F00317AEC /* winscard.h */,
-				4ABE86011FEB909F00317AEC /* wintypes.h */,
+				1A5B5D772011F5AB00FDA151 /* ft301u.h */,
+				1A5B5D742011F5AB00FDA151 /* ReaderInterface.h */,
+				1A5B5D762011F5AB00FDA151 /* winscard.h */,
+				1A5B5D752011F5AB00FDA151 /* wintypes.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -494,7 +472,7 @@
 		4ABE86021FEB909F00317AEC /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				4ADE18A2200C3E3400481B39 /* libiRockey301_ccid.a */,
+				B5FD3693215F90D8002642DB /* libiRockey301_ccid_V3.5.29_Debug.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -545,6 +523,10 @@
 			isa = PBXGroup;
 			children = (
 				4A9C10251FC6A5F900A50FAD /* Classes */,
+				4AEF93FB20BE77E300A18758 /* ViewController.h */,
+				4AEF93FC20BE77E300A18758 /* ViewController.m */,
+				4AEF940120BE83C500A18758 /* view.h */,
+				4AEF940220BE83C500A18758 /* view.m */,
 				4A9C10261FC6A60700A50FAD /* Other */,
 				678D0C821FC26D4500D05AB7 /* Supporting Files */,
 			);
@@ -697,16 +679,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A1633831FC446AF001F4572 /* ReaderTypeTableViewCell.xib in Resources */,
 				678D0C921FC26D4600D05AB7 /* LaunchScreen.storyboard in Resources */,
-				4A9C10321FC6D06800A50FAD /* CollectionViewCell.xib in Resources */,
 				4A9C107B1FC7C38E00A50FAD /* LICENSE in Resources */,
 				678D0C8F1FC26D4600D05AB7 /* Assets.xcassets in Resources */,
+				4A3F414A20E33B7A00DBE8F2 /* CollectionViewCell.xib in Resources */,
 				4A9C10951FC8078200A50FAD /* flash.txt in Resources */,
 				678D0C8D1FC26D4600D05AB7 /* Main.storyboard in Resources */,
 				4A9C10901FC7C38E00A50FAD /* README.md in Resources */,
 				4A9C108A1FC7C38E00A50FAD /* MJRefresh.bundle in Resources */,
+				4A47E0CC21269CF400DC9F28 /* OperationViewController.xib in Resources */,
+				4A47E0C22125986400DC9F28 /* WelcomeController.xib in Resources */,
 				672B0ED91FC2C12A000CBEDC /* SVProgressHUD.bundle in Resources */,
+				4A47E0C421265DFD00DC9F28 /* ScanDeviceController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,25 +715,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A3F414320E21A0200DBE8F2 /* HelpVisualEffectView.m in Sources */,
 				4A9C10811FC7C38E00A50FAD /* MJRefreshAutoGifFooter.m in Sources */,
 				4A9C10891FC7C38E00A50FAD /* MJRefreshStateHeader.m in Sources */,
-				4A9C10AA1FC92B2B00A50FAD /* CommandView.m in Sources */,
 				4A9C10861FC7C38E00A50FAD /* MJRefreshBackStateFooter.m in Sources */,
+				4A3F414920E33B7A00DBE8F2 /* CollectionViewCell.m in Sources */,
 				4A9C102D1FC6A6A500A50FAD /* OperationViewController.m in Sources */,
-				4A1633821FC446AF001F4572 /* ReaderTypeTableViewCell.m in Sources */,
 				4A9C108C1FC7C38E00A50FAD /* NSBundle+MJRefresh.m in Sources */,
 				4A9C10441FC6E81400A50FAD /* Tools.m in Sources */,
-				4A9C103C1FC6E32400A50FAD /* CollectionView.m in Sources */,
 				4A9C10841FC7C38E00A50FAD /* MJRefreshBackGifFooter.m in Sources */,
 				4A9C10831FC7C38E00A50FAD /* MJRefreshAutoStateFooter.m in Sources */,
 				4A9C10881FC7C38E00A50FAD /* MJRefreshNormalHeader.m in Sources */,
 				4A9C10931FC8024600A50FAD /* commandModel.m in Sources */,
+				4A47E0CA212695BC00DC9F28 /* ReaderItemView.m in Sources */,
+				4AEF940320BE83C500A18758 /* view.m in Sources */,
 				4A9C108F1FC7C38E00A50FAD /* UIView+MJExtension.m in Sources */,
 				672B0EDA1FC2C12A000CBEDC /* SVProgressHUD.m in Sources */,
 				678D0C871FC26D4600D05AB7 /* AppDelegate.m in Sources */,
 				4A9C108B1FC7C38E00A50FAD /* MJRefreshConst.m in Sources */,
 				4A9C109B1FC8178A00A50FAD /* DeviceInfoModel.m in Sources */,
-				4A9C10311FC6D06800A50FAD /* CollectionViewCell.m in Sources */,
+				4AEF93FD20BE77E300A18758 /* ViewController.m in Sources */,
 				678D0C841FC26D4600D05AB7 /* main.m in Sources */,
 				4A9C10821FC7C38E00A50FAD /* MJRefreshAutoNormalFooter.m in Sources */,
 				672B0ED81FC2C12A000CBEDC /* SVIndefiniteAnimatedView.m in Sources */,
@@ -758,18 +743,17 @@
 				4A9C107D1FC7C38E00A50FAD /* MJRefreshBackFooter.m in Sources */,
 				4A9C107F1FC7C38E00A50FAD /* MJRefreshFooter.m in Sources */,
 				4A9C108E1FC7C38E00A50FAD /* UIScrollView+MJRefresh.m in Sources */,
-				4A1633811FC446AF001F4572 /* SelecteReaderTypeController.mm in Sources */,
 				4A9C10801FC7C38E00A50FAD /* MJRefreshHeader.m in Sources */,
 				4A9C10851FC7C38E00A50FAD /* MJRefreshBackNormalFooter.m in Sources */,
 				4A9C10981FC816BF00A50FAD /* DeviceInfoTableViewController.m in Sources */,
+				4A47E0C12125986400DC9F28 /* WelcomeController.m in Sources */,
+				4A8E5DC920C8D613007DFAD1 /* ListView.m in Sources */,
 				4A9C107E1FC7C38E00A50FAD /* MJRefreshComponent.m in Sources */,
 				4A1633F51FC596E0001F4572 /* ScanDeviceController.mm in Sources */,
 				4A9C10A41FC91F8A00A50FAD /* Button.m in Sources */,
 				4A9C108D1FC7C38E00A50FAD /* UIScrollView+MJExtension.m in Sources */,
 				4A9C10871FC7C38E00A50FAD /* MJRefreshGifHeader.m in Sources */,
-				4A9C109E1FC91A3F00A50FAD /* TabbarViewController.m in Sources */,
 				4A9C107C1FC7C38E00A50FAD /* MJRefreshAutoFooter.m in Sources */,
-				4A1633861FC446CE001F4572 /* ReaderModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,46 +903,64 @@
 		678D0CAD1FC26D4700D05AB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					arm64,
+					armv7,
+					armv7s,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S47T4UESP3;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = iReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/iReader/Lib/commFramework",
-					"$(PROJECT_DIR)/iReader/Lib",
+					"\"$(SRCROOT)/../../lib/SDK/lib\"",
+					"\"$(SRCROOT)/../../tags/Combo V3.5.22/SDK/lib\"",
 					"$(PROJECT_DIR)/iReader/SDK/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.iReader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.iR301v1.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
 		678D0CAE1FC26D4700D05AB7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					arm64,
+					armv7,
+					armv7s,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S47T4UESP3;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = iReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/iReader/Lib/commFramework",
-					"$(PROJECT_DIR)/iReader/Lib",
+					"\"$(SRCROOT)/../../lib/SDK/lib\"",
+					"\"$(SRCROOT)/../../tags/Combo V3.5.22/SDK/lib\"",
 					"$(PROJECT_DIR)/iReader/SDK/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.iReader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.iR301v1.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};

@@ -3,7 +3,7 @@
 /**
  *  Delegate which is used to notify the appliation layer when the reader is attached/detached..
  */
-typedef enum READERTYPE{
+typedef enum FTREADERTYPE{
     READER_UNKOWN = 0,
     READER_iR301U_DOCK,
     READER_iR301U_LIGHTING,
@@ -11,13 +11,13 @@ typedef enum READERTYPE{
     READER_bR301B, //bR301 C63
     READER_bR301BLE,
     READER_bR500
-}READERTYPE;
+}FTREADERTYPE;
 
-typedef enum DEVICETYPE{
+typedef enum FTDEVICETYPE{
     EMPTY_DEVICE = 0,
     IR301_AND_BR301 = 1,
     BR301BLE_AND_BR500 = 2,
-}DEVICETYPE;
+}FTDEVICETYPE;
 
 @protocol ReaderInterfaceDelegate<NSObject>
 @required
@@ -30,9 +30,11 @@ typedef enum DEVICETYPE{
  */
 - (void) findPeripheralReader:(NSString *)readerName;
 
-- (void) readerInterfaceDidChange:(BOOL)attached;
+- (void) readerInterfaceDidChange:(BOOL)attached bluetoothID:(NSString *)bluetoothID;
 
 - (void) cardInterfaceDidDetach:(BOOL)attached;
+
+- (void) didGetBattery:(NSInteger)battery;
 @end
 
 
@@ -80,6 +82,11 @@ typedef enum DEVICETYPE{
  */
 - (void)disConnectCurrentPeripheralReader;
 
+/**
+ *set auto pair YES or NOT,default is YES
+ */
+- (void)setAutoPair:(BOOL)autoPair;
+
 @end
 
 /**
@@ -87,18 +94,18 @@ typedef enum DEVICETYPE{
  *  Now it supports IR301 and BR301. It must be set one type before you use other function.
  */
 
-@interface DeviceType : NSObject
+@interface FTDeviceType : NSObject
 
 /**
  *  Set an device type you will use.
  *  @param deviceType is the type you will use. Now it supports IR301 and BR301.
  */
-+(void)setDeviceType:(DEVICETYPE) deviceType;
++(void)setDeviceType:(FTDEVICETYPE) deviceType;
 
 /**
  *  Get the device type which you are using now.
  *  @return IR301 or BR301.
  */
-+(DEVICETYPE)getDeviceType;
++(FTDEVICETYPE)getDeviceType;
 
 @end

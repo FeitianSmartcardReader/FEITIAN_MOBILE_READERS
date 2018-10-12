@@ -9,7 +9,6 @@
 #import "ReaderTypeTableViewCell.h"
 #import "ReaderModel.h"
 #import "ScanDeviceController.h"
-#import "ReaderInterface.h"
 
 static NSString *cellID = @"SelectReaderCell";
 
@@ -38,7 +37,7 @@ static NSString *cellID = @"SelectReaderCell";
 
 -(void)formReaderTypeArray
 {
-    NSArray *titleArr = @[@"iR301 & bR301", @"bR301FC4 & bR500"];
+    NSArray *titleArr = @[@"iR301 & bR301", @"bR301BLE & bR500"];
     NSArray *imageArr = @[@"iR301bR301", @"bR500"];
     
     for(NSInteger i = 0 ; i < titleArr.count; i++){
@@ -67,11 +66,11 @@ static NSString *cellID = @"SelectReaderCell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row == 0){
-        [DeviceType setDeviceType:IR301_AND_BR301];
-    }else{
-        [DeviceType setDeviceType:BR301BLE_AND_BR500];
-    }
+//    if(indexPath.row == 0){
+//        [DeviceType setDeviceType:IR301_AND_BR301];
+//    }else{
+//        [DeviceType setDeviceType:BR301BLE_AND_BR500];
+//    }
     
     [self performSegueWithIdentifier:@"scanDevice" sender:nil];
 }
