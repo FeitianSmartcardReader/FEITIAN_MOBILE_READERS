@@ -1,4 +1,9 @@
 History:
+2018/10/12
+	- Update iOS SDK, release version is 3.5.29
+	- Update iOS OC Demo code, support all feitian reader, and improve UI
+	- 3.5.29 support Autopair or manual pair with bR301BLE and bR500
+	- 3.5.29 support get battery status for bR500, bR301BLE not support yet, we are working to add this feature
 2018/6/25
 	- Update iOS SDK, release version is 3.5.16
 	- After call SCardEstablishContext, the scan thread will start scan the BLE device
