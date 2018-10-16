@@ -1,4 +1,6 @@
 History:
+2018/10/15
+	- Update iOS SDK, add iReader basic demo to github
 2018/10/12
 	- Update iOS SDK, release version is 3.5.29
 	- Update iOS OC Demo code, support all feitian reader, and improve UI
