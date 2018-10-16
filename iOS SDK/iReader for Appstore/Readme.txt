@@ -1,3 +1,5 @@
+2018/10/16
+	Add OC basic demo, which only show few API functions in single view, avoid developer look the function simply.
 2018/10/12
 	OC demo using for Appstore, the binary can download from:
 	https://itunes.apple.com/us/app/irockey301/id525954151?mt=8

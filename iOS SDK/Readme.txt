@@ -1,3 +1,6 @@
+2018/10/15
+	Rename iReader OC demo to "iReader for Appstore", which only using for Appstore
+	Add iReader_Basic for developer, put APIs in single view
 2018/10/12
 	Update iOS demo code - only objective-C
 	1. Redesign the UI to meet latest iPhone style
