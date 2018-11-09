@@ -1,3 +1,12 @@
+Get Start:
+
+Download demo application from Appstore:
+https://itunes.apple.com/us/app/smartcard-reader/id525954151?mt=8
+
+Download demo application APK file for Android:
+https://github.com/FeitianSmartcardReader/FEITIAN_MOBILE_READERS/raw/master/Android%20SDK/BIN/FTReaderStandard.apk
+
+
 History:
 2018/10/15
 	- Update iOS SDK, add iReader basic demo to github
@@ -21,10 +30,3 @@ History:
 	- Update Lib to 3.5.9, modify features of bR301BLE and bR500, modify SCardListReader API, this is debug version, and not release yet, only for test, once release will update GIT, thanks for your support.
 2018/1/15 
 	- Update iOS lib to 3.5.8 and Update demo code(put two demos in one SDK)
-	
-	
-Download demo application from Appstore:
-https://itunes.apple.com/us/app/smartcard-reader/id525954151?mt=8
-
-Download demo application APK file for Android:
-https://github.com/FeitianSmartcardReader/FEITIAN_MOBILE_READERS/raw/master/Android%20SDK/BIN/FTReaderStandard.apk
