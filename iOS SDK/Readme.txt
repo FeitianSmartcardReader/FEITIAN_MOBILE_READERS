@@ -1,3 +1,13 @@
+2018/12/04
+	Update SDK to 3.5.38
+	1. Fix a bug when get bR301 firmware version error 
+ 	2. Modify the initial value when using auto pair feature for bR301BLE and bR500
+	3. Improve SCardStatus API
+	4. Fix get SN error issue and fix a bug of length value when read the flash
+	5. Improve thread safe, improve the stability  of card slot event
+	6. Improve FtWriteFlash and FtReadFlash API
+	7. Fix bug when get bR301 hardware version issue
+	8. Improve SCardEstablishContext and SCardReleaseContext API
 2018/10/15
 	Rename iReader OC demo to "iReader for Appstore", which only using for Appstore
 	Add iReader_Basic for developer, put APIs in single view
