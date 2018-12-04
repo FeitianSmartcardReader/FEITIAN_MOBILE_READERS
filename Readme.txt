@@ -8,6 +8,9 @@ https://github.com/FeitianSmartcardReader/FEITIAN_MOBILE_READERS/raw/master/Andr
 
 
 History:
+
+2018/12/04
+	- Update iOS SDK, a minor update of demo code
 2018/10/15
 	- Update iOS SDK, add iReader basic demo to github
 2018/10/12
