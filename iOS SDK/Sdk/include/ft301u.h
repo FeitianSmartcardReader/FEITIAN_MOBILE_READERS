@@ -30,19 +30,21 @@ extern "C"
      The function read the firmware and hardware Version.
      
      */
-    LONG FtGetDevVer( SCARDCONTEXT hContext,char *firmwareRevision,char *hardwareRevision);
+    LONG FtGetDevVer(SCARDCONTEXT hContext,char *firmwareRevision,char *hardwareRevision);
+    
+    
     /*
      Function: FtGetLibVersion
      
      Parameters:
      buffer :buffer of libVersion
      
-     
      Description:
      Get the Current Lib Version
      
      */
     void FtGetLibVersion (char *buffer);
+    
     
     /*
      Function: FtSetTimeout
@@ -57,33 +59,38 @@ extern "C"
      */
     LONG FtSetTimeout(SCARDCONTEXT hContext, DWORD dwTimeout);
     
+    
     /*
      Function: FtWriteFlash
      
      Parameters:
-     hCard          IN 		Connection made from SCardConnect(Ignore this parameter and just set to zero in iOS system)
+     hContext       IN      Connection context to the PC/SC Resource Manager
      bOffset		IN		Offset of flash to write
      blength		IN		The length of data
      buffer       	IN		The data for write
      
      Description:
      This function userd to write data to flash.
+     
      */
-    LONG FtWriteFlash(SCARDCONTEXT hContext,unsigned int bOffset, unsigned int blength,unsigned char *buffer);
+    LONG FtWriteFlash(SCARDCONTEXT hContext,unsigned int bOffset, unsigned char blength,unsigned char *buffer);
+    
+    
     /*
      Function: FtReadFlash
      
      Parameters:
-     hCard             IN         Connection made from SCardConnect(Ignore this parameter and just set to zero in iOS system)
+     hContext       IN        Connection context to the PC/SC Resource Manager
      bOffset        IN        Offset of flash to write
-     blength        IN/OUT  IN:The length of data want to read;
-                            OUT:the real length of readed data;
-     buffer           OUT        The read data
+     blength        IN/OUT    IN:The length of data want to read;
+                              OUT:the real length of readed data;
+     buffer         OUT       The read data
      
      Description:
      This function used to read data from flash.
+     
      */
-    LONG FtReadFlash(SCARDCONTEXT hContext,unsigned int bOffset, unsigned int* blength,unsigned char *buffer);
+    LONG FtReadFlash(SCARDCONTEXT hContext,unsigned int bOffset, unsigned char* blength,unsigned char *buffer);
     
 //======================================================================================
 //=============================ir301 function===========================================
@@ -93,31 +100,36 @@ extern "C"
     Function: FtGetSerialNum
  
     Parameters:
-    hCard 			IN 		Connection made from SCardConnect(Ignore this parameter and just set to zero in iOS system)
+    hContext        IN      Connection context to the PC/SC Resource Manager
     length			IN		length of buffer(>=8)
     buffer       	OUT		Serial number
  
     Description:
     This function userd to get serial number of iR301.
+     
     */
-    
-    LONG FtGetSerialNum(SCARDHANDLE hCard, unsigned int  *length,
+    LONG FtGetSerialNum(SCARDCONTEXT hContext, unsigned int  *length,
                                       char * buffer);
+    
+    
     /* Function: FT_AutoTurnOffReader 
      
      Parameters: 
      isOpen IN the switch is able to open/close the automatic shutdown function of reader. 
      
      Description: 
-     The function is able to open/close the automatic shutdown function of reader. */
+     The function is able to open/close the automatic shutdown function of reader.
+     
+     */
     LONG FT_AutoTurnOffReader(bool isOpen);
+    
     
     //for dukpt
     /*
      Function: FtDukptInit
      
      Parameters:
-     hCard 		IN 	 Connection made from SCardConnect(Ignore this parameter and just set to zero in iOS system)
+     hContext   IN   Connection context to the PC/SC Resource Manager
      encBuf 	IN	 Ciphertext use TDES_ECB_PKCS7/AES_ECB_PKCS7 (See "Key C" )
      nLen       IN	 encBuf length(40(TDES_ECB_PKCS7 ciphertext length) 48(AES_ECB_PKCS7 ciphertext length))
      
@@ -125,14 +137,14 @@ extern "C"
      Init iR301 new ipek and ksn for dukpt.
      
      */
-    LONG FtDukptInit(SCARDHANDLE hCard,unsigned char *encBuf,unsigned int nLen);
+    LONG FtDukptInit(SCARDCONTEXT hContext,unsigned char *encBuf,unsigned int nLen);
     
     
     /*
      Function: FtDukptSetEncMod
      
      Parameters:
-     hCard 		IN 	 Connection made from SCardConnect(Ignore this parameter and just set to zero in iOS system)
+     hContext   IN   Connection context to the PC/SC Resource Manager
      bEncrypt 	IN	 1: SCardTransmit  Encrypted    
                      0:SCardTransmit not Encrypted
      
@@ -146,19 +158,17 @@ extern "C"
      Set the encryption mode of iR301 for dukpt.
      
      */
-    LONG FtDukptSetEncMod(SCARDHANDLE hCard,
+    LONG FtDukptSetEncMod(SCARDCONTEXT hContext,
                           unsigned int bEncrypt,
                           unsigned int bEncFunc,
                           unsigned int bEncType);
-    
-    
     
     
     /*
      Function: FtDukptGetKSN
      
      Parameters:
-     hCard 		IN      Connection made from SCardConnect(Ignore this parameter and just set to zero in iOS system)
+     hContext   IN      Connection context to the PC/SC Resource Manager
      pnlength 	INOUT	IN: The size of ksn buffer(>=10) 
                         OUT: The real size(if successful has been 10)
      buffer 	OUT     Buffer of ksn
@@ -167,18 +177,18 @@ extern "C"
      Get Ksn from iR301 for dukpt.
      
      */
+    LONG FtDukptGetKSN(SCARDCONTEXT hContext,unsigned int * pnlength,unsigned char *buffer);
     
-    LONG FtDukptGetKSN(SCARDHANDLE hCard,unsigned int * pnlength,unsigned char *buffer);
+    
     /*
      Function: FtDidEnterBackground
      
      Parameters:
      bDidEnter 	IN	 must be set 1
-                     
      
      Description:
      Use this method to release monitor thread of reader status
-     
+    
      */
     void FtDidEnterBackground(unsigned int bDidEnter);
     
@@ -193,7 +203,6 @@ extern "C"
      Get current Reader Type
      
      */
-    
     LONG FtGetCurrentReaderType(unsigned int *readerType);
     
 //======================================================================================
@@ -259,7 +268,7 @@ extern "C"
      Parameters:
      hContext         IN         Connection context to the PC/SC Resource Manager
      length           OUT        length of accessory mode name
-     buffer           OUT        accessory model name
+     buffer           OUT        accessory mode name
      
      Description:
      This function used to get accessory manufacturer

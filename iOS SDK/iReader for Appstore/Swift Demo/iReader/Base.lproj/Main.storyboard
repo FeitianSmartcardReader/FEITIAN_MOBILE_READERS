@@ -10,39 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--select reader type-->
-        <scene sceneID="hU5-9A-rws">
-            <objects>
-                <tableViewController id="qle-8V-VlN" customClass="SelectReaderTypeController" customModule="iReader_swift" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="utZ-iJ-Dkr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="readerCell" id="kge-dw-rVf">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kge-dw-rVf" id="Mu5-1i-Mld">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="qle-8V-VlN" id="9EL-cK-A5D"/>
-                            <outlet property="delegate" destination="qle-8V-VlN" id="jog-kY-SFg"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="select reader type" id="CcF-XB-dwU"/>
-                    <connections>
-                        <segue destination="TMO-xv-YFC" kind="show" identifier="scanDevice" id="YFQ-ef-SCh"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CeU-KU-RK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-70" y="99"/>
-        </scene>
-        <!--Scan Device Controller-->
+        <!--list reader-->
         <scene sceneID="rk3-bA-0pp">
             <objects>
                 <tableViewController id="TMO-xv-YFC" customClass="ScanDeviceController" customModule="iReader_swift" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,6 +33,7 @@
                             <outlet property="delegate" destination="TMO-xv-YFC" id="wxz-aa-ao9"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="list reader" id="LyS-S9-ac6"/>
                     <connections>
                         <segue destination="cmR-SQ-hPR" kind="show" identifier="sendAPDU" id="PhA-cB-iPu"/>
                     </connections>
@@ -286,12 +255,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="qle-8V-VlN" kind="relationship" relationship="rootViewController" id="a1a-7j-Z3I"/>
+                        <segue destination="TMO-xv-YFC" kind="relationship" relationship="rootViewController" id="X3e-Zj-scY"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FP1-Sb-LAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-823" y="99"/>
+            <point key="canvasLocation" x="-170" y="99"/>
         </scene>
     </scenes>
     <resources>

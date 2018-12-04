@@ -13,13 +13,11 @@
 		4A16FDB61FF5F12B00B0BB13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A16FDB41FF5F12B00B0BB13 /* LaunchScreen.storyboard */; };
 		4A16FDC11FF5F12B00B0BB13 /* iReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16FDC01FF5F12B00B0BB13 /* iReaderTests.swift */; };
 		4A16FDCC1FF5F12B00B0BB13 /* iReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16FDCB1FF5F12B00B0BB13 /* iReaderUITests.swift */; };
-		4A16FDDA1FF5F19000B0BB13 /* SelectReaderTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16FDD91FF5F19000B0BB13 /* SelectReaderTypeController.swift */; };
-		4A16FDDD1FF609DB00B0BB13 /* ReaderTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16FDDB1FF609DB00B0BB13 /* ReaderTypeTableViewCell.swift */; };
-		4A16FDDE1FF609DB00B0BB13 /* ReaderTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A16FDDC1FF609DB00B0BB13 /* ReaderTypeTableViewCell.xib */; };
 		4A16FDE01FF6106E00B0BB13 /* ScanDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16FDDF1FF6106E00B0BB13 /* ScanDeviceController.swift */; };
 		4A16FDE21FF6268800B0BB13 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16FDE11FF6268800B0BB13 /* TabbarViewController.swift */; };
 		4A16FDE41FF63D2E00B0BB13 /* CardCommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16FDE31FF63D2E00B0BB13 /* CardCommandViewController.swift */; };
 		4A16FDE61FFC89AF00B0BB13 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16FDE51FFC89AF00B0BB13 /* Const.swift */; };
+		4A4DA1362100569B00E8472C /* libiRockey301_ccid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4DA1352100569B00E8472C /* libiRockey301_ccid.a */; };
 		4A9926A11FFE1AC1007C71B0 /* CommandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9926A01FFE1AC1007C71B0 /* CommandView.swift */; };
 		4A9927E61FFF53ED007C71B0 /* DeviceInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9927E51FFF53ED007C71B0 /* DeviceInfoTableViewController.swift */; };
 		4A99A6C62003487300DE3667 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A99A6C22003487300DE3667 /* SVIndefiniteAnimatedView.m */; };
@@ -30,7 +28,6 @@
 		4A99A6CF20034A3B00DE3667 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A99A6CE20034A3A00DE3667 /* libc++.tbd */; };
 		4A99A6EC2005DEE900DE3667 /* flash.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A99A6E92005DEE800DE3667 /* flash.txt */; };
 		4A99A6ED2005DEE900DE3667 /* hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A99A6EB2005DEE900DE3667 /* hex.m */; };
-		4AAD37D720203A1F0082B02D /* libiRockey301_ccid_Debug_V3.5.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAD37D620203A1F0082B02D /* libiRockey301_ccid_Debug_V3.5.9.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,13 +64,11 @@
 		4A16FDC71FF5F12B00B0BB13 /* iReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A16FDCB1FF5F12B00B0BB13 /* iReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iReaderUITests.swift; sourceTree = "<group>"; };
 		4A16FDCD1FF5F12B00B0BB13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A16FDD91FF5F19000B0BB13 /* SelectReaderTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectReaderTypeController.swift; sourceTree = "<group>"; };
-		4A16FDDB1FF609DB00B0BB13 /* ReaderTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTypeTableViewCell.swift; sourceTree = "<group>"; };
-		4A16FDDC1FF609DB00B0BB13 /* ReaderTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReaderTypeTableViewCell.xib; sourceTree = "<group>"; };
 		4A16FDDF1FF6106E00B0BB13 /* ScanDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDeviceController.swift; sourceTree = "<group>"; };
 		4A16FDE11FF6268800B0BB13 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		4A16FDE31FF63D2E00B0BB13 /* CardCommandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCommandViewController.swift; sourceTree = "<group>"; };
 		4A16FDE51FFC89AF00B0BB13 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		4A4DA1352100569B00E8472C /* libiRockey301_ccid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiRockey301_ccid.a; path = ../../../../lib/SDK/lib/libiRockey301_ccid.a; sourceTree = "<group>"; };
 		4A9926A01FFE1AC1007C71B0 /* CommandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandView.swift; sourceTree = "<group>"; };
 		4A9927E51FFF53ED007C71B0 /* DeviceInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoTableViewController.swift; sourceTree = "<group>"; };
 		4A99A6BC200345CD00DE3667 /* iReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iReader-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -88,7 +83,6 @@
 		4A99A6E92005DEE800DE3667 /* flash.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flash.txt; sourceTree = "<group>"; };
 		4A99A6EA2005DEE900DE3667 /* hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hex.h; sourceTree = "<group>"; };
 		4A99A6EB2005DEE900DE3667 /* hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hex.m; sourceTree = "<group>"; };
-		4AAD37D620203A1F0082B02D /* libiRockey301_ccid_Debug_V3.5.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiRockey301_ccid_Debug_V3.5.9.a; path = include/libiRockey301_ccid_Debug_V3.5.9.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +91,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A99A6CC200348F700DE3667 /* ExternalAccessory.framework in Frameworks */,
-				4AAD37D720203A1F0082B02D /* libiRockey301_ccid_Debug_V3.5.9.a in Frameworks */,
 				4A99A6CF20034A3B00DE3667 /* libc++.tbd in Frameworks */,
+				4A4DA1362100569B00E8472C /* libiRockey301_ccid.a in Frameworks */,
 				4A99A6CD200348FA00DE3667 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,14 +139,11 @@
 			isa = PBXGroup;
 			children = (
 				1A37E1AF2010932300F58015 /* ft301u.h */,
-				4AAD37D620203A1F0082B02D /* libiRockey301_ccid_Debug_V3.5.9.a */,
 				1A37E1AB2010932200F58015 /* ReaderInterface.h */,
 				1A37E1AC2010932200F58015 /* winscard.h */,
 				1A37E1AE2010932200F58015 /* wintypes.h */,
+				4A4DA1352100569B00E8472C /* libiRockey301_ccid.a */,
 				4A16FDAB1FF5F12B00B0BB13 /* AppDelegate.swift */,
-				4A16FDD91FF5F19000B0BB13 /* SelectReaderTypeController.swift */,
-				4A16FDDB1FF609DB00B0BB13 /* ReaderTypeTableViewCell.swift */,
-				4A16FDDC1FF609DB00B0BB13 /* ReaderTypeTableViewCell.xib */,
 				4A16FDDF1FF6106E00B0BB13 /* ScanDeviceController.swift */,
 				4A16FDE11FF6268800B0BB13 /* TabbarViewController.swift */,
 				4A16FDE31FF63D2E00B0BB13 /* CardCommandViewController.swift */,
@@ -321,7 +312,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A99A6C72003487300DE3667 /* SVProgressHUD.bundle in Resources */,
-				4A16FDDE1FF609DB00B0BB13 /* ReaderTypeTableViewCell.xib in Resources */,
 				4A16FDB61FF5F12B00B0BB13 /* LaunchScreen.storyboard in Resources */,
 				4A99A6EC2005DEE900DE3667 /* flash.txt in Resources */,
 				4A16FDB31FF5F12B00B0BB13 /* Assets.xcassets in Resources */,
@@ -351,8 +341,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A16FDE41FF63D2E00B0BB13 /* CardCommandViewController.swift in Sources */,
-				4A16FDDD1FF609DB00B0BB13 /* ReaderTypeTableViewCell.swift in Sources */,
-				4A16FDDA1FF5F19000B0BB13 /* SelectReaderTypeController.swift in Sources */,
 				4A16FDE01FF6106E00B0BB13 /* ScanDeviceController.swift in Sources */,
 				4A16FDE21FF6268800B0BB13 /* TabbarViewController.swift in Sources */,
 				4A99A6C62003487300DE3667 /* SVIndefiniteAnimatedView.m in Sources */,
@@ -535,14 +523,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S47T4UESP3;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = iReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/iReader/include",
-					"$(PROJECT_DIR)/iReader/SDK/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../lib/SDK/lib\"";
+				OTHER_LDFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "-D VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.iReaderSwift;
 				PRODUCT_NAME = iReader_swift;
@@ -565,14 +551,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S47T4UESP3;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = iReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/iReader/include",
-					"$(PROJECT_DIR)/iReader/SDK/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../lib/SDK/lib\"";
+				OTHER_LDFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "-D VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.iReaderSwift;
 				PRODUCT_NAME = iReader_swift;

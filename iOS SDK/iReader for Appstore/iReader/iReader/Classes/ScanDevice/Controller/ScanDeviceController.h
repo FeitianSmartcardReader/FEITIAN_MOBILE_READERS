@@ -1,6 +1,6 @@
 //
 //  ScanDeviceController.h
-//  iReader
+//  eID Viewer
 //
 //  Copyright © 1998-2017, FEITIAN Technologies Co., Ltd. All rights reserved.
 //

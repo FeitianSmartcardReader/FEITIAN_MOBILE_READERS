@@ -81,13 +81,14 @@ extension CardCommandViewController {
     }
     
     @IBAction func sendCommand(_ sender: Any) {
+
         if let command = self.apduInputField.text {
             if command.count > 5 {
                 self.sendTheCommand(command: command)
                 return
             }
         }
-        
+
         Tools.shareInstance.showError(errorInfo: "invalid APUD")
     }
     

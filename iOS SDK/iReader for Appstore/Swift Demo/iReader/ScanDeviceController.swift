@@ -8,9 +8,11 @@
 import UIKit
 
 public var readerName: String = ""
+public var gContxtHandle: SCARDCONTEXT = 0
+let readerInterface = ReaderInterface()
 
-class ScanDeviceController: UITableViewController {
-
+class ScanDeviceController: UITableViewController , ReaderInterfaceDelegate{
+    
     lazy var deviceList = [String]()
 
     override func viewWillAppear(_ animated: Bool) {
@@ -22,12 +24,24 @@ class ScanDeviceController: UITableViewController {
         rightBtn.addTarget(self, action: #selector(scanDevice), for: .touchUpInside)
         rightBtn.setTitleColor(UIColor.black, for: .normal)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightBtn)
-
+        
+        
+    }
+    
+    override func viewDidLoad() {
+        
+        readerInterface.setDelegate(self)
+        
+        let ret = SCardEstablishContext(DWORD(SCARD_SCOPE_SYSTEM), nil, nil, &gContxtHandle)
+        if ret != SCARD_S_SUCCESS {
+            Tools.shareInstance.showError(errorCode: ret)
+        }
     }
     
     @objc func scanDevice() {
        
         self.deviceList.removeAll()
+        self.tableView.reloadData()
         
         var ret: LONG = 0
         Tools.shareInstance.showMsg(msg: "scaning devices...")
@@ -99,3 +113,23 @@ class ScanDeviceController: UITableViewController {
     }
 }
 
+
+//MARK:ReaderInterfaceDelegate
+extension ScanDeviceController {
+    
+    func findPeripheralReader(_ readerName: String!) {
+        
+    }
+    
+    func readerInterfaceDidChange(_ attached: Bool) {
+//        if attached == true {
+//            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!reader  did didetach")
+//        }
+        
+        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!reader  did didetach")
+    }
+    
+    func cardInterfaceDidDetach(_ attached: Bool) {
+//        print("card did didetach")
+    }
+}

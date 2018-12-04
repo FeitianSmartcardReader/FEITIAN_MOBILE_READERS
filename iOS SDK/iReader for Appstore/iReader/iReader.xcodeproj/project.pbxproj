@@ -16,6 +16,7 @@
 		4A47E0C421265DFD00DC9F28 /* ScanDeviceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A47E0C321265DFD00DC9F28 /* ScanDeviceController.xib */; };
 		4A47E0CA212695BC00DC9F28 /* ReaderItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A47E0C9212695BC00DC9F28 /* ReaderItemView.m */; };
 		4A47E0CC21269CF400DC9F28 /* OperationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A47E0CB21269CF400DC9F28 /* OperationViewController.xib */; };
+		4A64A6D321B615880008D665 /* libiRockey301_ccid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A64A6D221B615880008D665 /* libiRockey301_ccid.a */; };
 		4A8E5DC920C8D613007DFAD1 /* ListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8E5DC820C8D613007DFAD1 /* ListView.m */; };
 		4A9C102D1FC6A6A500A50FAD /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C102C1FC6A6A500A50FAD /* OperationViewController.m */; };
 		4A9C10441FC6E81400A50FAD /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C10421FC6E81400A50FAD /* Tools.m */; };
@@ -62,7 +63,6 @@
 		678D0C921FC26D4600D05AB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678D0C901FC26D4600D05AB7 /* LaunchScreen.storyboard */; };
 		678D0C9D1FC26D4600D05AB7 /* iReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 678D0C9C1FC26D4600D05AB7 /* iReaderTests.m */; };
 		678D0CA81FC26D4700D05AB7 /* iReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 678D0CA71FC26D4700D05AB7 /* iReaderUITests.m */; };
-		B5FD3694215F90D8002642DB /* libiRockey301_ccid_V3.5.29_Debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FD3693215F90D8002642DB /* libiRockey301_ccid_V3.5.29_Debug.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +101,7 @@
 		4A47E0C8212695BC00DC9F28 /* ReaderItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReaderItemView.h; sourceTree = "<group>"; };
 		4A47E0C9212695BC00DC9F28 /* ReaderItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReaderItemView.m; sourceTree = "<group>"; };
 		4A47E0CB21269CF400DC9F28 /* OperationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationViewController.xib; sourceTree = "<group>"; };
+		4A64A6D221B615880008D665 /* libiRockey301_ccid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiRockey301_ccid.a; sourceTree = "<group>"; };
 		4A8E5DC720C8D613007DFAD1 /* ListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListView.h; sourceTree = "<group>"; };
 		4A8E5DC820C8D613007DFAD1 /* ListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListView.m; sourceTree = "<group>"; };
 		4A9C102B1FC6A6A500A50FAD /* OperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationViewController.h; sourceTree = "<group>"; };
@@ -187,7 +188,6 @@
 		678D0CA31FC26D4700D05AB7 /* iReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		678D0CA71FC26D4700D05AB7 /* iReaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iReaderUITests.m; sourceTree = "<group>"; };
 		678D0CA91FC26D4700D05AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5FD3693215F90D8002642DB /* libiRockey301_ccid_V3.5.29_Debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiRockey301_ccid_V3.5.29_Debug.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,7 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5FD3694215F90D8002642DB /* libiRockey301_ccid_V3.5.29_Debug.a in Frameworks */,
+				4A64A6D321B615880008D665 /* libiRockey301_ccid.a in Frameworks */,
 				672B0EE11FC2C1CA000CBEDC /* ExternalAccessory.framework in Frameworks */,
 				672B0EDF1FC2C1C3000CBEDC /* CoreBluetooth.framework in Frameworks */,
 			);
@@ -472,7 +472,7 @@
 		4ABE86021FEB909F00317AEC /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				B5FD3693215F90D8002642DB /* libiRockey301_ccid_V3.5.29_Debug.a */,
+				4A64A6D221B615880008D665 /* libiRockey301_ccid.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -907,6 +907,7 @@
 					arm64,
 					armv7,
 					armv7s,
+					arm64e,
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -928,7 +929,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALID_ARCHS = "arm64 armv7 armv7s arm64e";
 			};
 			name = Debug;
 		};
@@ -939,6 +940,7 @@
 					arm64,
 					armv7,
 					armv7s,
+					arm64e,
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -960,7 +962,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALID_ARCHS = "arm64 armv7 armv7s arm64e";
 			};
 			name = Release;
 		};

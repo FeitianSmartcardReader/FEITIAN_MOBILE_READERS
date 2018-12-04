@@ -1,6 +1,6 @@
 //
 //  ScanDeviceController.m
-//  iReader
+//  eID Viewer
 //
 //  Copyright © 1998-2017, FEITIAN Technologies Co., Ltd. All rights reserved.
 //
@@ -52,32 +52,34 @@ NSString *gBluetoothID = @"";
     [interface setAutoPair:_autoConnect];
     
     [interface setDelegate:self];
+    [FTDeviceType setDeviceType:BR301BLE_AND_BR500];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     interface = [[ReaderInterface alloc] init];
-    
+
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [self initReaderInterface];
     });
-    
+
     _deviceList = [NSMutableArray array];
     _autoConnect = YES;
     _itemHW = 60;
     _itemCountPerRow = 3;
     _itemMargin = (_scanDeviceListView.frame.size.width - _itemHW * _itemCountPerRow) / (_itemCountPerRow + 2);
     _itemStartX = (screenW - _itemHW) * 0.5;
-    
+
     _displayedItem = [NSMutableArray array];
-    
+
     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     _helpView = [[HelpVisualEffectView alloc] initWithEffect:effect];
     _helpView.frame = CGRectMake(0, screenH, screenW, screenH);
     [self.view addSubview:_helpView];
-    
+
     [self startRefreshThread];
+
 }
 
 //init readerInterface and card context
@@ -95,7 +97,7 @@ NSString *gBluetoothID = @"";
     [interface setDelegate:self];
     
     //set support device type, default support all readers;
-//    [FTDeviceType setDeviceType:(FTDEVICETYPE)(IR301_AND_BR301 | BR301BLE_AND_BR500)];
+    [FTDeviceType setDeviceType:(FTDEVICETYPE)(IR301_AND_BR301 | BR301BLE_AND_BR500)];
     
     ULONG ret = SCardEstablishContext(SCARD_SCOPE_SYSTEM,NULL,NULL,&gContxtHandle);
     if(ret != 0){
@@ -108,7 +110,7 @@ NSString *gBluetoothID = @"";
 {
     if (attached) {
         gBluetoothID = bluetoothID;
-    
+
         if (_timer) {
             [_timer invalidate];
             _timer = nil;
@@ -148,6 +150,7 @@ NSString *gBluetoothID = @"";
 {
     if (attached) {
         NSLog(@"card present");
+//        [self connectCard];
         
     }else {
         NSLog(@"card not present");
@@ -156,6 +159,10 @@ NSString *gBluetoothID = @"";
 
 - (void) findPeripheralReader:(NSString *)readerName
 {
+    if (readerName == nil) {
+        return;
+    }
+    
     if ([_deviceList containsObject:readerName]) {
         return;
     }
@@ -170,6 +177,7 @@ NSString *gBluetoothID = @"";
 //connect reader
 - (void)connectReader:(NSString *)readerName
 {
+    NSString *temp = [self getReaderList];
     [[Tools shareTools] showMsg:@"Connect reader"];
     BOOL rev = [interface connectPeripheralReader:readerName timeout:15];
     [[Tools shareTools] hideMsgView];
@@ -180,7 +188,8 @@ NSString *gBluetoothID = @"";
 
 //connect card
 - (void)connectCard {
-    
+    NSLog(@"currentThread -- %@", [NSThread currentThread]);
+
     [[Tools shareTools] showMsg:@"Connect card"];
     
     DWORD dwActiveProtocol = -1;
@@ -294,16 +303,16 @@ NSString *gBluetoothID = @"";
 #pragma mark show help info
 - (IBAction)helpButtonClick:(id)sender {
     
-    //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    //        [self performSegueWithIdentifier:@"operation" sender:nil];
-    //    });
-    //
-    //    return;
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self performSegueWithIdentifier:@"operation" sender:nil];
+//        });
+//
+//        return;
     
     [UIView animateWithDuration:0.5 animations:^{
         _helpView.frame = CGRectMake(0, 0, screenW, screenH);
     } completion:^(BOOL finished) {
-        
+
     }];
 }
 -(void)viewDidAppear:(BOOL)animated

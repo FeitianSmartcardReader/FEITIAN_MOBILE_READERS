@@ -81,7 +81,13 @@ extern NSString *gBluetoothID;
     char hardwareRevision[32] = {0};
     int ret = FtGetDevVer(gContxtHandle, firmwareRevision, hardwareRevision);
     if(ret == SCARD_S_SUCCESS){
-        [self addModel:firmwareRevision title:@"Firmware Version"];
+        if(strlen(firmwareRevision) > 0) {
+            [self addModel:firmwareRevision title:@"Firmware Version"];
+        }
+        
+        if (strlen(hardwareRevision) > 0) {
+            [self addModel:hardwareRevision title:@"Hardware Version"];
+        }
     }
     
     //Manufacturer

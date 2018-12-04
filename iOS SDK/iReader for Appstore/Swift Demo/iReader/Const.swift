@@ -59,6 +59,12 @@ class Tools {
         }
     }
     
+    func showSuccess(msg: String) {
+        DispatchQueue.main.async {
+            SVProgressHUD.showSuccess(withStatus: msg, maskType: SVProgressHUDMaskType.black)
+        }
+    }
+    
     func hideMsg() {
         DispatchQueue.main.async {
             SVProgressHUD.dismiss()
