@@ -8,7 +8,8 @@ https://github.com/FeitianSmartcardReader/FEITIAN_MOBILE_READERS/raw/master/Andr
 
 
 History:
-
+2018/12/18
+	- Update iOS SDK, new lib is 3.5.39, the change log can find in iOS folder -> readme
 2018/12/04
 	- Update iOS SDK, a minor update of demo code
 2018/10/15
