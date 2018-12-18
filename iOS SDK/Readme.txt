@@ -1,4 +1,5 @@
 2018/12/18
+	Update SDK to 3.5.39
 	Re-define the internal API and values, CommunicationMutex, Dpt, isbadreadptr,ccid_error,log_msg
 2018/12/04
 	Update SDK to 3.5.38
