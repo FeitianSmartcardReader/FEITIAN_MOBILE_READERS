@@ -35,7 +35,23 @@
     [[NSUserDefaults standardUserDefaults] setValue:@(1) forKey:welcomeKey];
     
     [self.window makeKeyAndVisible];
+    [self logToFile];
     return YES;
+}
+
+-(void)logToFile
+{
+    NSString * documentDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
+    NSDateFormatter *dateformat = [[NSDateFormatter  alloc]init];
+    [dateformat setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
+    NSString *fileName = [NSString stringWithFormat:@"LOG-%@.txt",[dateformat stringFromDate:[NSDate date]]];
+    NSString *path = [documentDirectory stringByAppendingPathComponent:fileName];
+    [[NSFileManager defaultManager] createFileAtPath:path contents:nil attributes:nil];
+    
+    //Output the error to log file, include error message and operation message.
+    //This file will stored locally only
+    freopen([path cStringUsingEncoding:NSASCIIStringEncoding], "a+", stdout);
+    freopen([path cStringUsingEncoding:NSASCIIStringEncoding], "a+", stderr);
 }
 
 @end

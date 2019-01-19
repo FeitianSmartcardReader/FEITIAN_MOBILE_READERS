@@ -8,6 +8,13 @@ https://github.com/FeitianSmartcardReader/FEITIAN_MOBILE_READERS/raw/master/Andr
 
 
 History:
+2018/01/19
+	- Update demo app, demo update to 2.0.1
+	    1. Using CoreBluetooth API to scan the BLE readers and through the UUID rules to do filter
+	    2. Using a thread to check the Bluetooth broadcast information each 1s, to make the BLE reader list up to date
+	    3. Output the log into demo App, the user can connect their iOS device into a computer, through iTunes to export the log, this improve help us to locate the issues
+	    4. Fix issue for display the battery status of Bluetooth Smart reader (bR500BLE,bR301BLE)	
+	- Update iOS SDK, new lib is 3.5.40, changed debugging flag, to void compilation conflicts with client Libraries
 2018/12/18
 	- Update iOS SDK, new lib is 3.5.39, the change log can find in iOS folder -> readme
 2018/12/04

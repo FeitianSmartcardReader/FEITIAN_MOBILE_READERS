@@ -8,15 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		4A1633F51FC596E0001F4572 /* ScanDeviceController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A1633F41FC596E0001F4572 /* ScanDeviceController.mm */; };
+		4A1D12F221DEFD4C00B1D5C2 /* DeviceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1D12F021DEFD4C00B1D5C2 /* DeviceCollectionViewCell.m */; };
+		4A1D12F321DEFD4C00B1D5C2 /* DeviceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1D12F121DEFD4C00B1D5C2 /* DeviceCollectionViewCell.xib */; };
+		4A1D12F621DF103B00B1D5C2 /* readerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1D12F521DF103B00B1D5C2 /* readerModel.m */; };
+		4A1D12FA21E0455100B1D5C2 /* libiRockey301_ccid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1D12F921E0455100B1D5C2 /* libiRockey301_ccid.a */; };
+		4A1D12FC21E8387F00B1D5C2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1D12FB21E8387F00B1D5C2 /* StoreKit.framework */; };
+		4A1D12FE21E8388700B1D5C2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1D12FD21E8388700B1D5C2 /* GameKit.framework */; };
 		4A3F414320E21A0200DBE8F2 /* HelpVisualEffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F414220E21A0200DBE8F2 /* HelpVisualEffectView.m */; };
 		4A3F414920E33B7A00DBE8F2 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F414720E33B7A00DBE8F2 /* CollectionViewCell.m */; };
 		4A3F414A20E33B7A00DBE8F2 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3F414820E33B7A00DBE8F2 /* CollectionViewCell.xib */; };
 		4A47E0C12125986400DC9F28 /* WelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A47E0BF2125986400DC9F28 /* WelcomeController.m */; };
 		4A47E0C22125986400DC9F28 /* WelcomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A47E0C02125986400DC9F28 /* WelcomeController.xib */; };
 		4A47E0C421265DFD00DC9F28 /* ScanDeviceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A47E0C321265DFD00DC9F28 /* ScanDeviceController.xib */; };
-		4A47E0CA212695BC00DC9F28 /* ReaderItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A47E0C9212695BC00DC9F28 /* ReaderItemView.m */; };
 		4A47E0CC21269CF400DC9F28 /* OperationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A47E0CB21269CF400DC9F28 /* OperationViewController.xib */; };
-		4A64A6D321B615880008D665 /* libiRockey301_ccid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A64A6D221B615880008D665 /* libiRockey301_ccid.a */; };
 		4A8E5DC920C8D613007DFAD1 /* ListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8E5DC820C8D613007DFAD1 /* ListView.m */; };
 		4A9C102D1FC6A6A500A50FAD /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C102C1FC6A6A500A50FAD /* OperationViewController.m */; };
 		4A9C10441FC6E81400A50FAD /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C10421FC6E81400A50FAD /* Tools.m */; };
@@ -89,6 +93,14 @@
 		1A5B5D772011F5AB00FDA151 /* ft301u.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ft301u.h; sourceTree = "<group>"; };
 		4A1633F31FC596E0001F4572 /* ScanDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanDeviceController.h; sourceTree = "<group>"; };
 		4A1633F41FC596E0001F4572 /* ScanDeviceController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ScanDeviceController.mm; sourceTree = "<group>"; };
+		4A1D12EF21DEFD4C00B1D5C2 /* DeviceCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceCollectionViewCell.h; sourceTree = "<group>"; };
+		4A1D12F021DEFD4C00B1D5C2 /* DeviceCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceCollectionViewCell.m; sourceTree = "<group>"; };
+		4A1D12F121DEFD4C00B1D5C2 /* DeviceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceCollectionViewCell.xib; sourceTree = "<group>"; };
+		4A1D12F421DF103B00B1D5C2 /* readerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = readerModel.h; sourceTree = "<group>"; };
+		4A1D12F521DF103B00B1D5C2 /* readerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = readerModel.m; sourceTree = "<group>"; };
+		4A1D12F921E0455100B1D5C2 /* libiRockey301_ccid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiRockey301_ccid.a; path = ../../../../../lib/SDK/lib/libiRockey301_ccid.a; sourceTree = "<group>"; };
+		4A1D12FB21E8387F00B1D5C2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4A1D12FD21E8388700B1D5C2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		4A3F414120E21A0200DBE8F2 /* HelpVisualEffectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpVisualEffectView.h; sourceTree = "<group>"; };
 		4A3F414220E21A0200DBE8F2 /* HelpVisualEffectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelpVisualEffectView.m; sourceTree = "<group>"; };
 		4A3F414620E33B7A00DBE8F2 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -98,10 +110,7 @@
 		4A47E0BF2125986400DC9F28 /* WelcomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeController.m; sourceTree = "<group>"; };
 		4A47E0C02125986400DC9F28 /* WelcomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeController.xib; sourceTree = "<group>"; };
 		4A47E0C321265DFD00DC9F28 /* ScanDeviceController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanDeviceController.xib; sourceTree = "<group>"; };
-		4A47E0C8212695BC00DC9F28 /* ReaderItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReaderItemView.h; sourceTree = "<group>"; };
-		4A47E0C9212695BC00DC9F28 /* ReaderItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReaderItemView.m; sourceTree = "<group>"; };
 		4A47E0CB21269CF400DC9F28 /* OperationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationViewController.xib; sourceTree = "<group>"; };
-		4A64A6D221B615880008D665 /* libiRockey301_ccid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiRockey301_ccid.a; sourceTree = "<group>"; };
 		4A8E5DC720C8D613007DFAD1 /* ListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListView.h; sourceTree = "<group>"; };
 		4A8E5DC820C8D613007DFAD1 /* ListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListView.m; sourceTree = "<group>"; };
 		4A9C102B1FC6A6A500A50FAD /* OperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationViewController.h; sourceTree = "<group>"; };
@@ -195,9 +204,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A64A6D321B615880008D665 /* libiRockey301_ccid.a in Frameworks */,
+				4A1D12FA21E0455100B1D5C2 /* libiRockey301_ccid.a in Frameworks */,
 				672B0EE11FC2C1CA000CBEDC /* ExternalAccessory.framework in Frameworks */,
 				672B0EDF1FC2C1C3000CBEDC /* CoreBluetooth.framework in Frameworks */,
+				4A1D12FC21E8387F00B1D5C2 /* StoreKit.framework in Frameworks */,
+				4A1D12FE21E8388700B1D5C2 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,8 +245,11 @@
 				4A47E0C321265DFD00DC9F28 /* ScanDeviceController.xib */,
 				4A3F414120E21A0200DBE8F2 /* HelpVisualEffectView.h */,
 				4A3F414220E21A0200DBE8F2 /* HelpVisualEffectView.m */,
-				4A47E0C8212695BC00DC9F28 /* ReaderItemView.h */,
-				4A47E0C9212695BC00DC9F28 /* ReaderItemView.m */,
+				4A1D12EF21DEFD4C00B1D5C2 /* DeviceCollectionViewCell.h */,
+				4A1D12F021DEFD4C00B1D5C2 /* DeviceCollectionViewCell.m */,
+				4A1D12F121DEFD4C00B1D5C2 /* DeviceCollectionViewCell.xib */,
+				4A1D12F421DF103B00B1D5C2 /* readerModel.h */,
+				4A1D12F521DF103B00B1D5C2 /* readerModel.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -472,7 +486,7 @@
 		4ABE86021FEB909F00317AEC /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				4A64A6D221B615880008D665 /* libiRockey301_ccid.a */,
+				4A1D12F921E0455100B1D5C2 /* libiRockey301_ccid.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -492,6 +506,8 @@
 		672B0EDD1FC2C1C3000CBEDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A1D12FD21E8388700B1D5C2 /* GameKit.framework */,
+				4A1D12FB21E8387F00B1D5C2 /* StoreKit.framework */,
 				672B0EE01FC2C1CA000CBEDC /* ExternalAccessory.framework */,
 				672B0EDE1FC2C1C3000CBEDC /* CoreBluetooth.framework */,
 			);
@@ -639,6 +655,14 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = S47T4UESP3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					678D0C971FC26D4600D05AB7 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -689,6 +713,7 @@
 				4A9C108A1FC7C38E00A50FAD /* MJRefresh.bundle in Resources */,
 				4A47E0CC21269CF400DC9F28 /* OperationViewController.xib in Resources */,
 				4A47E0C22125986400DC9F28 /* WelcomeController.xib in Resources */,
+				4A1D12F321DEFD4C00B1D5C2 /* DeviceCollectionViewCell.xib in Resources */,
 				672B0ED91FC2C12A000CBEDC /* SVProgressHUD.bundle in Resources */,
 				4A47E0C421265DFD00DC9F28 /* ScanDeviceController.xib in Resources */,
 			);
@@ -719,6 +744,7 @@
 				4A9C10811FC7C38E00A50FAD /* MJRefreshAutoGifFooter.m in Sources */,
 				4A9C10891FC7C38E00A50FAD /* MJRefreshStateHeader.m in Sources */,
 				4A9C10861FC7C38E00A50FAD /* MJRefreshBackStateFooter.m in Sources */,
+				4A1D12F221DEFD4C00B1D5C2 /* DeviceCollectionViewCell.m in Sources */,
 				4A3F414920E33B7A00DBE8F2 /* CollectionViewCell.m in Sources */,
 				4A9C102D1FC6A6A500A50FAD /* OperationViewController.m in Sources */,
 				4A9C108C1FC7C38E00A50FAD /* NSBundle+MJRefresh.m in Sources */,
@@ -727,7 +753,6 @@
 				4A9C10831FC7C38E00A50FAD /* MJRefreshAutoStateFooter.m in Sources */,
 				4A9C10881FC7C38E00A50FAD /* MJRefreshNormalHeader.m in Sources */,
 				4A9C10931FC8024600A50FAD /* commandModel.m in Sources */,
-				4A47E0CA212695BC00DC9F28 /* ReaderItemView.m in Sources */,
 				4AEF940320BE83C500A18758 /* view.m in Sources */,
 				4A9C108F1FC7C38E00A50FAD /* UIView+MJExtension.m in Sources */,
 				672B0EDA1FC2C12A000CBEDC /* SVProgressHUD.m in Sources */,
@@ -743,6 +768,7 @@
 				4A9C107D1FC7C38E00A50FAD /* MJRefreshBackFooter.m in Sources */,
 				4A9C107F1FC7C38E00A50FAD /* MJRefreshFooter.m in Sources */,
 				4A9C108E1FC7C38E00A50FAD /* UIScrollView+MJRefresh.m in Sources */,
+				4A1D12F621DF103B00B1D5C2 /* readerModel.m in Sources */,
 				4A9C10801FC7C38E00A50FAD /* MJRefreshHeader.m in Sources */,
 				4A9C10851FC7C38E00A50FAD /* MJRefreshBackNormalFooter.m in Sources */,
 				4A9C10981FC816BF00A50FAD /* DeviceInfoTableViewController.m in Sources */,
@@ -911,6 +937,7 @@
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LIBRARY = "libc++";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S47T4UESP3;
@@ -944,6 +971,7 @@
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LIBRARY = "libc++";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S47T4UESP3;

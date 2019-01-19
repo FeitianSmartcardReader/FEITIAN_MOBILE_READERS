@@ -1,3 +1,5 @@
+2019/01/19
+	Update SDK to 3.5.40, changed debugging flag, to void compilation conflicts with client Libraries
 2018/12/18
 	Update SDK to 3.5.39
 	Re-define the internal API and values, CommunicationMutex, Dpt, isbadreadptr,ccid_error,log_msg

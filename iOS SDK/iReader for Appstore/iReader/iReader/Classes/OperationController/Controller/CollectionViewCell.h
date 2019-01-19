@@ -2,8 +2,7 @@
 //  CollectionViewCell.h
 //  iReader
 //
-//  Created by Jermy on 2018/6/27.
-//  Copyright © 2018年 ft. All rights reserved.
+//  Copyright © 1998-2019, FEITIAN Technologies Co., Ltd. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -2,7 +2,7 @@
 //  ViewController.m
 //  iReader
 //
-///  Copyright © 1998-2017, FEITIAN Technologies Co., Ltd. All rights reserved.
+//  Copyright © 1998-2019, FEITIAN Technologies Co., Ltd. All rights reserved.
 //
 
 #import "ViewController.h"

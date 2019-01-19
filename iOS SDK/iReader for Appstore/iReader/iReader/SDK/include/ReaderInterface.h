@@ -35,6 +35,7 @@ typedef enum FTDEVICETYPE{
 - (void) cardInterfaceDidDetach:(BOOL)attached;
 
 - (void) didGetBattery:(NSInteger)battery;
+
 @end
 
 

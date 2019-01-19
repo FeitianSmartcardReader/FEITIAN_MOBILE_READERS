@@ -12,7 +12,7 @@
 #import "ReaderInterface.h"
 #import "ScanDeviceController.h"
 
-#define AppVersion @"2.0.0"
+#define AppVersion @"2.0.1"
 
 extern SCARDCONTEXT gContxtHandle;
 extern SCARDHANDLE gCardHandle;
