@@ -24,28 +24,28 @@
    		android:layout_height="wrap_content">
    		
         <Button
-            android:id="@+id/clear"
+            android:id="@+id/button_clear"
 	        android:text="clear"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="8dp"/>
         
          <Button
-            android:id="@+id/exit"
+            android:id="@+id/button_exit"
 	        android:text="exit"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="8dp"/>
         
    		<Button
-            android:id="@+id/jni"
+            android:id="@+id/button_use_jni"
 	        android:text="PC/SC API"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="8dp"/>
    		
    		<Button
-            android:id="@+id/jar"
+            android:id="@+id/button_use_jar"
 	        android:text="Private API"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
@@ -65,21 +65,21 @@
    		
    		
    		<Button
-            android:id="@+id/USBMODE"
+            android:id="@+id/button_mode_usb"
 	        android:text="USB Mode"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="8dp"/>
    		
    		<Button
-            android:id="@+id/BTMODE"
+            android:id="@+id/button_mode_bt3"
 	        android:text="Bluetooth 3.0 Mode"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="8dp"/>
    		
    		<Button
-            android:id="@+id/BLEMODE"
+            android:id="@+id/button_mode_bt4"
 	        android:text="BLE Mode"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
 		android:background="#66CCFF"/>
 	
    <LinearLayout
-         android:id="@+id/pcsc_area"
+        android:id="@+id/pcsc_area"
         android:orientation="vertical"
         android:layout_width="match_parent"
    		android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
    		android:layout_height="wrap_content"
    		>
         <Button
-            android:id="@+id/button21"
+            android:id="@+id/button_SCardEstablishContext"
 	        android:text="SCardEstablishContext"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
@@ -113,7 +113,7 @@
 	       
 	        />
         <Button
-            android:id="@+id/button22"
+            android:id="@+id/button_SCardListReaders"
 	        android:text="SCardListReaders"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
 	        
 	        />
         <Spinner
-			android:id="@+id/spinnerC_14"
+			android:id="@+id/spinner_PCSC"
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
 			android:layout_weight="1"
@@ -136,7 +136,7 @@
    		>
         
         <Button
-            android:id="@+id/button31"
+            android:id="@+id/button_SCardConnect"
 	        android:text="SCardConnect"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
@@ -144,7 +144,7 @@
 	       
 	        />
         <Button
-            android:id="@+id/button32"
+            android:id="@+id/button_SCardStatus"
 	        android:text="SCardStatus"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
@@ -153,7 +153,7 @@
 	        />
       
         <Button
-            android:id="@+id/button33"
+            android:id="@+id/button_SCardDisconnect"
 	        android:text="SCardDisconnect"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
@@ -161,7 +161,7 @@
 	        
 	        />
         <Button
-            android:id="@+id/button34"
+            android:id="@+id/button_SCardReleaseContext"
 	        android:text="SCardReleaseContext"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
@@ -179,60 +179,133 @@
    		android:layout_height="wrap_content">
         
            <Button
-            android:id="@+id/button41"
+            android:id="@+id/button_SCardTransmit"
 	        android:text="SCardTransmit"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="8dp"/>
            
            <EditText
-              android:id="@+id/apdu"
+              android:id="@+id/edittext_PCSC_APDU"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:gravity="top"
               android:textSize="20dp"
               android:text="0084000008" />
+     </LinearLayout>
+	
+     
+     <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+   		android:layout_height="wrap_content">
+        
+           <Button
+            android:id="@+id/button_SCardTransmit2"
+	        android:text="SCardTransmit2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="8dp"/>
            
+           <Spinner
+                android:id="@+id/spinner_PCSC_APDU"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="8dp" />
+     </LinearLayout>
+     
+     <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+   		android:layout_height="wrap_content">
+        
+           <Button
+            android:id="@+id/button_SCardControl"
+	        android:text="SCardControl"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="8dp"/>
            
+           <EditText
+              android:id="@+id/edittext_PCSC_CTL"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="top"
+              android:textSize="20dp"
+              android:text="A55A8031" />
+     </LinearLayout>
+     
+       <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+   		android:layout_height="wrap_content"
+   		>
+        
+        <Button
+            android:id="@+id/button_SCardIsValidContext"
+	        android:text="SCardIsValidContext"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="8dp"
+	       
+	        />
+        <Button
+            android:id="@+id/button_SCardGetStatusChange"
+	        android:text="SCardGetStatusChange"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="8dp"
+	       
+	        />
+      
+    
+        
 	</LinearLayout>
+     
+     
+     
+     
+     
+     
     </LinearLayout>
     
      
-      <LinearLayout
-         android:id="@+id/jar_area"
+	<LinearLayout
+        android:id="@+id/jar_area"
         android:orientation="vertical"
         android:layout_width="match_parent"
    		android:layout_height="wrap_content"
    		android:visibility="gone">
 
-<LinearLayout
+	<LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
    		android:layout_height="wrap_content">
 		
         <Button
-            android:id="@+id/ft_find"
-	        android:text="ft_find"
+            android:id="@+id/button_readerFind"
+	        android:text="readerFind"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="8dp"/>
 			
         <Button
-			android:id="@+id/ft_open"
-	        android:text="ft_open"
+			android:id="@+id/button_readerOpen"
+	        android:text="readerOpen"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="8dp"/>
 			
         <Button
-			android:id="@+id/ft_close"
-	        android:text="ft_close"
+			android:id="@+id/button_readerClose"
+	        android:text="readerClose"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="8dp"/>
 			
         <Spinner
-			android:id="@+id/spinner_jar"
+			android:id="@+id/spinner_Private"
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
 			android:layout_weight="1"
@@ -245,41 +318,87 @@
    		android:layout_height="wrap_content">
 		
         <Button
-            android:id="@+id/ft_poweron"
-	        android:text="ft_poweron"
+            android:id="@+id/button_readerPowerOn"
+	        android:text="readerPowerOn"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="8dp"/>
 			
         <Button
-			android:id="@+id/ft_poweroff"
-	        android:text="ft_poweroff"
+			android:id="@+id/button_readerPowerOff"
+	        android:text="readerPowerOff"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="8dp"/>
 			
         <Button
-			android:id="@+id/ft_xfr"
-	        android:text="ft_xfr"
+			android:id="@+id/button_readerXfr"
+	        android:text="readerXfr"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="8dp"/>
-			
+	</LinearLayout>
+	
+     <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+   		android:layout_height="wrap_content">
+		
         <Button
-			android:id="@+id/slotStatus"
-	        android:text="slotStatus"
+			android:id="@+id/button_readerGetSlotStatus"
+	        android:text="readerGetSlotStatus"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="8dp"/>
         
          <Button
-			android:id="@+id/readerInfo"
-	        android:text="readerInfo"
+			android:id="@+id/button_readerGetType"
+	        android:text="readerGetType"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="8dp"/>
          
-	</LinearLayout>    
+          <Button
+			android:id="@+id/button_readerAutoTurnOff"
+	        android:text="readerAutoTurn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="8dp"/>
+          
+           <Spinner
+                android:id="@+id/spinner_AutoTurnOffSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="8dp" />
+         
+	</LinearLayout>
+	
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+   		android:layout_height="wrap_content">
+        
+           <Button
+            android:id="@+id/button_readerXfr2"
+	        android:text="readerXfr2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="8dp"/>
+           
+           <Spinner
+                android:id="@+id/spinner_Private_APDU"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="8dp" />
+     </LinearLayout>
+    
+    
+    
+    
+    
+    
     </LinearLayout>
      
       

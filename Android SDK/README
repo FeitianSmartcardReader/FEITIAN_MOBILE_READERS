@@ -1,6 +1,9 @@
 Feitian combo Android SDK
 
 Change history:
+2019/03/01
+	Update Android SDK, the new native lib version support SCardControl command
+	Update Android demo code, upgrade jni lib to 0.7.00 and update .so/.a to 0.2.01
 2018/08/10
 	Update Android SDK, the new native lib version support native lib with Bluetooth 3.0, Bluetooth 4.0 and OTG.
 2018/04/12
