@@ -6,7 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tools.h"
 
 @interface DeviceInfoTableViewController : UITableViewController
 @property (nonatomic, copy)NSString *readerName;
+@property (nonatomic, assign)FTReaderType readerType;
 @end

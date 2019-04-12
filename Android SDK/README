@@ -1,6 +1,10 @@
 Feitian combo Android SDK
 
 Change history:
+2019/04/12
+	Update Android SDK, add android studio demo code into project
+	Update jar lib to 0.7.04, improve card timeout, the reader will check the ATR and get the timeout
+	PC/SC API not update yet, will need time to do more test.
 2019/03/01
 	Update Android SDK, the new native lib version support SCardControl command
 	Update Android demo code, upgrade jni lib to 0.7.00 and update .so/.a to 0.2.01

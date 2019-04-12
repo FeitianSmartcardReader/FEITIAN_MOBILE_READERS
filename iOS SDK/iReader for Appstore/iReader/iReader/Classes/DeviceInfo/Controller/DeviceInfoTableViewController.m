@@ -8,11 +8,10 @@
 #import "Tools.h"
 #import "DeviceInfoModel.h"
 #import "ft301u.h"
-#import "hex.h"
 #import "ReaderInterface.h"
 #import "ScanDeviceController.h"
 
-#define AppVersion @"2.0.1"
+#define AppVersion @"2.0.3"
 
 extern SCARDCONTEXT gContxtHandle;
 extern SCARDHANDLE gCardHandle;
@@ -22,9 +21,12 @@ extern NSString *gBluetoothID;
 {
     NSMutableArray *_readerInfoArray;
     NSMutableArray *_cardInfoArray;
-    NSArray *_sectionTitleArray;
-    
+    NSMutableArray *_sectionTitleArray;
+    NSMutableArray *_sectionFooterArray;
+    NSMutableArray *_cellText;
+    unsigned int _type;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -45,8 +47,16 @@ extern NSString *gBluetoothID;
     
     _readerInfoArray = [NSMutableArray array];
     _cardInfoArray = [NSMutableArray array];
-    _sectionTitleArray = @[@"APP INFO", @"READER INFO"];
+    _sectionTitleArray = [NSMutableArray arrayWithArray:@[@"APP INFO", @"READER INFO", @" ", @" "]];
+    _sectionFooterArray = [NSMutableArray arrayWithArray:@[@"", @"",
+        @"If enabled,iReader App will connect to the reader which has the strongest Bluetooth signal(normally the nearest)at startup,mostly suilable when you have only one bR301BLE/bR500 around.Disable this if you want to connect a reader manually.",
+       @"The power saving mode of Bluetooth reader is enabled by default, in order to extend battery life of a reader. it will automaticlly shut down in 3 minutes if there is no communication between App and reader.\nIf set switch button to ON, the App will turn off power saving mode to keep reader always powered, except pysical shutdown by power button or by turnning off the Bluetooth.\nThis power saving mode is one time setting, after closing App, the reader will go back to default.\n"]];
     
+    _cellText = [NSMutableArray arrayWithArray:@[@"", @"", @"Bluetooth Auto Connect", @"Disable power saving mode"]];
+    
+    _type = 0;
+    FtGetCurrentReaderType(&_type);
+
     [self getDeviceInfo];
 }
 
@@ -154,11 +164,13 @@ extern NSString *gBluetoothID;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return 2;
+        return 1;
     }else if (section == 1) {
         return _readerInfoArray.count;
     }else if (section == 2) {
-        return _cardInfoArray.count;
+        return 1;
+    }else if (section == 3) {
+        return 1;
     }
     
     return 0;
@@ -173,24 +185,47 @@ extern NSString *gBluetoothID;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
     
+    cell.accessoryView = nil;
+    
     DeviceInfoModel *model = [[DeviceInfoModel alloc] init];
     
     if (indexPath.section == 0) {
         model = [DeviceInfoModel deviceInfoModelWithKey:@"App Version" value:AppVersion];
     }else if (indexPath.section == 1) {
         model = _readerInfoArray[indexPath.row];
-    }else if (indexPath.section == 2) {
-        model = _cardInfoArray[indexPath.row];
     }
     
-    if (indexPath.section == 0 && indexPath.row == 1) {
-        cell.textLabel.text = @"Bluetooth Auto Connect";
+    if (indexPath.section == 2 || indexPath.section == 3) {
+        cell.textLabel.text = _cellText[indexPath.section];
         cell.detailTextLabel.numberOfLines = 0;
         UISwitch *_switch = [[UISwitch alloc] init];
+        _switch.tag = indexPath.section;
+    
         NSNumber *number = [[NSUserDefaults standardUserDefaults]valueForKey:autoConnectKey];
-        [_switch setOn:number.boolValue];
+        if (indexPath.section == 3) {
+            number = [[NSUserDefaults standardUserDefaults]valueForKey:autoPowerOffKey];
+        }
+        
+        if (number == nil) {
+            [_switch setOn:NO];
+        }else {
+            [_switch setOn:number.boolValue];
+        }
+        
         [_switch addTarget:self action:@selector(switchValueChanged:) forControlEvents:UIControlEventValueChanged];
         cell.accessoryView = _switch;
+        
+        NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:_sectionFooterArray[indexPath.section]];
+        
+//        if ([FTDeviceType getDeviceType] == IR301_AND_BR301) {
+        if (_type == READER_iR301U_DOCK || _type == READER_iR301U_LIGHTING) {
+            if (indexPath.section == 3) {
+                _switch.enabled = false;
+                NSAttributedString *_str = [[NSAttributedString alloc] initWithString:@"Disable power saving mode error or not supported by this firmware version.\n" attributes:@{NSForegroundColorAttributeName: [UIColor redColor]}];
+                [str insertAttributedString:_str atIndex:0];
+            }
+        }
+        cell.detailTextLabel.attributedText = str;
     }else {
         cell.detailTextLabel.text = model.deviceInfoValue;
         cell.textLabel.text = model.deviceInfoKey;
@@ -205,8 +240,29 @@ extern NSString *gBluetoothID;
 
 - (void)switchValueChanged:(UISwitch *)_switch
 {
-    BOOL autoConnect = _switch.isOn;
-    [[NSUserDefaults standardUserDefaults] setValue:@(autoConnect) forKey:autoConnectKey];
+    BOOL isOn = _switch.isOn;
+    if (_switch.tag == 2) {
+        [[NSUserDefaults standardUserDefaults] setValue:@(isOn) forKey:autoConnectKey];
+    }else if (_switch.tag == 3) {
+        
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            
+            [[Tools shareTools] showMsg:@"reader auto off"];
+            
+            NSInteger iRet = FT_AutoTurnOffReader(isOn);
+            if (iRet != SCARD_S_SUCCESS) {
+                NSString *error = [NSString stringWithFormat:@"Disable power saving mode not supported by this firmware version."];
+                [[Tools shareTools] showError:error];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [_switch setOn:!isOn];
+                });
+            }else {
+                [[Tools shareTools] hideMsgView];
+                [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:isOn] forKey:autoPowerOffKey];
+            }
+        });
+    }
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -218,38 +274,28 @@ extern NSString *gBluetoothID;
     return label;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 2 || indexPath.section == 3) {
+        NSString *str = _sectionFooterArray[indexPath.section];
+        CGFloat width = [UIScreen mainScreen].bounds.size.width - 150;
+        UIFont *font = [UIFont systemFontOfSize:12];
+        CGFloat heiht = [str boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size.height;
+        
+        return heiht;
+    }
+
+    return 44;
+}
+
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    if (section == 0) {
-        NSString *str =  @"If enabled,iReader App will connect to the reader which has the strongest Bluetooth signal(normally the nearest)at startup,mostly suilable when you have only one bR301BLE/bR500 around.Disable this if you want to connect a reader manually.";
-        
-        UIFont *font = [UIFont systemFontOfSize:12];
-        CGFloat width = self.tableView.frame.size.width - 20;
-        CGFloat height = 90;
-        
-        UILabel *label = [[UILabel alloc] init];
-        label.frame = CGRectMake(15, 0, width, height);
-        label.text = str;
-        label.numberOfLines = 0;
-        label.font = font;
-        label.textColor = [UIColor lightGrayColor];
-        
-        UIView *view = [[UIView alloc] init];
-        view.frame = CGRectMake(0, 0, width + 20, height);
-        [view addSubview:label];
-        return view;
-    }
-    
-    return nil;
+    return [[UIView alloc] init];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    if (section == 0) {
-        return 90;
-    }
-    
-    return 0;
+    return 10;
 }
 
 @end

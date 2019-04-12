@@ -8,6 +8,9 @@ https://github.com/FeitianSmartcardReader/FEITIAN_MOBILE_READERS/raw/master/Andr
 
 
 History:
+2019/4/12
+	- Update android SDK, jar up to 0.7.04
+	- Update iOS SDK, lib up to 3.5.45
 2018/01/19
 	- Update demo app, demo update to 2.0.1
 	    1. Using CoreBluetooth API to scan the BLE readers and through the UUID rules to do filter

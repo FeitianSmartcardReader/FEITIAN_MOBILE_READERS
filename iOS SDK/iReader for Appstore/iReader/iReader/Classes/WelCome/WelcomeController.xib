@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -87,7 +87,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bluetooth Auto Connect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9O-A9-KHb">
-                    <rect key="frame" x="20" y="343" width="183.5" height="20"/>
+                    <rect key="frame" x="20" y="342.5" width="183.5" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="VZp-6A-l2r"/>
                     </constraints>
@@ -96,7 +96,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFS-gP-bGR">
-                    <rect key="frame" x="306" y="338" width="51" height="30"/>
+                    <rect key="frame" x="306" y="337.5" width="51" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="rZR-Rb-ig9"/>
                     </constraints>
@@ -119,13 +119,13 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can change this setting in Info Panel after connected to a reader." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12g-Ei-tns">
-                    <rect key="frame" x="20" y="445" width="335" height="29"/>
+                    <rect key="frame" x="20" y="444.5" width="335" height="29"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" white="0.94050276359999996" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTq-LZ-4JD">
-                    <rect key="frame" x="20" y="368" width="335" height="72"/>
+                    <rect key="frame" x="20" y="367.5" width="335" height="72"/>
                     <string key="text">If enable,iReader APP will connect to the reader which has the strongest Bluetooth signal(normally the nearest)at startup,mostly suitable when you have only one bR301BLE/bR500 around.Disable this if you want to connect a reader manually.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" white="0.94050276359999996" alpha="1" colorSpace="calibratedWhite"/>

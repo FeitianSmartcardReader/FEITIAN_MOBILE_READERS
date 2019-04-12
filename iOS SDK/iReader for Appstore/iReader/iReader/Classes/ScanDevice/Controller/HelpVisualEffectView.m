@@ -63,7 +63,7 @@
     
     //iR301 info
     _iR301ImageView = [[UIImageView alloc] init];
-    _iR301ImageView.image = [UIImage imageNamed:@"iR301.png"];
+    _iR301ImageView.image = [UIImage imageNamed:@"iR301-CardDefault"];
     _iR301ImageView.layer.cornerRadius = 20;
     [self.contentView addSubview:_iR301ImageView];
     
@@ -84,7 +84,7 @@
     
     //bR301 info
     _bR301ImageView = [[UIImageView alloc] init];
-    _bR301ImageView.image = [UIImage imageNamed:@"bR301.png"];
+    _bR301ImageView.image = [UIImage imageNamed:@"bR301-CardDefault"];
     [self.contentView addSubview:_bR301ImageView];
     
     _bR301TitleLabel = [[UILabel alloc] init];
@@ -130,7 +130,7 @@
     
     //info label
     _infoLabel = [[UILabel alloc] init];
-    _infoLabel.text = @"The iReader App only support one reader using on the same time.";
+    _infoLabel.text = @"The iReader App only support one reader using simultaneously.";
     _infoLabel.numberOfLines = 0;
     _infoLabel.font = [UIFont systemFontOfSize:12];
     _infoLabel.textColor = [UIColor whiteColor];

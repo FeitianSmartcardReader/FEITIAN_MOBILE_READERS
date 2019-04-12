@@ -1,3 +1,19 @@
+2019/04/12
+	App upgrade to 2.3.0, here is the change log:
+	1. Improve App stability
+	2. Modify API to get reader model name, reader name and Bluetooth ID command
+	3. To build the demo source code, need to add -all_load/-ObjC
+	4. Support OEM reader display
+	5. Add log export function, allow the user to record communication log and export by mail, help us locate the issue.
+
+	Lib upgrade to 3.5.45, improve below issues：
+	1. Improve bR301 card slot event 
+	2. Improve compatible with latest iOS 12.2
+	3. Modify the API which to get reader model name
+	4. Solved error when calculating the time of card timeout 
+	5. Modify the lib, after call SCardReleaseContext, and call SCardReconnect/SCardConnect, return SCARD_E_READER_UNAVAILABLE
+	6. Improve API to disable power saving mode, the BLE reader after 3mins will turn off automatically to saving battery, the user can disable this feature 
+
 2019/01/19
 	- Update iReader demo app, demo update to 2.0.1
 	    1. Using CoreBluetooth API to scan the BLE readers and through the UUID rules to do filter
@@ -10,4 +26,4 @@
 	OC demo using for Appstore, the binary can download from:
 	https://itunes.apple.com/us/app/irockey301/id525954151?mt=8
 
-Swift demo, we only for demo show, it includes basic function.
+Swift demo, it includes basic function.

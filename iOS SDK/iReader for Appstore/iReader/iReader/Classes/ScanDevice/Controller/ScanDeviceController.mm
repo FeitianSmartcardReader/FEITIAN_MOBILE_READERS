@@ -14,7 +14,7 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "DeviceCollectionViewCell.h"
 #import "readerModel.h"
-
+#import "HJProxy.h"
 
 static id myobject;
 SCARDCONTEXT gContxtHandle;
@@ -51,16 +51,15 @@ NSString *gBluetoothID = @"";
 {
     myobject = self;
     self.navigationController.delegate = self;
+    [self initReaderInterface];
     
-    NSNumber *value = [[NSUserDefaults standardUserDefaults] valueForKey:autoConnectKey];
-    if (value == nil) {
-        _autoConnect = NO;
+    if (gContxtHandle == 0) {
+        ULONG ret = SCardEstablishContext(SCARD_SCOPE_SYSTEM,NULL,NULL,&gContxtHandle);
+        if(ret != 0){
+            [[Tools shareTools] showError:[[Tools shareTools] mapErrorCode:ret]];
+            return;
+        }
     }
-    _autoConnect = value.boolValue;
-    [interface setAutoPair:_autoConnect];
-    
-    [interface setDelegate:self];
-    [FTDeviceType setDeviceType:BR301BLE_AND_BR500];
     
     [self beginScanBLEDevice];
 }
@@ -173,12 +172,6 @@ NSString *gBluetoothID = @"";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    interface = [[ReaderInterface alloc] init];
-
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [self initReaderInterface];
-    });
 
     _deviceList = [NSMutableArray array];
     _discoverdList = [NSMutableArray array];
@@ -203,6 +196,7 @@ NSString *gBluetoothID = @"";
 //init readerInterface and card context
 - (void)initReaderInterface
 {
+    interface = [[ReaderInterface alloc] init];
     NSNumber *value = [[NSUserDefaults standardUserDefaults] valueForKey:autoConnectKey];
     if (value == nil) {
         _autoConnect = NO;
@@ -216,11 +210,6 @@ NSString *gBluetoothID = @"";
     
     //set support device type, default support all readers;
     [FTDeviceType setDeviceType:(FTDEVICETYPE)(IR301_AND_BR301 | BR301BLE_AND_BR500)];
-    
-    ULONG ret = SCardEstablishContext(SCARD_SCOPE_SYSTEM,NULL,NULL,&gContxtHandle);
-    if(ret != 0){
-        [[Tools shareTools] showError:[[Tools shareTools] mapErrorCode:ret]];
-    }
 }
 
 #pragma mark ReaderInterfaceDelegate
@@ -232,34 +221,12 @@ NSString *gBluetoothID = @"";
         [self stopRefresh];
         
         gBluetoothID = bluetoothID;
-
-        if (_timer) {
-            [_timer invalidate];
-            _timer = nil;
-        }
         
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            
-            NSString *reader = [self getReaderList];
-            if (reader.length == 0 || reader == nil) {
-                return ;
-            }
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                _readerNameLabel.text = reader;
-            });
-            
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                
-                if (_autoConnect) {
-                    _selectedDeviceName = [self getReaderList];
-                }
-                
-                OperationViewController *operationVC = [[OperationViewController alloc] init];
-                operationVC.readerName = _selectedDeviceName;
-                operationVC.rootVC = self;
-                [self.navigationController pushViewController:operationVC animated:YES];
-            });
+        dispatch_async(dispatch_get_main_queue(), ^{
+            OperationViewController *operationVC = [[OperationViewController alloc] init];
+            operationVC.readerName = [_selectedDeviceName copy];
+            operationVC.rootVC = self;
+            [self.navigationController pushViewController:operationVC animated:YES];
         });
     }else {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -371,7 +338,7 @@ NSString *gBluetoothID = @"";
 }
 -(void)viewDidAppear:(BOOL)animated
 {
-    [self startRefreshThread];
+    [self startRefresh];
     [self setupCollectionView];
 }
 
@@ -383,11 +350,6 @@ NSString *gBluetoothID = @"";
     for (UIView *view in _scanDeviceListView.subviews) {
         [view removeFromSuperview];
     }
-    
-    if (_timer) {
-        [_timer invalidate];
-        _timer = nil;
-    }
 }
 
 #pragma mark UINavigationControllerDelegate
@@ -396,17 +358,10 @@ NSString *gBluetoothID = @"";
     [self.navigationController setNavigationBarHidden:isSelf animated:YES];
 }
 
-//start a thread
-- (void)startRefreshThread
+- (void)startRefresh
 {
-    [NSThread detachNewThreadSelector:@selector(autoRefresh) toTarget:self withObject:nil];
-}
-
-- (void)autoRefresh
-{
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(refresh) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
-    [[NSRunLoop currentRunLoop] run];
+    HJProxy *proxy = [HJProxy proxyWithTarget:self];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:proxy selector:@selector(refresh) userInfo:nil repeats:YES];
 }
 
 -(void)stopRefresh
@@ -420,23 +375,23 @@ NSString *gBluetoothID = @"";
 //restart bluetooth scan
 - (void)refresh
 {
-    _tempList = [_discoverdList copy];
-    for (NSInteger i = 0; i < _tempList.count; i++) {
-        readerModel *model = _tempList[i];
-        NSDate *_date = model.date;
-        if ([[NSDate date] timeIntervalSinceDate:_date] < 1) {
-            continue;
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        _tempList = [_discoverdList copy];
+        for (NSInteger i = 0; i < _tempList.count; i++) {
+            readerModel *model = _tempList[i];
+            NSDate *_date = model.date;
+            if ([[NSDate date] timeIntervalSinceDate:_date] < 1) {
+                continue;
+            }
+            
+            [_deviceList removeObject:model.name];
+            [_discoverdList removeObject:model];
         }
-        
-        [_deviceList removeObject:model.name];
-        [_discoverdList removeObject:model];
-    }
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [_deviceListCollectionView reloadData];
+        _tempList = [_discoverdList copy];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_deviceListCollectionView reloadData];
+        });
     });
-    
-    return;
 }
 
 - (void)setupCollectionView
