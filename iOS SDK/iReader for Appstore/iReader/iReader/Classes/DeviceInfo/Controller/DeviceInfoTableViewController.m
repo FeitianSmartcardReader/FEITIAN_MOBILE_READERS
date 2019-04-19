@@ -249,7 +249,7 @@ extern NSString *gBluetoothID;
             
             [[Tools shareTools] showMsg:@"reader auto off"];
             
-            NSInteger iRet = FT_AutoTurnOffReader(isOn);
+            NSInteger iRet = FT_AutoTurnOffReader(!isOn);
             if (iRet != SCARD_S_SUCCESS) {
                 NSString *error = [NSString stringWithFormat:@"Disable power saving mode not supported by this firmware version."];
                 [[Tools shareTools] showError:error];
