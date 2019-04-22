@@ -1,3 +1,11 @@
+2019/04/22
+	Lib upgrade to 3.5.45, improve below issues：
+	1. Improve bR301 card slot event 
+	2. Improve compatible with latest iOS 12.2
+	3. Modify the API which to get reader model name
+	4. Solved error when calculating the time of card timeout 
+	5. Modify the lib, after call SCardReleaseContext, and call SCardReconnect/SCardConnect, return SCARD_E_READER_UNAVAILABLE
+	6. Improve API to disable power saving mode, the BLE reader after 3mins will turn off automatically to saving battery, the user can disable this feature 
 2019/01/19
 	Update SDK to 3.5.40, changed debugging flag, to void compilation conflicts with client Libraries
 2018/12/18
