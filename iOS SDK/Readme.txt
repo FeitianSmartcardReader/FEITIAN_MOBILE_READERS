@@ -1,3 +1,16 @@
+2020/01/22
+	Lib upgrade to 3.5.55, improve below issues:
+	1. Compatible with latest iOS 13.2
+	2. Solved building issue with xcode 11(solved data to string convert issue)
+	3. Modify the code to meet the PC/SC connection without delegate
+  	4. Rename derive_key API
+	5. Solved a issue which is computing the timeout API, which lead to a error while in communication
+	6. Support OEM reader
+	7. Change the private command for Bluetooth reader 
+	8. Solved a issue when call GetDeviceType, sometimes, the EA API return 0, before start transfer data with reader, will check the self.session outputStream
+	9. Solved a bug when power on the specific card
+	10. Add compatible with BLE reader
+	11. Add API to get reader type
 2019/04/22
 	Lib upgrade to 3.5.45, improve below issues：
 	1. Improve bR301 card slot event 
