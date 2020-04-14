@@ -1,3 +1,7 @@
+2020/04/14
+	Update lib to 3.5.57, improve below issues:
+	compatibility with bR301BD5 and bR301BLE
+	Fix bug for timeout card, which test the card timeout with 30s
 2020/01/22
 	Lib upgrade to 3.5.55, improve below issues:
 	1. Compatible with latest iOS 13.2
