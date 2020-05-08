@@ -6,8 +6,12 @@ https://itunes.apple.com/us/app/smartcard-reader/id525954151?mt=8
 Download demo application APK file for Android:
 https://github.com/FeitianSmartcardReader/FEITIAN_MOBILE_READERS/raw/master/Android%20SDK/BIN/FTReaderStandard.apk
 
+User manual and Developer manual:
+http://www.pcscreader.com/docs/getting_started.html
 
 History:
+2020/05/08
+    - Update iOS SDK, check the first two bytes of UUID for connection
 2020/4/14
 	- Update iOS SDK, lib upgrade to 3.5.57
 2020/1/22
