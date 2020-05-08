@@ -1,3 +1,0 @@
-C:/Users/Shane/Desktop/FTReaderStandard_androidstudio/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/rebuild_cache.dir
-C:/Users/Shane/Desktop/FTReaderStandard_androidstudio/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/FTReaderStandard.dir
-C:/Users/Shane/Desktop/FTReaderStandard_androidstudio/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/edit_cache.dir

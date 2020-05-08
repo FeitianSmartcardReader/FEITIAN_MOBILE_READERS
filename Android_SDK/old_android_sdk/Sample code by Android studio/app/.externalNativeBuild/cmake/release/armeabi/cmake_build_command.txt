@@ -1,0 +1,18 @@
+Executable : C:\Android\SDK4AndroidStudio\cmake\3.6.4111459\bin\cmake.exe
+arguments : 
+-HC:\Users\Shane\Desktop\FTReaderStandard_androidstudio\app
+-BC:\Users\Shane\Desktop\FTReaderStandard_androidstudio\app\.externalNativeBuild\cmake\release\armeabi
+-DANDROID_ABI=armeabi
+-DANDROID_PLATFORM=android-19
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\Shane\Desktop\FTReaderStandard_androidstudio\app\build\intermediates\cmake\release\obj\armeabi
+-DCMAKE_BUILD_TYPE=Release
+-DANDROID_NDK=C:\Android\SDK4AndroidStudio\ndk-bundle
+-DCMAKE_CXX_FLAGS=
+-DCMAKE_TOOLCHAIN_FILE=C:\Android\SDK4AndroidStudio\ndk-bundle\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=C:\Android\SDK4AndroidStudio\cmake\3.6.4111459\bin\ninja.exe
+-GAndroid Gradle - Ninja
+-DANDROID_PLATFORM=android-23
+-DANDROID_TOOLCHAIN=clang
+-DANDROID_STL=gnustl_static
+jvmArgs : 
+

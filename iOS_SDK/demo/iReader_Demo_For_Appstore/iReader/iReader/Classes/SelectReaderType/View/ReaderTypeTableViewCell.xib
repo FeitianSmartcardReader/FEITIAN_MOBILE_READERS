@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectReaderCell" rowHeight="194" id="KGk-i7-Jjw" customClass="ReaderTypeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="247" height="194"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="247" height="193.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bR500" translatesAutoresizingMaskIntoConstraints="NO" id="FUn-dD-S3v">
+                        <rect key="frame" x="0.0" y="10" width="247" height="143"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iR301" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9U4-Uj-OQx">
+                        <rect key="frame" x="0.0" y="163" width="247" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="uKd-oA-wgY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9U4-Uj-OQx" firstAttribute="top" secondItem="FUn-dD-S3v" secondAttribute="bottom" constant="10" id="9hJ-gL-z8O"/>
+                    <constraint firstAttribute="bottom" secondItem="9U4-Uj-OQx" secondAttribute="bottom" constant="10" id="Dtz-Wd-gMC"/>
+                    <constraint firstAttribute="trailing" secondItem="9U4-Uj-OQx" secondAttribute="trailing" id="Q1i-Wt-Cg4"/>
+                    <constraint firstItem="FUn-dD-S3v" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="akc-bC-qCZ"/>
+                    <constraint firstItem="FUn-dD-S3v" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nts-Ej-l9P"/>
+                    <constraint firstAttribute="trailing" secondItem="FUn-dD-S3v" secondAttribute="trailing" id="pNP-dq-L8e"/>
+                    <constraint firstItem="9U4-Uj-OQx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zmR-Uv-bv9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="keyTypeImageView" destination="FUn-dD-S3v" id="Yh8-IX-kR2"/>
+                <outlet property="keyTypeTitleLabel" destination="9U4-Uj-OQx" id="CH1-rR-mQD"/>
+            </connections>
+            <point key="canvasLocation" x="-101" y="1"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bR500" width="621" height="300"/>
+    </resources>
+</document>

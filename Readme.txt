@@ -12,6 +12,7 @@ http://www.pcscreader.com/docs/getting_started.html
 History:
 2020/05/08
     - Update iOS SDK, check the first two bytes of UUID for connection
+    - Android SDK may update in these two weeks, the old SDK won't be using anymore
 2020/4/14
 	- Update iOS SDK, lib upgrade to 3.5.57
 2020/1/22
