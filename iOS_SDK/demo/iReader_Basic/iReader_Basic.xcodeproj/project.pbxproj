@@ -19,7 +19,6 @@
 		4A4E390A2175831800C3F62F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E39092175831800C3F62F /* CoreBluetooth.framework */; };
 		4A4E391621758E8C00C3F62F /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E391521758E8C00C3F62F /* Tools.m */; };
 		4A4E391A2175B94300C3F62F /* hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E39192175B94300C3F62F /* hex.m */; };
-		B512614E23CD6B0A00CB38AF /* libiRockey301_ccid_V3.5.55_release.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B512614C23CD6B0A00CB38AF /* libiRockey301_ccid_V3.5.55_release.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 		4A4E391521758E8C00C3F62F /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		4A4E39182175B94300C3F62F /* hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hex.h; sourceTree = "<group>"; };
 		4A4E39192175B94300C3F62F /* hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hex.m; sourceTree = "<group>"; };
-		B512614C23CD6B0A00CB38AF /* libiRockey301_ccid_V3.5.55_release.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiRockey301_ccid_V3.5.55_release.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +73,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A4E390A2175831800C3F62F /* CoreBluetooth.framework in Frameworks */,
-				B512614E23CD6B0A00CB38AF /* libiRockey301_ccid_V3.5.55_release.a in Frameworks */,
 				4A4E39082175831200C3F62F /* ExternalAccessory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,7 +186,6 @@
 		B512614A23CD6B0A00CB38AF /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				B512614C23CD6B0A00CB38AF /* libiRockey301_ccid_V3.5.55_release.a */,
 			);
 			name = lib;
 			path = iReader_Basic/SDK/lib;

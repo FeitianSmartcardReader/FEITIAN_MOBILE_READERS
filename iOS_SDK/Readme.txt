@@ -1,3 +1,9 @@
+2020/05/12
+	Add PCSC Demo, which only call PCSC API
+	Update iReader demo
+	Upload PCSC Library, which only support PCSC API
+	Rename the iReader Appstore demo
+	Upload IPA for iReader and PC/SC Demo 
 2020/04/14
 	Update lib to 3.5.57, improve below issues:
 	compatibility with bR301BD5 and bR301BLE

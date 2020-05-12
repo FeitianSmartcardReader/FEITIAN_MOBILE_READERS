@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F153A3223716ED4002344F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F153A3123716ED4002344F5 /* AppDelegate.m */; };
+		1F153A3523716ED4002344F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F153A3423716ED4002344F5 /* ViewController.m */; };
+		1F153A3823716ED4002344F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F153A3623716ED4002344F5 /* Main.storyboard */; };
+		1F153A3A23716ED6002344F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F153A3923716ED6002344F5 /* Assets.xcassets */; };
+		1F153A3D23716ED6002344F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F153A3B23716ED6002344F5 /* LaunchScreen.storyboard */; };
+		1F153A4023716ED6002344F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F153A3F23716ED6002344F5 /* main.m */; };
+		1F153A53237177FF002344F5 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F153A52237177FF002344F5 /* ExternalAccessory.framework */; };
+		1F153A5523717805002344F5 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F153A5423717805002344F5 /* CoreBluetooth.framework */; };
+		1F7498952374143A00F66F9F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7498942374143A00F66F9F /* libc++.tbd */; };
+		A11FB8B92387A4520018AAA2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11FB8B82387A4520018AAA2 /* StoreKit.framework */; };
+		A11FB8BB2387A45C0018AAA2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11FB8BA2387A45B0018AAA2 /* GameKit.framework */; };
+		A11FB8BD2387A4730018AAA2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11FB8BC2387A4730018AAA2 /* MessageUI.framework */; };
+		A11FB8C42387D0550018AAA2 /* hex.m in Sources */ = {isa = PBXBuildFile; fileRef = A11FB8C22387D0540018AAA2 /* hex.m */; };
+		A12672892464ECEE004FFB2C /* libiRockey301_PCSC_Debug_V3_5_57ccid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A12672882464ECEE004FFB2C /* libiRockey301_PCSC_Debug_V3_5_57ccid.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F153A2D23716ED4002344F5 /* PCSCTestFTReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PCSCTestFTReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F153A3023716ED4002344F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1F153A3123716ED4002344F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1F153A3323716ED4002344F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1F153A3423716ED4002344F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1F153A3723716ED4002344F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F153A3923716ED6002344F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F153A3C23716ED6002344F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F153A3E23716ED6002344F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F153A3F23716ED6002344F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F153A49237170B4002344F5 /* ReaderInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderInterface.h; sourceTree = "<group>"; };
+		1F153A4A237170B4002344F5 /* wintypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wintypes.h; sourceTree = "<group>"; };
+		1F153A4B237170B4002344F5 /* winscard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = winscard.h; sourceTree = "<group>"; };
+		1F153A4C237170B4002344F5 /* ft301u.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ft301u.h; sourceTree = "<group>"; };
+		1F153A52237177FF002344F5 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		1F153A5423717805002344F5 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		1F7498942374143A00F66F9F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		A11FB8B82387A4520018AAA2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A11FB8BA2387A45B0018AAA2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		A11FB8BC2387A4730018AAA2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		A11FB8C22387D0540018AAA2 /* hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hex.m; sourceTree = "<group>"; };
+		A11FB8C32387D0550018AAA2 /* hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hex.h; sourceTree = "<group>"; };
+		A12672882464ECEE004FFB2C /* libiRockey301_PCSC_Debug_V3_5_57ccid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiRockey301_PCSC_Debug_V3_5_57ccid.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F153A2A23716ED4002344F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11FB8BD2387A4730018AAA2 /* MessageUI.framework in Frameworks */,
+				A11FB8BB2387A45C0018AAA2 /* GameKit.framework in Frameworks */,
+				A11FB8B92387A4520018AAA2 /* StoreKit.framework in Frameworks */,
+				A12672892464ECEE004FFB2C /* libiRockey301_PCSC_Debug_V3_5_57ccid.a in Frameworks */,
+				1F7498952374143A00F66F9F /* libc++.tbd in Frameworks */,
+				1F153A5523717805002344F5 /* CoreBluetooth.framework in Frameworks */,
+				1F153A53237177FF002344F5 /* ExternalAccessory.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F153A2423716ED4002344F5 = {
+			isa = PBXGroup;
+			children = (
+				1F153A2F23716ED4002344F5 /* TestFTReader */,
+				1F153A2E23716ED4002344F5 /* Products */,
+				1F153A5023717736002344F5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F153A2E23716ED4002344F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F153A2D23716ED4002344F5 /* PCSCTestFTReader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F153A2F23716ED4002344F5 /* TestFTReader */ = {
+			isa = PBXGroup;
+			children = (
+				1F153A47237170B4002344F5 /* SDK */,
+				1F153A3023716ED4002344F5 /* AppDelegate.h */,
+				1F153A3123716ED4002344F5 /* AppDelegate.m */,
+				A11FB8C32387D0550018AAA2 /* hex.h */,
+				A11FB8C22387D0540018AAA2 /* hex.m */,
+				1F153A3323716ED4002344F5 /* ViewController.h */,
+				1F153A3423716ED4002344F5 /* ViewController.m */,
+				1F153A3623716ED4002344F5 /* Main.storyboard */,
+				1F153A3923716ED6002344F5 /* Assets.xcassets */,
+				1F153A3B23716ED6002344F5 /* LaunchScreen.storyboard */,
+				1F153A3E23716ED6002344F5 /* Info.plist */,
+				1F153A3F23716ED6002344F5 /* main.m */,
+			);
+			path = TestFTReader;
+			sourceTree = "<group>";
+		};
+		1F153A47237170B4002344F5 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				1F153A48237170B4002344F5 /* include */,
+				1F153A4D237170B4002344F5 /* lib */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		1F153A48237170B4002344F5 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1F153A49237170B4002344F5 /* ReaderInterface.h */,
+				1F153A4A237170B4002344F5 /* wintypes.h */,
+				1F153A4B237170B4002344F5 /* winscard.h */,
+				1F153A4C237170B4002344F5 /* ft301u.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		1F153A4D237170B4002344F5 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A12672882464ECEE004FFB2C /* libiRockey301_PCSC_Debug_V3_5_57ccid.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		1F153A5023717736002344F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A11FB8BC2387A4730018AAA2 /* MessageUI.framework */,
+				A11FB8BA2387A45B0018AAA2 /* GameKit.framework */,
+				A11FB8B82387A4520018AAA2 /* StoreKit.framework */,
+				1F7498942374143A00F66F9F /* libc++.tbd */,
+				1F153A5423717805002344F5 /* CoreBluetooth.framework */,
+				1F153A52237177FF002344F5 /* ExternalAccessory.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F153A2C23716ED4002344F5 /* TestFTReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F153A4323716ED6002344F5 /* Build configuration list for PBXNativeTarget "TestFTReader" */;
+			buildPhases = (
+				1F153A2923716ED4002344F5 /* Sources */,
+				1F153A2A23716ED4002344F5 /* Frameworks */,
+				1F153A2B23716ED4002344F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestFTReader;
+			productName = TestFTReader;
+			productReference = 1F153A2D23716ED4002344F5 /* PCSCTestFTReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F153A2523716ED4002344F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "洪捷";
+				TargetAttributes = {
+					1F153A2C23716ED4002344F5 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 1F153A2823716ED4002344F5 /* Build configuration list for PBXProject "TestFTReader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F153A2423716ED4002344F5;
+			productRefGroup = 1F153A2E23716ED4002344F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F153A2C23716ED4002344F5 /* TestFTReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F153A2B23716ED4002344F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F153A3D23716ED6002344F5 /* LaunchScreen.storyboard in Resources */,
+				1F153A3A23716ED6002344F5 /* Assets.xcassets in Resources */,
+				1F153A3823716ED4002344F5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F153A2923716ED4002344F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F153A3523716ED4002344F5 /* ViewController.m in Sources */,
+				A11FB8C42387D0550018AAA2 /* hex.m in Sources */,
+				1F153A4023716ED6002344F5 /* main.m in Sources */,
+				1F153A3223716ED4002344F5 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F153A3623716ED4002344F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F153A3723716ED4002344F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F153A3B23716ED6002344F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F153A3C23716ED6002344F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F153A4123716ED6002344F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1F153A4223716ED6002344F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F153A4423716ED6002344F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PL9NCP8CG6;
+				INFOPLIST_FILE = TestFTReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestFTReader/SDK/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.pcscTestFTReader123;
+				PRODUCT_NAME = PCSCTestFTReader;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F153A4523716ED6002344F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PL9NCP8CG6;
+				INFOPLIST_FILE = TestFTReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestFTReader/SDK/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.pcscTestFTReader123;
+				PRODUCT_NAME = PCSCTestFTReader;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F153A2823716ED4002344F5 /* Build configuration list for PBXProject "TestFTReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F153A4123716ED6002344F5 /* Debug */,
+				1F153A4223716ED6002344F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F153A4323716ED6002344F5 /* Build configuration list for PBXNativeTarget "TestFTReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F153A4423716ED6002344F5 /* Debug */,
+				1F153A4523716ED6002344F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F153A2523716ED4002344F5 /* Project object */;
+}
