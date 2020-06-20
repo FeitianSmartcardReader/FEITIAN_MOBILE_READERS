@@ -1,5 +1,6 @@
-Get Start:
+Get Start: http://www.pcscreader.com/docs/getting_started.html
 
+Take a test: http://www.pcscreader.com/docs/usage.html
 Download demo application from Appstore:
 https://itunes.apple.com/us/app/smartcard-reader/id525954151?mt=8
 
