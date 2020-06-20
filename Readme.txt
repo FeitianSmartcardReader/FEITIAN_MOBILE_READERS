@@ -4,7 +4,7 @@ Download demo application from Appstore:
 https://itunes.apple.com/us/app/smartcard-reader/id525954151?mt=8
 
 Download demo application APK file for Android:
-https://github.com/FeitianSmartcardReader/FEITIAN_MOBILE_READERS/raw/master/Android%20SDK/BIN/FTReaderStandard.apk
+https://github.com/FeitianSmartcardReader/FEITIAN_MOBILE_READERS/raw/master/Android_SDK/old_android_sdk/BIN/FTReaderStandard.apk
 
 User manual and Developer manual:
 http://www.pcscreader.com/docs/getting_started.html
