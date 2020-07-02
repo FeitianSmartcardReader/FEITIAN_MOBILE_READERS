@@ -11,6 +11,8 @@ User manual and Developer manual:
 http://www.pcscreader.com/docs/getting_started.html
 
 History:
+2020/07/02
+	- Update iOS Lib 3.5.59, add background mode support, to have support background mode, you will need add "external accessory communication" key in your settings. more details, check https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background/about_the_background_execution_sequence
 2020/05/12
 	- Update iReader demo, add PC/SC library which only support PCSC API
 2020/05/08
