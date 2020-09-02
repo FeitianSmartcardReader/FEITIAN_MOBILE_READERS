@@ -1,3 +1,11 @@
+2020/09/02
+	Add new string into lib, the new external protocol string apply lower-case letter, if you are using iR301, bR301, then please add below strings in your Info.plist,  External Accessory Protocol string key needs to set as below:
+        iR301: com.ftsafe.ir301, com.ftsafe.iR301
+        bR301: com.ftsafe.br301, com.ftsafe.bR301
+	
+	 If you want use App match feature, confirm below:
+	 1. You have add those strings into your Info.plist file
+	 2. Add notes in your order and said you need App match feature
 2020/05/12
 	Add PCSC Demo, which only call PCSC API
 	Update iReader demo
