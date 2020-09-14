@@ -5,12 +5,14 @@ Download demo application from Appstore:
 https://itunes.apple.com/us/app/smartcard-reader/id525954151?mt=8
 
 Download demo application APK file for Android:
-https://github.com/FeitianSmartcardReader/FEITIAN_MOBILE_READERS/raw/master/Android_SDK/old_android_sdk/BIN/FTReaderStandard.apk
+https://github.com/FeitianSmartcardReader/FEITIAN_MOBILE_READERS/raw/master/Android_SDK/new_android_sdk/BIN/cardReader_1.0.3.apk
 
 User manual and Developer manual:
 http://www.pcscreader.com/docs/getting_started.html
 
 History:
+2020/09/14
+	- Upload android sdk v1.0.3
 2020/09/02
 	- Update iOS Lib to 3.5.60, add new protocol string which are com.ftsafe.ir301 and com.ftsafe.br301
 2020/07/02
