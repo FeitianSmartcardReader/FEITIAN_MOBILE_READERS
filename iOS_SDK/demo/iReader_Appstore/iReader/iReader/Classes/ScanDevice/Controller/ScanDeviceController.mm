@@ -138,6 +138,11 @@ NSString *gBluetoothID = @"";
     BOOL ret = NO;
     if([adv objectForKey:CBAdvertisementDataServiceUUIDsKey])
     {
+        
+     NSArray * array0 =[adv objectForKey:CBAdvertisementDataServiceUUIDsKey];
+     if(array0.count >0)
+      {
+        
         CBUUID  *serviceUUID = [[adv objectForKey:CBAdvertisementDataServiceUUIDsKey] objectAtIndex:0];
         NSInteger type = 0;
         ret = [self CheckFTBLEDeviceByUUID:serviceUUID.data UUIDType:&type];
@@ -147,6 +152,7 @@ NSString *gBluetoothID = @"";
                 ret = NO;
             }
         }
+     }
     }
     return ret;
 }

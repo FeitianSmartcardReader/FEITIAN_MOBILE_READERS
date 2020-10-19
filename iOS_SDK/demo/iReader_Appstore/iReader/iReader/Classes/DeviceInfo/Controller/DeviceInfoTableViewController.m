@@ -11,7 +11,7 @@
 #import "ReaderInterface.h"
 #import "ScanDeviceController.h"
 
-#define AppVersion @"2.0.5"
+#define AppVersion @"2.0.8"
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
 extern SCARDCONTEXT gContxtHandle;
 extern SCARDHANDLE gCardHandle;

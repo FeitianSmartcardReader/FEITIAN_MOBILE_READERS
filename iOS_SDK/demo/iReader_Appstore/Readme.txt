@@ -1,5 +1,14 @@
+2020/10/19
+	App upgrade to 2.0.8, here is the change log:
+	1. Build with latest Feitian mobile library
+	2. Improve the UI experience
+	3. Add Bluetooth auto connect feature
+	4. Support background running mode
+	5. Support new reader
+	6. Solve the compatible issue with iOS, relates the Bluetooth name
+	7. Fixed crash issue which is multi-thread function in iOS14
 2019/04/12
-	App upgrade to 2.3.0, here is the change log:
+	App upgrade to 2.0.3, here is the change log:
 	1. Improve App stability
 	2. Modify API to get reader model name, reader name and Bluetooth ID command
 	3. To build the demo source code, need to add -all_load/-ObjC
