@@ -4,8 +4,8 @@ import android.app.Dialog;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnShowListener;
 import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnShowListener;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -17,7 +17,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ftsafe.readerScheme.FTException;
 import com.ftsafe.readerScheme.FTReader;
@@ -71,14 +70,14 @@ public class SelectDeviceDialog extends Dialog implements View.OnClickListener, 
 		LinearLayout.LayoutParams lp5 = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
 		LinearLayout.LayoutParams lp6 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, 0, 1);
 		
-		// ========================= 顶部布局 =========================
+		// ========================= Top layout =========================
 		
 		LinearLayout titleLayout = new LinearLayout(context);
 		titleLayout.setOrientation(LinearLayout.HORIZONTAL);
 		titleLayout.setLayoutParams(lp1);
 		
 		tvTitle = new TextView(context);
-		tvTitle.setText("选择设备");
+		tvTitle.setText("select bluetooth device");
 		tvTitle.setTextSize(22);
 		
 		progressBar = new ProgressBar(context);
@@ -88,7 +87,7 @@ public class SelectDeviceDialog extends Dialog implements View.OnClickListener, 
 		titleLayout.addView(tvTitle);
 		titleLayout.addView(progressBar);
 		
-		// ========================= 底部布局 =========================
+		// ========================= Bottom layout =========================
 		
 		LinearLayout buttonsLayout = new LinearLayout(context);
 		buttonsLayout.setOrientation(LinearLayout.HORIZONTAL);
@@ -102,9 +101,9 @@ public class SelectDeviceDialog extends Dialog implements View.OnClickListener, 
 		btnScanStop.setLayoutParams(lp5);
 		btnClose.setLayoutParams(lp5);
 		
-		btnScanStart.setText("开始扫描");
-		btnScanStop.setText("停止扫描");
-		btnClose.setText("关闭");
+		btnScanStart.setText("start scan");
+		btnScanStop.setText("stop scan");
+		btnClose.setText("close");
 		
 		btnScanStart.setOnClickListener(this);
 		btnScanStop.setOnClickListener(this);
@@ -116,14 +115,14 @@ public class SelectDeviceDialog extends Dialog implements View.OnClickListener, 
 		buttonsLayout.addView(btnScanStop);
 		buttonsLayout.addView(btnClose);
 		
-		// ===================== 中部的 ListView 布局 =================
+		// ===================== Listview layout in the middle =================
 		
 		mListView = new ListView(context);
 		mListView.setLayoutParams(lp6);
 		mListView.setHeaderDividersEnabled(true);
 		mListView.setFooterDividersEnabled(true);
 
-		// ===================== 根布局 ==============================
+		// ===================== Root layout ==============================
 		
 		LinearLayout rootLayout = new LinearLayout(context);
 		rootLayout.setOrientation(LinearLayout.VERTICAL);
@@ -174,13 +173,22 @@ public class SelectDeviceDialog extends Dialog implements View.OnClickListener, 
 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		BluetoothDevice device = listDevice.get(position);
 		SelectDeviceDialog.this.cancel();
-		try {
-			mFTReader.readerOpen(listDevice.get(position));
-			mCallback.onDeviceConnected();
-		} catch (FTException e) {
-			e.printStackTrace();
-		}
+		((MainActivity)mContext).showLoading(true);
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					mFTReader.readerOpen(device);
+					((MainActivity)mContext).showLoading(false);
+					mCallback.onDeviceConnected();
+				} catch (FTException e) {
+					e.printStackTrace();
+					((MainActivity)mContext).showLoading(false);
+				}
+			}
+		}).start();
 	}
 
 	@Override

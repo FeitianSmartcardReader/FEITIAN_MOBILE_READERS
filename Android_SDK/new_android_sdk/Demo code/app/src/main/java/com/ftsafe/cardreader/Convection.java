@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class Convection {
 
 	/**
-	 * 10进制字符串转16进制字符 例如"1610678288" ------>60010010
+	 * Decimal string to hexadecimal character for example"1610678288" ------>60010010
 	 * **/
 	public static String str10ToStr16(String str10) {
 		return Long.toHexString(Long.parseLong(str10));

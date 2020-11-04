@@ -9,7 +9,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -103,7 +104,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_connect"
                 android:layout_toRightOf="@id/btn_control"
-                android:text="A55A8031"/>
+                android:text="A55A8031"
+                android:singleLine="true"/>
 
             <Button
                 android:id="@+id/btn_transmit"
@@ -118,7 +120,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_control"
                 android:layout_toRightOf="@id/btn_transmit"
-                android:completionThreshold="0"/>
+                android:completionThreshold="0"
+                android:singleLine="true"/>
 
             <Button
                 android:id="@+id/btn_list_reader_groups"

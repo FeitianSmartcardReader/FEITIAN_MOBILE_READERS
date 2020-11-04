@@ -9,7 +9,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -18,13 +19,18 @@
             <TextView
                 android:id="@+id/tv_select_type"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="15dp"
                 android:text="select device type : "/>
 
             <Spinner
                 android:id="@+id/sp_type"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
                 android:layout_toRightOf="@id/tv_select_type"
                 android:entries="@array/type"/>
 
@@ -55,7 +61,8 @@
             <Spinner
                 android:id="@+id/sp_device_name"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
                 android:layout_below="@id/tv_select_type"
                 android:layout_toRightOf="@id/btn_close"/>
 
@@ -87,7 +94,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_poweron"
                 android:layout_toRightOf="@id/btn_readerxfr"
-                android:completionThreshold="0"/>
+                android:completionThreshold="0"
+                android:singleLine="true"/>
 
             <Button
                 android:id="@+id/btn_readerescape"
@@ -102,7 +110,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_readerxfr"
                 android:layout_toRightOf="@id/btn_readerescape"
-                android:text="A55A8031"/>
+                android:text="A55A8031"
+                android:singleLine="true"/>
 
             <Button
                 android:id="@+id/btn_getslotstatus"
@@ -187,14 +196,22 @@
                 android:layout_toRightOf="@id/btn_open_auto_turnoff"
                 android:text="close auto turn off"/>
 
-            <Button
-                android:id="@+id/btn_clear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/btn_open_auto_turnoff"
-                android:text="clear"/>
         </RelativeLayout>
     </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="#999999"/>
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_open_auto_turnoff"
+        android:text="clear"/>
 
     <ListView
         android:id="@+id/lv_result"

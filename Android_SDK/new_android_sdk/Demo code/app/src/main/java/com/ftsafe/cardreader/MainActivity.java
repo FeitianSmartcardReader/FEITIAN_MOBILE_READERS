@@ -1,19 +1,20 @@
 package com.ftsafe.cardreader;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.bluetooth.BluetoothDevice;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -29,9 +30,12 @@ import com.ftsafe.readerScheme.FTException;
 import com.ftsafe.readerScheme.FTReader;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+import androidx.annotation.RequiresApi;
+
+public class MainActivity extends Activity implements View.OnClickListener {
     FTReader mFtReader;
     Spinner spType, spDeviceName;
     EditText etEscape;
@@ -40,18 +44,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ProgressDialog progressDialog;
     int type = 0;//usb
     int slotIndex = 0;
+    private long lastTimesFlag = 0;
     private final int REQUEST_PERMISSION_CODE = 1;
     private final String[] permissions = {
             Manifest.permission.ACCESS_COARSE_LOCATION
     };
+    private String[] readerNames;
 
     List<String> mResultList;
     ArrayAdapter<String> mAdapterResult;
+    private Handler uiHandler;
     ListView lvResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Click the home button to restart the app
+        if (!isTaskRoot()) {
+            finish();
+            return;
+        }
         setContentView(R.layout.activity_main);
 
 //        mFtReader = new FTReader(this, mHandler, DK.FTREADER_TYPE_USB);
@@ -120,7 +132,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         spDeviceName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                slotIndex = position;
+                if(readerNames != null && readerNames.length > position){
+                    try {
+                        mFtReader.readerOpen(readerNames[position]);
+                    } catch (FTException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
 
             @Override
@@ -143,6 +161,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         progressDialog.setCancelable(false);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 
+        autoCompleteTextView.setOnClickListener(this);
+        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                InputMethodManager in = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                in.hideSoftInputFromWindow(view.getApplicationWindowToken(), 0);
+            }
+        });
         findViewById(R.id.btn_finder).setOnClickListener(this);
         findViewById(R.id.btn_open).setOnClickListener(this);
         findViewById(R.id.btn_close).setOnClickListener(this);
@@ -162,6 +188,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_open_auto_turnoff).setOnClickListener(this);
         findViewById(R.id.btn_close_auto_trunoff).setOnClickListener(this);
         findViewById(R.id.btn_clear).setOnClickListener(this);
+
+        uiHandler = new Handler(this.getMainLooper());
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -241,6 +269,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             if (names.length != 0) {
                                 addSpinnerPrivate(names);
                             }
+                             readerNames = names;
                             showMessage("USB device has been connected.");
                         } catch (FTException e) {
                             e.printStackTrace();
@@ -254,16 +283,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                     break;
                 case DK.BT3_DISCONNECTED:
-                    showMessage("Bluetooth device has been disconneted.");
+                    showMessage("Bluetooth device has been disconnected.");
                     break;
                 case DK.BT4_ACL_DISCONNECTED:
-                    showMessage("BLE device has been disconneted.");
+                    showMessage("BLE device has been disconnected.");
                     break;
                 case DK.USB_IN:
                     showMessage("USB device has been inserted.");
                     break;
                 case DK.USB_OUT:
                     showMessage("USB device out");
+                    addSpinnerPrivate(new String[]{});
                     break;
                 default:
                     if((msg.what & DK.CARD_IN_MASK) == DK.CARD_IN_MASK){
@@ -281,6 +311,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.auto_et_xfr_commond:
+                autoCompleteTextView.setText("0");
+                autoCompleteTextView.setText("");
+                break;
             case R.id.btn_finder:
                 find();
                 break;
@@ -370,7 +404,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         try {
             mFtReader.readerClose();
             if(type == DK.FTREADER_TYPE_BT4){
-                showMessage("BLE device has been disconneted.");
+                showMessage("BLE device has been disconnected.");
+            }else if(type == DK.FTREADER_TYPE_USB){
+                showMessage("USB device has been disconnected.");
+                addSpinnerPrivate(new String[]{});
             }
         } catch (FTException e) {
             e.printStackTrace();
@@ -383,10 +420,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void run() {
                 try {
                     byte[] atr = mFtReader.readerPowerOn(slotIndex);
-                    showMessage("POWER ON SUCCESS. ATR : " + Convection.Bytes2HexString(atr));
+                    showMessage("Power on success. Atr : " + Convection.Bytes2HexString(atr));
                 } catch (FTException e) {
                     e.printStackTrace();
-                    showMessage("POWER ON FAILED.\n" + e.getMessage());
+                    showMessage("Power on failed.\n" + e.getMessage());
                 }
             }
         });
@@ -398,10 +435,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void run() {
                 try {
                     mFtReader.readerPowerOff(slotIndex);
-                    showMessage("POWER OFF SUCCESS.");
+                    showMessage("Power off success.");
                 } catch (FTException e) {
                     e.printStackTrace();
-                    showMessage("POWER OFF SUCCESS.\n"  + e.getMessage());
+                    showMessage("Power off failed.\n"  + e.getMessage());
                 }
             }
         });
@@ -412,16 +449,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void run() {
                 try {
-                    byte[] send = Utility.hexStrToBytes(autoCompleteTextView.getText().toString());
+                    String sendStr = autoCompleteTextView.getText().toString();
+                    showMessage("XFR send : " + sendStr);
+                    byte[] send = Utility.hexStrToBytes(sendStr);
+                    long startTime = System.currentTimeMillis();
                     byte[] data = mFtReader.readerXfr(slotIndex, send);
                     if(data[0] == 0x61){
+                        showMessage("XFR recv : " + Convection.Bytes2HexString(data));
+                        showMessage("XFR send : 00C00000");
                         send = Utility.hexStrToBytes("00c00000" + StrUtil.byte2HexStr(data[1]));
                         data = mFtReader.readerXfr(slotIndex, send);
                     }
-                    showMessage("XFR SUCCESS. RECV : " + Convection.Bytes2HexString(data));
+                    long endTime = System.currentTimeMillis();
+                    showMessage("XFR recv : " + Convection.Bytes2HexString(data) + " (" + (endTime - startTime) + "ms)");
                 } catch (FTException e) {
                     e.printStackTrace();
-                    showMessage("XFR FAILED.\n" + e.getMessage());
+                    showMessage("XFR failed.\n" + e.getMessage());
                 }
             }
         });
@@ -433,12 +476,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void run() {
                 try {
                     String sendStr = etEscape.getText().toString();
+                    showMessage("ESCAPE send : " + sendStr);
                     byte[] send = Utility.hexStrToBytes(sendStr);
+                    long startTime = System.currentTimeMillis();
                     byte[] data = mFtReader.readerEscape(slotIndex, send);
-                    showMessage("ESCAPE SUCCESS. RECV : " + Convection.Bytes2HexString(data));
+                    long endTime = System.currentTimeMillis();
+                    showMessage("ESCAPE recv : " + Convection.Bytes2HexString(data) + " (" + (endTime - startTime) + "ms)");
                 } catch (FTException e) {
                     e.printStackTrace();
-                    showMessage("ESCAPE FAILED.\n" + e.getMessage());
+                    showMessage("ESCAPE failed.\n" + e.getMessage());
                 }
             }
         });
@@ -493,10 +539,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     String result = "";
                     switch (type){
                         case DK.READER_R301E:
-                            result = "READER_R301E";
+                            result = "READER_R301";
                             break;
                         case DK.READER_BR301FC4:
-                            result = "READER_BR301FC4";
+                            result = "READER_BR301BLE";
                             break;
                         case DK.READER_BR500:
                             result = "READER_BR500";
@@ -519,9 +565,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         case DK.READER_VR504:
                             result = "READER_VR504";
                             break;
-                        case DK.READER_UNKNOW:
+                        case DK.READER_UNKNOWN:
                         default:
-                            result = "READER_UNKNOW";
+                            result = "READER_UNKNOWN";
                     }
                     showMessage("type : " + result);
                 } catch (FTException e) {
@@ -613,10 +659,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void run() {
                 try {
                     byte[] result = mFtReader.FT_AutoTurnOffReader(isOpen);
-                    showMessage(isOpen?"open":"close" + "auto turn off : " + Utility.bytes2HexStr(result));
+                    showMessage((isOpen?"open":"close") + " auto turn off : " + Utility.bytes2HexStr(result));
                 } catch (FTException e) {
                     e.printStackTrace();
-                    showMessage(isOpen?"open":"close" + "auto turn off \n" + e.getMessage());
+                    showMessage((isOpen?"open":"close") + " auto turn off \n" + e.getMessage());
                 }
             }
         });
@@ -625,7 +671,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void addSpinnerPrivate(String devName){
         ArrayAdapter<String> arr_adapter = (ArrayAdapter<String>)(((Spinner)findViewById(R.id.sp_device_name)).getAdapter());
         if(arr_adapter == null){
-            arr_adapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_item, new ArrayList<String>());
+            arr_adapter = new ArrayAdapter<String>(MainActivity.this, R.layout.spinner_item, new ArrayList<String>());
         }
         arr_adapter.add(devName);
         ((Spinner)findViewById(R.id.sp_device_name)).setAdapter(arr_adapter);
@@ -664,7 +710,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }).start();
     }
 
-    private void showLoading(final boolean show){
+    public void showLoading(final boolean show){
         lvResult.post(new Runnable() {
             @Override
             public void run() {
@@ -679,5 +725,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            tapFinish();
+            return false;
+        }
+        return keyCode != KeyEvent.KEYCODE_BACK &&
+                super.onKeyDown(keyCode, event);
+    }
+
+    public void tapFinish() {
+        long currentTimes = Calendar.getInstance().getTimeInMillis();
+        long diffTime = currentTimes - lastTimesFlag;
+        lastTimesFlag = Calendar.getInstance().getTimeInMillis();
+        if (diffTime <= 2000 && diffTime > 0) {
+            finish();
+            System.exit(0);
+        } else {
+            uiHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(MainActivity.this, "Click again to exit the app", Toast.LENGTH_LONG).show();
+                }
+            });
+        }
     }
 }

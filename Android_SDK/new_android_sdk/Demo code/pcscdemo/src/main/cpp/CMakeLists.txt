@@ -13,14 +13,14 @@ add_library( pcsc
 find_library( log-lib
         log )
 
-# IMPORTED 表示只需要导入，不需要构建库
+# IMPORTED Indicates that only import is required, and no library building is required
 add_library(comm STATIC IMPORTED)
 
-# 设置库的路径
+# Set the path of the library
 set_target_properties(
         comm
         PROPERTIES IMPORTED_LOCATION
-        ${CMAKE_CURRENT_SOURCE_DIR}/../../../libs/${ANDROID_ABI}/libFTReaderPCSC_1.0.2.a
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../../libs/${ANDROID_ABI}/libFTReaderPCSC_1.0.8.a
 )
 
 target_link_libraries( pcsc

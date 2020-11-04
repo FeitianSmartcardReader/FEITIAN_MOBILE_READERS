@@ -1,6 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias 'lc'
+            keyPassword '123456'
+            storeFile file("../release.keystore")
+            storePassword '123456'
+        }
+    }
+
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.ftsafe.cardreader"
@@ -14,6 +23,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            jniDebuggable true
         }
     }
     lintOptions {
@@ -22,10 +35,15 @@ android {
         // but continue the build even when errors are found:
         abortOnError false
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
 //    implementation project(':cardreader')
+    implementation files('libs/FTReaderAPI_1.0.8.jar')
 }

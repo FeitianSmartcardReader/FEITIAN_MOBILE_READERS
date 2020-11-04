@@ -71,7 +71,7 @@ JNIEXPORT int JNICALL SCardConnect(JNIEnv *env, jobject obj, jbyteArray readerNa
     memcpy(pName, pReaderName, nameLen);
 
     DWORD activeProtocol = 0;
-    int ret = FT_SCardConnect(g_context, (LPCSTR)pName, NULL, NULL, &g_cardHandle, &activeProtocol);
+    int ret = FT_SCardConnect(g_context, (LPCSTR)pName, SCARD_SHARE_SHARED, SCARD_PROTOCOL_T0, &g_cardHandle, &activeProtocol);
     if(pReaderName != NULL){
         env->ReleaseByteArrayElements(readerName, (jbyte*)pReaderName, JNI_FALSE);
     }
@@ -179,7 +179,7 @@ JNIEXPORT int JNICALL SCardCancel(JNIEnv *env, jobject obj) {
 
 JNIEXPORT int JNICALL SCardReconnect(JNIEnv *env, jobject obj) {
     DWORD activeProtocol = 0;
-    return FT_SCardReconnect(g_cardHandle, NULL, NULL, SCARD_RESET_CARD, &activeProtocol);
+    return FT_SCardReconnect(g_cardHandle, SCARD_SHARE_SHARED, SCARD_PROTOCOL_T0, SCARD_RESET_CARD, &activeProtocol);
 }
 
 JNIEXPORT int JNICALL SCardGetAttrib(JNIEnv *env, jobject obj, jbyteArray atr, jintArray atrLen) {
