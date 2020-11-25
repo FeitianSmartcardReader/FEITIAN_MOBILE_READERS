@@ -1,0 +1,5 @@
+目录说明：
+BIN：示例程序
+Include：jni使用的头文件
+Lib：jar包以及jni使用的库
+Samples：示例代码
