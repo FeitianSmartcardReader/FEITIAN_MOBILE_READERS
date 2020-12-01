@@ -1,5 +1,5 @@
-Ä¿Â¼ËµÃ÷£º
-BIN£ºÊ¾Àı³ÌĞò
-Include£ºjniÊ¹ÓÃµÄÍ·ÎÄ¼ş
-Lib£ºjar°üÒÔ¼°jniÊ¹ÓÃµÄ¿â
-Samples£ºÊ¾Àı´úÂë
+Folder descriptionï¼š
+BINï¼šBinary file/APK
+Include:header file of jni
+Libï¼šjar with JNI lib
+Samplesï¼šDemo Source code
