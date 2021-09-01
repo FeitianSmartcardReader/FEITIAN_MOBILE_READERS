@@ -1,11 +1,15 @@
 Get Start: http://www.pcscreader.com/docs/getting_started.html
 
 Take a test: http://www.pcscreader.com/docs/usage.html
-Download demo application from Appstore:
+
+Install App on iOS:
 https://itunes.apple.com/us/app/smartcard-reader/id525954151?mt=8
 
-Download demo application APK file for Android:
-https://github.com/FeitianSmartcardReader/FEITIAN_MOBILE_READERS/raw/master/Android_SDK/new_android_sdk/BIN/cardReader_1.0.3.apk
+Install App on Android:
+PCSCLite: https://play.google.com/store/apps/details?id=com.ftsafe.pcscdemo&hl=en&gl=US 
+Private API: https://play.google.com/store/apps/details?id=com.ftsafe.cardreader&hl=en&gl=US
+
+
 
 User manual and Developer manual:
 http://www.pcscreader.com/docs/getting_started.html
