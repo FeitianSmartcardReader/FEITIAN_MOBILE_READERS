@@ -15,6 +15,9 @@ User manual and Developer manual:
 http://www.pcscreader.com/docs/getting_started.html
 
 History:
+2022/05/17
+	- update android SDK, lib upgrade to 1.0.9.6
+	- update iOS SDK, lib upgrade to 3.5.64
 2020/11/04
 	- Upload android sdk v1.0.8, first release version
 	- Update iOS SDK to 3.5.61
