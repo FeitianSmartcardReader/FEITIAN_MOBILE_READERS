@@ -1,0 +1,8 @@
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\Feitian.CardReader.iOS\bin\Debug\Feitian.CardReader.iOS.dll
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\Feitian.CardReader.iOS\bin\Debug\Feitian.CardReader.iOS.pdb
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\Feitian.CardReader.iOS\obj\Debug\_ProcessedBundleResourcesPath.items
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\Feitian.CardReader.iOS\obj\Debug\_ProcessedContentPath.items
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\Feitian.CardReader.iOS\obj\Debug\Feitian.CardReader.iOS.csproj.AssemblyReference.cache
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\Feitian.CardReader.iOS\obj\Debug\Feitian.CardReader.iOS.csproj.CoreCompileInputs.cache
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\Feitian.CardReader.iOS\obj\Debug\Feitian.CardReader.iOS.dll
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\Feitian.CardReader.iOS\obj\Debug\Feitian.CardReader.iOS.pdb

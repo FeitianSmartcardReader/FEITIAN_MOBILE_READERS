@@ -1,0 +1,63 @@
+{
+  "version": 3,
+  "targets": {
+    "MonoAndroid,Version=v10.0": {},
+    "MonoAndroid,Version=v10.0/win": {},
+    "MonoAndroid,Version=v10.0/win-x64": {},
+    "MonoAndroid,Version=v10.0/win-x86": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "MonoAndroid,Version=v10.0": []
+  },
+  "packageFolders": {
+    "C:\\Users\\FT\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\SVN\\CardReader\\branches\\XamarinCardReader\\trunk\\CardReader_Xamarin\\CardReaderLibrary\\CardReaderLibrary.csproj",
+      "projectName": "CardReaderLibrary",
+      "projectPath": "E:\\SVN\\CardReader\\branches\\XamarinCardReader\\trunk\\CardReader_Xamarin\\CardReaderLibrary\\CardReaderLibrary.csproj",
+      "packagesPath": "C:\\Users\\FT\\.nuget\\packages\\",
+      "outputPath": "E:\\SVN\\CardReader\\branches\\XamarinCardReader\\trunk\\CardReader_Xamarin\\CardReaderLibrary\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\FT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "monoandroid10.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "monoandroid10.0": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "monoandroid10.0": {}
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

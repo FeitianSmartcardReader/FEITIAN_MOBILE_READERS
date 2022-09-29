@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="CardReader_Xamarin.iOS.app/CardReader_Xamarin.iOS">
+      <BCSymbolMapName>CardReader_Xamarin.iOS.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>false</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>false</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>CardReader_Xamarin.iOS.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>\Users\IDDepartment\Library\Caches\Xamarin\mtbs\builds\CardReader_Xamarin.iOS\8f85cc4403f695eb6aedba0d21b5116224032212cc4f31ee41e641d438de3266\obj\iPhone\Debug\device-builds\iphone9.1-13.5.1\mtouch-symbols.list</SymbolFile>
+      <DSymName>CardReader_Xamarin.iOS.app.dSYM</DSymName>
+      <SourceProjectPath>E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin.iOS</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

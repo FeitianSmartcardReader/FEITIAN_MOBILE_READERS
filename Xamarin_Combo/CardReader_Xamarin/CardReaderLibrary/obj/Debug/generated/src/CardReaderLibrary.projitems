@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);ANDROID_1;ANDROID_2;ANDROID_3;ANDROID_4;ANDROID_5;ANDROID_6;ANDROID_7;ANDROID_8;ANDROID_9;ANDROID_10;ANDROID_11;ANDROID_12;ANDROID_13;ANDROID_14;ANDROID_15;ANDROID_16;ANDROID_17;ANDROID_18;ANDROID_19;ANDROID_20;ANDROID_21;ANDROID_22;ANDROID_23;ANDROID_24;ANDROID_25;ANDROID_26;ANDROID_27;ANDROID_28;ANDROID_29</DefineConstants>
+  </PropertyGroup>
+  <!-- Classes -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Cardreader.Library.BuildConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Cardreader.Library.R.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Comm.Bt3.BT3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Comm.Bt3.Bt3Exception.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Comm.Bt4.BluetoothLeClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Comm.Bt4.BT4.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Comm.Bt4.Bt4Exception.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Comm.Bt4.MyArrayList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Comm.CommBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Comm.LeBluetoothParsedScanRecord.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Comm.StrUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Comm.Usb.CCIDDescriptor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Comm.Usb.USB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Comm.Usb.UsbException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Comm.Usb.USBParse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.DK.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Ftnative.FTNative.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.ReaderScheme.FTException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.ReaderScheme.FTReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.ReaderScheme.IFTReaderInf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.UI.SelectDeviceDialog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Util.LogUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Ftsafe.Utility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Java.Interop.__TypeRegistrations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)__NamespaceMapping__.cs" />
+  </ItemGroup>
+  <!-- Enums -->
+  <ItemGroup />
+</Project>

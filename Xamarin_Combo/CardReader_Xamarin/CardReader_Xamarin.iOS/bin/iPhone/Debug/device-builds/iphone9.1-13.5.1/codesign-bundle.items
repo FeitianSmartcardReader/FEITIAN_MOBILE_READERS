@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_CodesignBundle Include="CardReader_Xamarin.iOS.app">
+      <CodesignSigningKey>6F8D65F91A46CE1FF779828AD3A276E3B16E6A5D</CodesignSigningKey>
+      <CodesignEntitlements>\Users\IDDepartment\Library\Caches\Xamarin\mtbs\builds\CardReader_Xamarin.iOS\8f85cc4403f695eb6aedba0d21b5116224032212cc4f31ee41e641d438de3266\obj\iPhone\Debug\device-builds\iphone9.1-13.5.1\Entitlements.xcent</CodesignEntitlements>
+      <CodesignUseSecureTimestamp></CodesignUseSecureTimestamp>
+      <CodesignAllocate>\Applications\Xcode.app\Contents\Developer\Toolchains\XcodeDefault.xctoolchain\usr\bin\codesign_allocate</CodesignAllocate>
+      <RequireCodeSigning>true</RequireCodeSigning>
+      <CodesignExtraArgs></CodesignExtraArgs>
+      <CodesignResourceRules></CodesignResourceRules>
+      <CodesignDisableTimestamp>true</CodesignDisableTimestamp>
+      <CodesignKeychain></CodesignKeychain>
+      <CodesignUseHardenedRuntime></CodesignUseHardenedRuntime>
+      <SourceProjectPath>E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin.iOS</SourceProjectPath>
+    </_CodesignBundle>
+  </ItemGroup>
+</Project>

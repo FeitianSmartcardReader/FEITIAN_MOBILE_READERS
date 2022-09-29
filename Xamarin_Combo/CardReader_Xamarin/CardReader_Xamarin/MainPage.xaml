@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:input="http://xamarin.com/schemas/2014/forms"
+             x:Class="CardReader_Xamarin.MainPage">
+    <ContentPage.Content>
+        <StackLayout Margin="0,20,0,0"
+                         Orientation="Vertical" >
+            <Picker x:Name="picker_ReaderType" 
+                    Title="Select card reader type:"
+                    FontSize="Body"
+                    HeightRequest="40"
+                    BackgroundColor="#C0C0C0"
+                    HorizontalTextAlignment="Center"
+                    SelectedIndex="1"
+                    TitleColor="#006400"
+                    VerticalTextAlignment="Center"
+                    SelectedIndexChanged="OnClickSelectedIndexChanged_ReaderType"
+                    >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>USB card reader</x:String>
+                        <x:String>BT3 card reader</x:String>
+                        <x:String>BT4 card reader</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <StackLayout Margin="0,0,0,0" Orientation="Horizontal">
+                <Button Text="Find" Margin="0,0,5,0" Clicked="Btn_Find_Clicked" BackgroundColor="#C0C0C0" BorderColor="#C0C0C0" BorderRadius = "5" BorderWidth = "2" WidthRequest="100" HeightRequest="40"/>
+                <Picker x:Name="picker_USBReaderName" 
+                    Title="USB Name"
+                    FontSize="Body"
+                    HorizontalTextAlignment="Center"
+                    SelectedIndex="0"
+                    TitleColor="Green"
+                    IsEnabled="False"
+                    VerticalTextAlignment="Center"
+                    SelectedIndexChanged="OnClickSelectedIndexChanged_USBName"
+                    >
+                </Picker>
+                <Button Text="Close" Margin="5,0,0,0" Clicked="Btn_Close_Clicked" BackgroundColor="#C0C0C0" BorderColor="#C0C0C0" BorderRadius = "5" BorderWidth = "2" WidthRequest="100" HeightRequest="40"/>
+            </StackLayout>
+            <StackLayout Margin="0,0,0,0" Orientation="Horizontal">
+                <Button Text="PowerON" Margin="0,0,5,0" WidthRequest="160" Clicked="Btn_PowerOn_Clicked"  BackgroundColor="#C0C0C0" BorderColor="#C0C0C0" BorderRadius = "5" BorderWidth = "2" HeightRequest="40"/>
+                <Button Text="PowerOFF" Margin="5,0,0,0" WidthRequest="160" Clicked="Btn_PowerOFF_Clicked"  BackgroundColor="#C0C0C0" BorderColor="#C0C0C0" BorderRadius = "5" BorderWidth = "2" HeightRequest="40"/>
+            </StackLayout>
+            <StackLayout Margin="0,0,0,0" Orientation="Horizontal">
+                <Button Text="XFR" Margin="0,0,5,0" Clicked="Btn_SendXFR_Clicked"  BackgroundColor="#C0C0C0" BorderColor="#C0C0C0" BorderRadius = "5" BorderWidth = "2" WidthRequest="100" HeightRequest="40"/>
+                <Entry Placeholder="Input instruction" 
+                       Text="0084000008"
+                       x:Name="xfr_data"
+                       TextColor="Black" 
+                       WidthRequest="500" 
+                       FontSize="16" 
+                       PlaceholderColor="LightGray"
+                 />
+            </StackLayout>
+            <StackLayout Margin="0,0,0,0" Orientation="Horizontal">
+                <Button Text="ESCAPE" Margin="0,0,5,0" Clicked="Btn_SendESCAPE_Clicked"  BackgroundColor="#C0C0C0" BorderColor="#C0C0C0" BorderRadius = "5" BorderWidth = "2" WidthRequest="100" HeightRequest="40"/>
+                <Entry Placeholder="Input instruction" 
+                       Text="A55A8031"
+                       x:Name="escape_data"
+                       TextColor="Black" 
+                       WidthRequest="500" 
+                       FontSize="16" 
+                       PlaceholderColor="LightGray"
+                 />
+            </StackLayout>
+            <Picker x:Name="picker_Instruct" 
+                    Title="Select function button:"
+                    FontSize="Body"
+                    HeightRequest="40"
+                    BackgroundColor="#C0C0C0"
+                    HorizontalTextAlignment="Center"
+                    SelectedIndex="0"
+                    TitleColor="Green"
+                    VerticalTextAlignment="Center"
+                    SelectedIndexChanged="OnClickSelectedIndexChanged_Instruct"
+                    >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Get Slot Status</x:String>
+                        <x:String>Get SN</x:String>
+                        <x:String>Get Type</x:String>
+                        <x:String>Get FireWare</x:String>
+                        <x:String>Get Uid</x:String>
+                        <x:String>Get lib version</x:String>
+                        <x:String>Get Manufacturer</x:String>
+                        <x:String>Get Hardware Info</x:String>
+                        <x:String>Get Reader Name</x:String>
+                        <x:String>Get BleFirmware Version</x:String>
+                        <x:String>Open Auto TurnON</x:String>
+                        <x:String>Close Auto TurnOFF</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <StackLayout Margin="0,0,0,0" Orientation="Vertical">
+                <Button Text="Clear" Clicked="Btn_Clear_Clicked" BackgroundColor="#C0C0C0" BorderColor="#C0C0C0" BorderRadius = "5" BorderWidth = "2" WidthRequest="100" HeightRequest="40"></Button>
+                <ListView
+                    x:Name="mylistView">
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,4 @@
+obj\Release\iOS\Feitian.CardReader.Library.iOS\FTDeviceType.g.cs
+obj\Release\iOS\Feitian.CardReader.Library.iOS\ReaderInterface.g.cs
+obj\Release\iOS\Feitian.CardReader.Library.iOS\ReaderInterfaceDelegate.g.cs
+obj\Release\iOS\ObjCRuntime\Messaging.g.cs

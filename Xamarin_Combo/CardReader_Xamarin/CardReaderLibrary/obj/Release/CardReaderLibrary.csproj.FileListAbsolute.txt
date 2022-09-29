@@ -1,0 +1,10 @@
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReaderLibrary\bin\Release\CardReaderLibrary.dll
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReaderLibrary\bin\Release\CardReaderLibrary.pdb
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReaderLibrary\obj\Release\MonoAndroid,Version=v10.0.AssemblyAttributes.cs
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReaderLibrary\obj\Release\CardReaderLibrary.csproj.AssemblyReference.cache
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReaderLibrary\obj\Release\stamp\_BuildLibraryImportsCache.stamp
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReaderLibrary\obj\Release\class-parse.rsp
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReaderLibrary\obj\Release\__AndroidNativeLibraries__.zip
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReaderLibrary\obj\Release\CardReaderLibrary.csproj.CoreCompileInputs.cache
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReaderLibrary\obj\Release\CardReaderLibrary.dll
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReaderLibrary\obj\Release\CardReaderLibrary.pdb

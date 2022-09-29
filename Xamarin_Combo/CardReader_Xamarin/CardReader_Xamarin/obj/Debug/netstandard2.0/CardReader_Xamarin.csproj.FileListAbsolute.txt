@@ -1,0 +1,15 @@
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\bin\Debug\netstandard2.0\CardReader_Xamarin.deps.json
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\bin\Debug\netstandard2.0\CardReader_Xamarin.dll
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\bin\Debug\netstandard2.0\CardReader_Xamarin.pdb
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\obj\Debug\netstandard2.0\CardReader_Xamarin.csproj.AssemblyReference.cache
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\obj\Debug\netstandard2.0\CardReader_Xamarin.GeneratedMSBuildEditorConfig.editorconfig
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\obj\Debug\netstandard2.0\App.xaml.g.cs
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\obj\Debug\netstandard2.0\CardReader_Xamarin.AssemblyInfoInputs.cache
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\obj\Debug\netstandard2.0\CardReader_Xamarin.AssemblyInfo.cs
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\obj\Debug\netstandard2.0\CardReader_Xamarin.csproj.CoreCompileInputs.cache
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\obj\Debug\netstandard2.0\XamlC.stamp
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\obj\Debug\netstandard2.0\CardReader_Xamarin.dll
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\obj\Debug\netstandard2.0\refint\CardReader_Xamarin.dll
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\obj\Debug\netstandard2.0\CardReader_Xamarin.pdb
+E:\SVN\CardReader\branches\XamarinCardReader\trunk\CardReader_Xamarin\CardReader_Xamarin\obj\Debug\netstandard2.0\ref\CardReader_Xamarin.dll
