@@ -6,6 +6,7 @@ Install App on iOS:
 https://itunes.apple.com/us/app/smartcard-reader/id525954151?mt=8
 
 Install App on Android:
+iReader: https://play.google.com/store/apps/details?id=com.ftsafe.ireader
 PCSCLite: https://play.google.com/store/apps/details?id=com.ftsafe.pcscdemo&hl=en&gl=US 
 Private API: https://play.google.com/store/apps/details?id=com.ftsafe.cardreader&hl=en&gl=US
 
