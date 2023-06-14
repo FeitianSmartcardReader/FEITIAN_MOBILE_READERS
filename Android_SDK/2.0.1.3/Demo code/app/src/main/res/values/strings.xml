@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">iReader</string>
+    <string name="bluetooth_auto_connect">If enabled,iReader App will connect to the reader which has the strongest Bluetooth signal(normally the nearest)at startup,mostly suilable when you have only one bR301BLE/bR500 around.Disable this if you want to connect a reader manually.</string>
+    <string name="disable_power_saving_mode">The power saving mode of Bluetooth reader is enabled by default, in order to extend battery life of a reader. it will automaticlly shut down in 3 minutes if there is no communication between App and reader.\nIf set switch button to ON, the App will turn off power saving mode to keep reader always powered, except pysical shutdown by power button or by turnning off the Bluetooth.\nThis power saving mode is one time setting, after closing App, the reader will go back to default.\n</string>
+    <string name="text_feedback">feedback</string>
+    <string name="text_cancle">Cancel</string>
+</resources>

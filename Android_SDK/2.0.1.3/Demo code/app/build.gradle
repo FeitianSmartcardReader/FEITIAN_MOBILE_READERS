@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'lc'
+            keyPassword '123456'
+            storeFile file("../release.keystore")
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 31
+    defaultConfig {
+        applicationId "com.ftsafe.ireader"
+        minSdkVersion 18
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            jniDebuggable false
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion '29.0.2'
+}
+
+dependencies {
+    //    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+//    implementation project(':cardreader')
+    testImplementation 'junit:junit:4.12'
+    implementation files('libs/FTReaderAPI_2.0.1.3.jar')
+}
