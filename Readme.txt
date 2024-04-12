@@ -16,6 +16,8 @@ User manual and Developer manual:
 http://www.pcscreader.com/docs/getting_started.html
 
 History:
+2024/04/12
+	- upload iOS_SDK_ForApplePrimitiveCCID, this version iOS SDK is specific made for Apple primitive suport for CCID compliant reader by utilizing the CryptoTokenKit framework.
 2022/05/17
 	- update android SDK, lib upgrade to 1.0.9.6
 	- update iOS SDK, lib upgrade to 3.5.64
