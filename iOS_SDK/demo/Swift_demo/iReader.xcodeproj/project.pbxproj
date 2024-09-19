@@ -17,7 +17,6 @@
 		4A16FDE21FF6268800B0BB13 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16FDE11FF6268800B0BB13 /* TabbarViewController.swift */; };
 		4A16FDE41FF63D2E00B0BB13 /* CardCommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16FDE31FF63D2E00B0BB13 /* CardCommandViewController.swift */; };
 		4A16FDE61FFC89AF00B0BB13 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16FDE51FFC89AF00B0BB13 /* Const.swift */; };
-		4A4DA1362100569B00E8472C /* libiRockey301_ccid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4DA1352100569B00E8472C /* libiRockey301_ccid.a */; };
 		4A9926A11FFE1AC1007C71B0 /* CommandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9926A01FFE1AC1007C71B0 /* CommandView.swift */; };
 		4A9927E61FFF53ED007C71B0 /* DeviceInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9927E51FFF53ED007C71B0 /* DeviceInfoTableViewController.swift */; };
 		4A99A6C62003487300DE3667 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A99A6C22003487300DE3667 /* SVIndefiniteAnimatedView.m */; };
@@ -28,6 +27,7 @@
 		4A99A6CF20034A3B00DE3667 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A99A6CE20034A3A00DE3667 /* libc++.tbd */; };
 		4A99A6EC2005DEE900DE3667 /* flash.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A99A6E92005DEE800DE3667 /* flash.txt */; };
 		4A99A6ED2005DEE900DE3667 /* hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A99A6EB2005DEE900DE3667 /* hex.m */; };
+		FFB273302C633F51000DCB8F /* libiRockey301_3.5.64_Release.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB2732F2C633F51000DCB8F /* libiRockey301_3.5.64_Release.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A37E1AB2010932200F58015 /* ReaderInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReaderInterface.h; path = include/ReaderInterface.h; sourceTree = "<group>"; };
-		1A37E1AC2010932200F58015 /* winscard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = winscard.h; path = include/winscard.h; sourceTree = "<group>"; };
-		1A37E1AE2010932200F58015 /* wintypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wintypes.h; path = include/wintypes.h; sourceTree = "<group>"; };
-		1A37E1AF2010932300F58015 /* ft301u.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ft301u.h; path = include/ft301u.h; sourceTree = "<group>"; };
 		4A16FDA81FF5F12B00B0BB13 /* iReader_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iReader_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A16FDAB1FF5F12B00B0BB13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A16FDB01FF5F12B00B0BB13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,7 +64,6 @@
 		4A16FDE11FF6268800B0BB13 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		4A16FDE31FF63D2E00B0BB13 /* CardCommandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCommandViewController.swift; sourceTree = "<group>"; };
 		4A16FDE51FFC89AF00B0BB13 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		4A4DA1352100569B00E8472C /* libiRockey301_ccid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiRockey301_ccid.a; path = ../../../../lib/SDK/lib/libiRockey301_ccid.a; sourceTree = "<group>"; };
 		4A9926A01FFE1AC1007C71B0 /* CommandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandView.swift; sourceTree = "<group>"; };
 		4A9927E51FFF53ED007C71B0 /* DeviceInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoTableViewController.swift; sourceTree = "<group>"; };
 		4A99A6BC200345CD00DE3667 /* iReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iReader-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -83,6 +78,11 @@
 		4A99A6E92005DEE800DE3667 /* flash.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flash.txt; sourceTree = "<group>"; };
 		4A99A6EA2005DEE900DE3667 /* hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hex.h; sourceTree = "<group>"; };
 		4A99A6EB2005DEE900DE3667 /* hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hex.m; sourceTree = "<group>"; };
+		FFB2732B2C633F49000DCB8F /* ft301u.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ft301u.h; path = ../../../libs/include/ft301u.h; sourceTree = "<group>"; };
+		FFB2732C2C633F49000DCB8F /* wintypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = wintypes.h; path = ../../../libs/include/wintypes.h; sourceTree = "<group>"; };
+		FFB2732D2C633F49000DCB8F /* ReaderInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ReaderInterface.h; path = ../../../libs/include/ReaderInterface.h; sourceTree = "<group>"; };
+		FFB2732E2C633F49000DCB8F /* winscard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = winscard.h; path = ../../../libs/include/winscard.h; sourceTree = "<group>"; };
+		FFB2732F2C633F51000DCB8F /* libiRockey301_3.5.64_Release.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiRockey301_3.5.64_Release.a; path = ../../../libs/libiRockey301_3.5.64_Release.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +92,8 @@
 			files = (
 				4A99A6CC200348F700DE3667 /* ExternalAccessory.framework in Frameworks */,
 				4A99A6CF20034A3B00DE3667 /* libc++.tbd in Frameworks */,
-				4A4DA1362100569B00E8472C /* libiRockey301_ccid.a in Frameworks */,
 				4A99A6CD200348FA00DE3667 /* CoreBluetooth.framework in Frameworks */,
+				FFB273302C633F51000DCB8F /* libiRockey301_3.5.64_Release.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,11 +138,11 @@
 		4A16FDAA1FF5F12B00B0BB13 /* iReader */ = {
 			isa = PBXGroup;
 			children = (
-				1A37E1AF2010932300F58015 /* ft301u.h */,
-				1A37E1AB2010932200F58015 /* ReaderInterface.h */,
-				1A37E1AC2010932200F58015 /* winscard.h */,
-				1A37E1AE2010932200F58015 /* wintypes.h */,
-				4A4DA1352100569B00E8472C /* libiRockey301_ccid.a */,
+				FFB2732F2C633F51000DCB8F /* libiRockey301_3.5.64_Release.a */,
+				FFB2732B2C633F49000DCB8F /* ft301u.h */,
+				FFB2732D2C633F49000DCB8F /* ReaderInterface.h */,
+				FFB2732E2C633F49000DCB8F /* winscard.h */,
+				FFB2732C2C633F49000DCB8F /* wintypes.h */,
 				4A16FDAB1FF5F12B00B0BB13 /* AppDelegate.swift */,
 				4A16FDDF1FF6106E00B0BB13 /* ScanDeviceController.swift */,
 				4A16FDE11FF6268800B0BB13 /* TabbarViewController.swift */,
@@ -525,9 +525,12 @@
 				DEVELOPMENT_TEAM = S47T4UESP3;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = iReader/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../lib/SDK/lib\"";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../lib/SDK/lib\"",
+					"\"$(SRCROOT)/../../libs\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "-D VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.iReaderSwift;
@@ -553,9 +556,12 @@
 				DEVELOPMENT_TEAM = S47T4UESP3;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = iReader/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../lib/SDK/lib\"";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../lib/SDK/lib\"",
+					"\"$(SRCROOT)/../../libs\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "-D VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.iReaderSwift;

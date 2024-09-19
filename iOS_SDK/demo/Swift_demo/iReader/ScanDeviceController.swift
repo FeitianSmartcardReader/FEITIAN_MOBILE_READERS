@@ -12,6 +12,14 @@ public var gContxtHandle: SCARDCONTEXT = 0
 let readerInterface = ReaderInterface()
 
 class ScanDeviceController: UITableViewController , ReaderInterfaceDelegate{
+    func readerInterfaceDidChange(_ attached: Bool, bluetoothID: String!) {
+        
+    }
+    
+    func didGetBattery(_ battery: Int) {
+        
+    }
+    
     
     lazy var deviceList = [String]()
 

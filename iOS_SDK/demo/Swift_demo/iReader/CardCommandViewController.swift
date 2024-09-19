@@ -207,7 +207,7 @@ extension CardCommandViewController {
                 let buffer: UnsafeMutablePointer<UInt8> = UnsafeMutablePointer<UInt8>.allocate(capacity: _fileData.count)
                 _fileData.copyBytes(to: buffer, count: _fileData.count)
 
-                let ret = FtWriteFlash(gCardHandle, 0, UInt32(_fileData.count), buffer)
+                let ret = FtWriteFlash(gCardHandle, 0, UInt8(_fileData.count), buffer)
 
                 buffer.deinitialize()
 
