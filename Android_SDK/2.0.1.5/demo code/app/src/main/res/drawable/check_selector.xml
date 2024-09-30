@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--按下状态的显示图片-->
+    <item android:state_checked="true" android:drawable="@drawable/open"></item>
+    <!--平时状态的显示图片-->
+    <item android:state_checked="false" android:drawable="@drawable/close"></item>
+</selector>
+
