@@ -16,6 +16,15 @@ User manual and Developer manual:
 http://www.pcscreader.com/docs/getting_started.html
 
 History:
+2024/12/12:
+	- iOS:
+		v3.5.70: From this version on, support CCID-compliant readers through Apple's CryptoTokenKit framework, this version improve recognizability during hot-plugging within iOS System.
+		v3.5.65: Support iR301 series readers with MFi coprocessor as external USB device through Apple's ExternalAccessory framework.
+		1. Compatibility improvement for certain card, feedbacked by a customer.
+		2. Upload separate libs: one for real device and the other for XCode simulator.
+		According to https://forums.developer.apple.com/forums/thread/711038
+	- Android: 
+		Update v2.0.1.6, fix issue #47 when work with old Bluetooth model
 2024/04/12
 	- upload iOS_SDK_ForApplePrimitiveCCID, this version iOS SDK is specific made for Apple primitive suport for CCID compliant reader by utilizing the CryptoTokenKit framework.
 2022/05/17
