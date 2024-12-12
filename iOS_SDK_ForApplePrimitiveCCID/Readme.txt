@@ -2,6 +2,9 @@ This directory contains the FEITIAN Smart Card Reader iOS SDK which provides the
 
 * Note: This is a pre-release version.*
 
+2024/12/12:
+-- v3.5.70: CCID-compliant readers recognizability during hot-plugging within iOS System.
+
 2024/09/19:
 -- Upload the new version iOS SDK for Apple primitive CCID support.
 

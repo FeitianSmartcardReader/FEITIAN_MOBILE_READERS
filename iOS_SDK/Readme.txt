@@ -1,7 +1,10 @@
 To install latest IPA, please download from Appstore
-
+2024/12/12
+	v3.5.65: 
+		1. Compatibility improvement for certain card, feedbacked by a customer.
+		2. Upload separate libs: one for real device and the other for XCode simulator. According to https://forums.developer.apple.com/forums/thread/711038
 2020/10/19
-	Solved the compatible issue with iOS 14 with multi-thread support
+	v3.5.61: Solved the compatible issue with iOS 14 with multi-thread support
 2020/09/02
 	Add new string into lib, the new external protocol string apply lower-case letter, if you are using iR301, bR301, then please add below strings in your Info.plist,  External Accessory Protocol string key needs to set as below:
         iR301: com.ftsafe.ir301, com.ftsafe.iR301
