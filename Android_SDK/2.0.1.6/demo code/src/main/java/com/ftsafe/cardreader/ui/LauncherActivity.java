@@ -23,28 +23,16 @@ import com.ftsafe.cardreader.utils.LogcatHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-@RequiresApi(api = Build.VERSION_CODES.S)
+ @RequiresApi(api = Build.VERSION_CODES.S)
 public class LauncherActivity extends AppCompatActivity {
 
     private static final int LAUNCHER = 10001;
     public static LogcatHelper logcatHelper;
 
-    private List<String> requestList = new ArrayList<>();
+//    private List<String> requestList = new ArrayList<>();
     private final int REQUEST_PERMISSION_CODE = 1;
-    private final String[] permissions = {
-            Manifest.permission.ACCESS_COARSE_LOCATION,
-            Manifest.permission.ACCESS_FINE_LOCATION,
-    };
-    private final String[] permissions_12 = {
-            Manifest.permission.ACCESS_COARSE_LOCATION,
-            Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.BLUETOOTH_SCAN,
-            Manifest.permission.BLUETOOTH_CONNECT,
-            Manifest.permission.BLUETOOTH_ADVERTISE,
-            Manifest.permission.BLUETOOTH
-    };
 
-    private Handler mHandler = new Handler(){
+    private final Handler mHandler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what){
@@ -69,14 +57,20 @@ public class LauncherActivity extends AppCompatActivity {
             StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
             StrictMode.setVmPolicy( builder.build() );
         }
-        if(Build.VERSION.SDK_INT >= 23 && Build.VERSION.SDK_INT < Build.VERSION_CODES.S){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && Build.VERSION.SDK_INT < Build.VERSION_CODES.S){
             PackageManager pm = getPackageManager();
-            if (pm.checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION, getPackageName())
-                    == PackageManager.PERMISSION_DENIED || pm.checkPermission(Manifest.permission.ACCESS_FINE_LOCATION, getPackageName())
-                    == PackageManager.PERMISSION_DENIED || pm.checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, getPackageName())
-                    == PackageManager.PERMISSION_DENIED || pm.checkPermission(Manifest.permission.READ_EXTERNAL_STORAGE, getPackageName())
-                    == PackageManager.PERMISSION_DENIED) {
-                requestPermissions(permissions, REQUEST_PERMISSION_CODE);
+            if (pm.checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION, getPackageName()) == PackageManager.PERMISSION_DENIED
+                    || pm.checkPermission(Manifest.permission.ACCESS_FINE_LOCATION, getPackageName()) == PackageManager.PERMISSION_DENIED
+                    || pm.checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, getPackageName()) == PackageManager.PERMISSION_DENIED
+                    || pm.checkPermission(Manifest.permission.READ_EXTERNAL_STORAGE, getPackageName()) == PackageManager.PERMISSION_DENIED
+                    || pm.checkPermission(Manifest.permission.BLUETOOTH, getPackageName()) == PackageManager.PERMISSION_DENIED) {
+                requestPermissions(new String[]{
+                        Manifest.permission.ACCESS_COARSE_LOCATION,
+                        Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.BLUETOOTH
+                }, REQUEST_PERMISSION_CODE);
             }else {
                 logcatHelper = LogcatHelper.getInstance(this);
                 logcatHelper.start();
@@ -85,15 +79,24 @@ public class LauncherActivity extends AppCompatActivity {
         }
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
             PackageManager pm = getPackageManager();
-            if (pm.checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION, getPackageName())
-                    == PackageManager.PERMISSION_DENIED || pm.checkPermission(Manifest.permission.ACCESS_FINE_LOCATION, getPackageName())
-                    == PackageManager.PERMISSION_DENIED || pm.checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, getPackageName())
-                    == PackageManager.PERMISSION_DENIED || pm.checkPermission(Manifest.permission.READ_EXTERNAL_STORAGE, getPackageName())
-                    == PackageManager.PERMISSION_DENIED || pm.checkPermission(Manifest.permission.BLUETOOTH_SCAN, getPackageName())
-                    == PackageManager.PERMISSION_DENIED || pm.checkPermission(Manifest.permission.BLUETOOTH_CONNECT, getPackageName())
-                    == PackageManager.PERMISSION_DENIED || pm.checkPermission(Manifest.permission.BLUETOOTH_ADVERTISE, getPackageName())
-                     == PackageManager.PERMISSION_DENIED) {
-                requestPermissions(permissions_12, REQUEST_PERMISSION_CODE);
+            if (pm.checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION, getPackageName()) == PackageManager.PERMISSION_DENIED
+                    || pm.checkPermission(Manifest.permission.ACCESS_FINE_LOCATION, getPackageName()) == PackageManager.PERMISSION_DENIED
+                    || pm.checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, getPackageName()) == PackageManager.PERMISSION_DENIED
+                    || pm.checkPermission(Manifest.permission.READ_EXTERNAL_STORAGE, getPackageName()) == PackageManager.PERMISSION_DENIED
+                    || pm.checkPermission(Manifest.permission.BLUETOOTH, getPackageName()) == PackageManager.PERMISSION_DENIED
+                    || pm.checkPermission(Manifest.permission.BLUETOOTH_SCAN, getPackageName()) == PackageManager.PERMISSION_DENIED
+                    || pm.checkPermission(Manifest.permission.BLUETOOTH_CONNECT, getPackageName()) == PackageManager.PERMISSION_DENIED
+                    || pm.checkPermission(Manifest.permission.BLUETOOTH_ADVERTISE, getPackageName()) == PackageManager.PERMISSION_DENIED) {
+                requestPermissions(new String[]{
+                        Manifest.permission.ACCESS_COARSE_LOCATION,
+                        Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.BLUETOOTH,
+                        Manifest.permission.BLUETOOTH_SCAN,
+                        Manifest.permission.BLUETOOTH_CONNECT,
+                        Manifest.permission.BLUETOOTH_ADVERTISE
+                }, REQUEST_PERMISSION_CODE);
             }else {
                 logcatHelper = LogcatHelper.getInstance(this);
                 logcatHelper.start();
@@ -103,31 +106,26 @@ public class LauncherActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
-        switch (requestCode) {
-            case REQUEST_PERMISSION_CODE: {
-                if (grantResults.length > 0){
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
-                        if(grantResults[0] == PackageManager.PERMISSION_DENIED || grantResults[1] == PackageManager.PERMISSION_DENIED || grantResults[2] == PackageManager.PERMISSION_DENIED || grantResults[3] == PackageManager.PERMISSION_DENIED || grantResults[4] == PackageManager.PERMISSION_DENIED || grantResults[5] == PackageManager.PERMISSION_DENIED) {
-                            showExitDialog();
-                        }else {
-                            // 创建一个 Handler 对象
-                            logcatHelper = LogcatHelper.getInstance(this);
-                            logcatHelper.start();
-                            mHandler.sendEmptyMessageDelayed(LAUNCHER, 1000);
-                        }
-                    }else{
-                        if(grantResults[0] == PackageManager.PERMISSION_DENIED || grantResults[1] == PackageManager.PERMISSION_DENIED || grantResults[2] == PackageManager.PERMISSION_DENIED || grantResults[3] == PackageManager.PERMISSION_DENIED) {
-                            showExitDialog();
-                        }else {
-                            logcatHelper = LogcatHelper.getInstance(this);
-                            logcatHelper.start();
-                            mHandler.sendEmptyMessageDelayed(LAUNCHER, 1000);
-                        }
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == REQUEST_PERMISSION_CODE) {
+            if (grantResults.length > 0) {
+                boolean permissionAllowed = true;
+                for (int grantResult : grantResults) {
+                    if (grantResult == PackageManager.PERMISSION_DENIED) {
+                        permissionAllowed = false;
+                        break;
                     }
                 }
-                return;
+                if (permissionAllowed) {
+                    // 创建一个 Handler 对象
+                    logcatHelper = LogcatHelper.getInstance(this);
+                    logcatHelper.start();
+                    mHandler.sendEmptyMessageDelayed(LAUNCHER, 1000);
+                } else {
+                    showExitDialog();
+                }
             }
+            return;
         }
     }
 

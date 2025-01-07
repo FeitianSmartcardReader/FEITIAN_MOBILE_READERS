@@ -241,7 +241,7 @@ public class ConnectActivity extends BaseActivity implements View.OnClickListene
         }
     };
 
-    @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
+    // @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
     public void initData() {
         waitingDialog = new ProgressDialog(mContext);
         hashMapList = new ArrayList<HashMap<String, GridViewItem>>();
@@ -280,7 +280,7 @@ public class ConnectActivity extends BaseActivity implements View.OnClickListene
         filter.addAction(ACTION_USB_PERMISSION);
         filter.addAction(UsbManager.ACTION_USB_DEVICE_ATTACHED);
         filter.addAction(UsbManager.ACTION_USB_DEVICE_DETACHED);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
             mContext.registerReceiver(mUsbReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
         }else{
             mContext.registerReceiver(mUsbReceiver, filter);

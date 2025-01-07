@@ -1,6 +1,8 @@
 Feitian combo Android SDK
 
 Change history:
+2025/1/7
+    v2.0.1.6, fix demo project code; improve support for Android API level 34.
 2024/12/12
     Update v2.0.1.6, fix issue #47 when work with old Bluetooth model
 2024/10/28
