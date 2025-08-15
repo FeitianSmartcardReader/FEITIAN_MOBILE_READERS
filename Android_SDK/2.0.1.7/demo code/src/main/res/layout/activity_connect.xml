@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1880FF"
+    tools:context=".ui.ConnectActivity">
+<LinearLayout
+    android:layout_gravity="center"
+    android:layout_marginTop="100dp"
+    android:layout_height="260dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="120dp"
+        android:text="Waiting for connection..."
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="No reader detected"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        />
+    <ImageView
+        android:id="@+id/id_help_png"
+        android:layout_marginTop="20dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/help"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_height="260dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <GridView
+            android:id="@+id/gview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="auto_fit"
+            android:columnWidth="80dp"
+            android:stretchMode="columnWidth"/>
+    </LinearLayout>
+
+</LinearLayout>
