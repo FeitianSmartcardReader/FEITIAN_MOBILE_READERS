@@ -1,6 +1,8 @@
 Feitian combo Android SDK
 
 Change history:
+2025/8/15
+    v2.0.1.7, add suppoprt for 16KB page size alignment, upgrade to JDK 11
 2025/1/7
     v2.0.1.6, fix demo project code; improve support for Android API level 34.
 2024/12/12
