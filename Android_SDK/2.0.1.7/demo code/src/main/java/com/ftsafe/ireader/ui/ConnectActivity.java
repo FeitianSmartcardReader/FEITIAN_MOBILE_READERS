@@ -1,4 +1,4 @@
-package com.ftsafe.cardreader.ui;
+package com.ftsafe.ireader.ui;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -36,10 +36,10 @@ import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 
 import com.ftsafe.DK;
-import com.ftsafe.cardreader.R;
-import com.ftsafe.cardreader.adapter.GridViewItem;
-import com.ftsafe.cardreader.adapter.ImageAdapter;
-import com.ftsafe.cardreader.utils.Convection;
+import com.ftsafe.ireader.R;
+import com.ftsafe.ireader.adapter.GridViewItem;
+import com.ftsafe.ireader.adapter.ImageAdapter;
+import com.ftsafe.ireader.utils.Convection;
 import com.ftsafe.readerScheme.FTException;
 import com.ftsafe.readerScheme.FTReader;
 

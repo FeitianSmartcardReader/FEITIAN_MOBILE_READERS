@@ -3,70 +3,49 @@
     xmlns:dist="http://schemas.android.com/apk/distribution"
     xmlns:tools="http://schemas.android.com/tools"
     >
-<!--    package="com.ftsafe.cardreader"-->
     <dist:module dist:instant="true" />
     <uses-feature android:name="android.hardware.usb.host"/>
     <uses-feature android:name="android.hardware.usb.accessory"/>
     <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
     <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
 
-    <!-- USB权限 -->
+    <!-- USB PERMISSION -->
     <uses-permission android:name="android.permission.USB_PERMISSION" />
-
-
-    <!--    <uses-permission android:name="android.permission.BLUETOOTH"/>-->
-<!--    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"-->
-<!--        android:maxSdkVersion="30" />-->
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="29" /><!-- 仅对旧设备保留 -->
+        android:maxSdkVersion="29" /><!-- Only for old devices for compatibility -->
 
 
-    <!-- 如果仅需要访问特定类型的媒体文件，可声明对应子集 -->
-    <!-- Android 13（API 33）及以上：READ_MEDIA_* 替代READ_EXTERNAL_STORAGE -->
+    <!-- Declare sub-permissions if specified media type files access needed -->
+    <!-- Android 13（API 33）and above：use READ_MEDIA_* instead of READ_EXTERNAL_STORAGE -->
 
     <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
-    <!-- Needed only if your app looks for Bluetooth devices.
-         You must add an attribute to this permission, or declare the
-         ACCESS_FINE_LOCATION permission, depending on the results when you
-         check location usage in your app. -->
-<!--    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />-->
 
-    <!-- Needed only if your app makes the device discoverable to Bluetooth
-         devices. -->
-<!--    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />-->
-
-    <!-- Needed only if your app communicates with already-paired Bluetooth
-         devices. -->
-<!--    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />-->
-
-
-
-    <!-- 基础蓝牙权限 -->
+    <!-- Basic Bluetooth permission -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
-    <!-- Android 12+ 新增权限 -->
+    <!-- Android 12+ added permissions -->
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
         android:usesPermissionFlags="neverForLocation"
-        tools:targetApi="31" /> <!-- 声明不需要定位 -->
+        tools:targetApi="31" /> <!-- Location is not needed -->
 
-    <!-- Android 6-11 需要的位置权限 -->
+    <!-- In Android 6-11, location permission is needed -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <!-- Android 9+ 需要的前台服务权限 -->
+    <!-- Android 9+ foreground service permission is needed -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
-    <!-- 存储权限（仅API ≤ 28需要） -->
+    <!-- Storage Permission（Only when API ≤ 28） -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="32"
-        tools:ignore="ScopedStorage" /> <!-- 限制仅API ≤ 28使用 -->
+        tools:ignore="ScopedStorage" /> <!-- Only needed when API ≤ 28 -->
 
     <application
         android:name=".ui.BaseApplication"

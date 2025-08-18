@@ -1,10 +1,10 @@
-package com.ftsafe.cardreader.ui;
+package com.ftsafe.ireader.ui;
 
-import static com.ftsafe.cardreader.ui.ConnectActivity.TAG;
-import static com.ftsafe.cardreader.ui.ConnectActivity.connectedDeviceCardSlotList;
-import static com.ftsafe.cardreader.ui.ConnectActivity.connectedDeviceList;
-import static com.ftsafe.cardreader.ui.ConnectActivity.connectedDeviceNameList;
-import static com.ftsafe.cardreader.ui.ConnectActivity.deviceType;
+import static com.ftsafe.ireader.ui.ConnectActivity.TAG;
+import static com.ftsafe.ireader.ui.ConnectActivity.connectedDeviceCardSlotList;
+import static com.ftsafe.ireader.ui.ConnectActivity.connectedDeviceList;
+import static com.ftsafe.ireader.ui.ConnectActivity.connectedDeviceNameList;
+import static com.ftsafe.ireader.ui.ConnectActivity.deviceType;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
@@ -39,8 +39,8 @@ import androidx.annotation.RequiresApi;
 
 import com.ftsafe.DK;
 import com.ftsafe.Utility;
-import com.ftsafe.cardreader.R;
-import com.ftsafe.cardreader.utils.Convection;
+import com.ftsafe.ireader.R;
+import com.ftsafe.ireader.utils.Convection;
 import com.ftsafe.comm.StrUtil;
 import com.ftsafe.readerScheme.FTException;
 import com.ftsafe.readerScheme.FTReader;
@@ -734,7 +734,7 @@ public class CardReaderManagertActivity extends BaseActivity implements View.OnC
         int type = -1;
         try {
             type = mFtReader.readerGetType(connectedDeviceList.get(connectedReaderIndex));
-            Log.i(TAG,"Reader type :"+type);
+            Log.i(TAG,"Reader type: "+type);
         } catch (FTException e) {
             e.printStackTrace();
         }

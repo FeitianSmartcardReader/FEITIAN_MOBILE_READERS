@@ -1,4 +1,4 @@
-package com.ftsafe.cardreader.ui;
+package com.ftsafe.ireader.ui;
 
 import android.app.Application;
 import android.os.Handler;

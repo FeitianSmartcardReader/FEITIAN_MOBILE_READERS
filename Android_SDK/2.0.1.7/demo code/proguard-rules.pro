@@ -19,9 +19,3 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
-
-#保留 com.ftsafe.** 包
--keep class com.ftsafe.** { *; }
-
-# 保留序列化类成员
--keepclassmembers class * implements java.io.Serializable { *; }

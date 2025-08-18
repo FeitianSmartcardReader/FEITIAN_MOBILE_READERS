@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace 'com.ftsafe.cardreader'
+    namespace 'com.ftsafe.ireader'
     compileSdk 34
     buildToolsVersion '35.0.1'
 
     defaultConfig {
-        applicationId "com.ftsafe.cardreader.ireader"
+        applicationId "com.ftsafe.ireader_demo"
         minSdk 21
         targetSdk 34
         versionCode 3
@@ -16,13 +16,12 @@ android {
     
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-
         debug {
-            debuggable false
+            debuggable true
         }
     }
     
@@ -34,8 +33,8 @@ android {
     }
     
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     packagingOptions {

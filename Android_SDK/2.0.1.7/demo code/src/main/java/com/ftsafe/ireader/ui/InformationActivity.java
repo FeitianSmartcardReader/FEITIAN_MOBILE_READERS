@@ -1,12 +1,12 @@
-package com.ftsafe.cardreader.ui;
+package com.ftsafe.ireader.ui;
 
-import static com.ftsafe.cardreader.ui.CardReaderManagertActivity.connectedReaderIndex;
-import static com.ftsafe.cardreader.ui.CardReaderManagertActivity.showMessage;
-import static com.ftsafe.cardreader.ui.ConnectActivity.TAG;
-import static com.ftsafe.cardreader.ui.ConnectActivity.connectedDeviceList;
-import static com.ftsafe.cardreader.ui.ConnectActivity.deviceType;
-import static com.ftsafe.cardreader.ui.ConnectActivity.foundUSBDevices;
-import static com.ftsafe.cardreader.ui.ConnectActivity.isAutoConnect;
+import static com.ftsafe.ireader.ui.CardReaderManagertActivity.connectedReaderIndex;
+import static com.ftsafe.ireader.ui.CardReaderManagertActivity.showMessage;
+import static com.ftsafe.ireader.ui.ConnectActivity.TAG;
+import static com.ftsafe.ireader.ui.ConnectActivity.connectedDeviceList;
+import static com.ftsafe.ireader.ui.ConnectActivity.deviceType;
+import static com.ftsafe.ireader.ui.ConnectActivity.foundUSBDevices;
+import static com.ftsafe.ireader.ui.ConnectActivity.isAutoConnect;
 
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothDevice;
@@ -26,8 +26,8 @@ import androidx.annotation.RequiresApi;
 
 import com.ftsafe.DK;
 import com.ftsafe.Utility;
-import com.ftsafe.cardreader.R;
-import com.ftsafe.cardreader.utils.Convection;
+import com.ftsafe.ireader.R;
+import com.ftsafe.ireader.utils.Convection;
 import com.ftsafe.readerScheme.FTException;
 import com.ftsafe.readerScheme.FTReader;
 

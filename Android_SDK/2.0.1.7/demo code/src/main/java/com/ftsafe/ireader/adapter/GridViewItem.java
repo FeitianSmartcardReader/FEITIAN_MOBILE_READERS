@@ -1,4 +1,4 @@
-package com.ftsafe.cardreader.adapter;
+package com.ftsafe.ireader.adapter;
 
 import android.graphics.Bitmap;
 

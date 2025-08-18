@@ -1,4 +1,4 @@
-package com.ftsafe.cardreader.utils;
+package com.ftsafe.ireader.utils;
 
 import android.content.Context;
 import android.os.Environment;
@@ -37,7 +37,6 @@ public class LogcatHelper {
         if (!file.exists()) {
             file.mkdirs();
         }
-
     }
 
     public static LogcatHelper getInstance(Context context) {

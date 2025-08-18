@@ -1,4 +1,4 @@
-package com.ftsafe.cardreader.adapter;
+package com.ftsafe.ireader.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ftsafe.cardreader.R;
+import com.ftsafe.ireader.R;
 
 import java.util.HashMap;
 import java.util.List;

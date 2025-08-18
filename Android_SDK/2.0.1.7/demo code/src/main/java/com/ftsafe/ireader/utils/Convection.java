@@ -1,4 +1,4 @@
-package com.ftsafe.cardreader.utils;
+package com.ftsafe.ireader.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
