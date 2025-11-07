@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "iR301-CardExcute.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "iR301 UI Elements_@2x-4.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "iR301 UI Elements_@3X-4.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
