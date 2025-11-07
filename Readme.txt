@@ -16,6 +16,9 @@ User manual and Developer manual:
 http://www.pcscreader.com/docs/getting_started.html
 
 History:
+2025/11/07:
+	- iOS:
+		v3.5.71: Fix CCID-compliant readers SDK minor bugs, improve SDK stability.
 2024/12/12:
 	- iOS:
 		v3.5.70: From this version on, support CCID-compliant readers through Apple's CryptoTokenKit framework, this version improve recognizability during hot-plugging within iOS System.
